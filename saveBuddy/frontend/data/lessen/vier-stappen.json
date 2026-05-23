@@ -1,0 +1,270 @@
+{
+	"id": "vier-stappen",
+
+	"title": "Vier stappen in eerste hulp",
+
+	"description": "Leer hoe je correct moet reanimeren.",
+
+	"exercises": [
+		{
+			"id": 1,
+
+			"type": "volgorde-oefening",
+
+			"question": "Zet de vier stappen van eerste hulp in de juiste volgorde.",
+
+			"options": [
+				"Verleen eerste hulp",
+				"Controleer de toestand van het slachtoffer",
+				"Zorg voor veiligheid",
+				"Bel de hulpdiensten"
+			],
+
+			"correctOrder": [
+				"Zorg voor veiligheid",
+				"Controleer de toestand van het slachtoffer",
+				"Bel de hulpdiensten",
+				"Verleen eerste hulp"
+			],
+
+			"feedback": {
+				"correct": "Correct! Je kent de vier stappen van eerste hulp.",
+				"wrong": "Niet helemaal juist. Veiligheid komt altijd eerst."
+			}
+		},
+
+		{
+			"id": 2,
+
+			"type": "meerkeuze-oefening",
+
+			"question": "Wat doe je als eerst in een noodsituatie?",
+
+			"image": "cpr.png",
+
+			"answers": [
+				"Zorg voor veiligheid",
+				"Water halen",
+				"Bel meteen 112",
+				"Loop hulp zoeken zonder te kijken"
+			],
+
+			"correctAnswer": "Zorg voor veiligheid",
+
+			"feedback": {
+				"correct": "Goed gedaan! Veiligheid is altijd de eerste stap.",
+				"wrong": "Helaas, dat is niet correct. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 3,
+
+			"type": "meerkeuze-oefening",
+
+			"question": "Hoe controleer je of iemand bewust is?",
+
+			"image": "cpr.png",
+
+			"answers": [
+				"Water in het gezicht gooien",
+				"Aan de persoon schudden en luid aanspreken",
+				"De persoon rechtzetten",
+				"Wachten tot de slachtoffer wakker wordt"
+			],
+
+			"correctAnswer": "Aan de persoon schudden en luid aanspreken",
+
+			"feedback": {
+				"correct": "Goed gedaan! Spreek het slachtoffer luid aan en schud voorzichtig aan de schouders.",
+				"wrong": "Helaas, dat is niet correct. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 4,
+
+			"type": "drag-drop-koffer",
+
+			"question": "Sleep de juiste materialen die echt in een EHBO-koffer horen in de koffer.",
+
+			"image": "koffer.png",
+
+			"basket": {
+				"id": "first_aid_kit",
+				"label": "EHBO-koffer"
+			},
+
+			"items": [
+				{
+					"id": "bandage",
+					"image": "bandage.png",
+					"text": "Verband",
+					"correct": true,
+
+					"feedback": {
+						"correct": "Juist!"
+					}
+				},
+
+				{
+					"id": "handschoenen",
+					"image": "handschoenen.png",
+					"text": "Wegwerphandschoenen",
+					"correct": true,
+
+					"feedback": {
+						"correct": "Juist!"
+					}
+				},
+
+				{
+					"id": "schaar",
+					"image": "schaar.png",
+					"text": "Verbandsschaar",
+					"correct": true,
+
+					"feedback": {
+						"correct": "Juist!"
+					}
+				},
+
+				{
+					"id": "kompres",
+					"image": "kompres.png",
+					"text": "Steriel kompres",
+					"correct": true,
+
+					"feedback": {
+						"correct": "Juist!"
+					}
+				},
+
+				{
+					"id": "coolpack",
+					"image": "coolpack.png",
+					"text": "Cold pack",
+					"correct": true,
+
+					"feedback": {
+						"correct": "Juist!"
+					}
+				},
+
+				{
+					"id": "vitamines",
+					"image": "vitamines.png",
+					"text": "Vitamines",
+					"correct": false,
+
+					"feedback": {
+						"wrong": "Fout."
+					},
+
+					"resetPosition": true
+				},
+
+				{
+					"id": "tandenborstel",
+					"image": "tandenborstel.png",
+					"text": "Tandenborstel",
+					"correct": false,
+
+					"feedback": {
+						"wrong": "Fout."
+					},
+
+					"resetPosition": true
+				},
+
+				{
+					"id": "pijnstillers",
+					"image": "pijnstillers.png",
+					"text": "Pijnstillers",
+					"correct": false,
+
+					"feedback": {
+						"wrong": "Fout."
+					},
+
+					"resetPosition": true
+				}
+			],
+
+			"settings": {
+				"removeCorrectItems": true,
+				"resetWrongItems": true,
+				"showInstantFeedback": true
+			},
+
+			"successMessage": "Goed gedaan! Je vulde de EHBO-koffer correct."
+		},
+
+		{
+			"id": 5,
+
+			"type": "tekst-input",
+
+			"image": "cpr.png",
+
+			"question": "Welk noodnummer bel je in een noodsituatie?",
+
+			"placeholder": "Typ hier het noodnummer:",
+
+			"correctAnswers": ["112"],
+
+			"feedback": {
+				"correct": "Correct! 112 is het algemene noodnummer.",
+				"wrong": "Niet correct. Probeer opnieuw. Hint: Het is een drie-cijferig nummer."
+			}
+		},
+
+		{
+			"id": 6,
+
+			"type": "meerkeuzevragen",
+
+			"image": "cpr.png",
+
+			"question": "Waarom is veiligheid belangrijk bij eerste hulp?",
+
+			"answers": [
+				"Zodat je zelf geen slachtoffer wordt",
+				"Zodat je sneller naar huis kan",
+				"Omdat dat verplicht is op school",
+				"Omdat je anders straf krijgt"
+			],
+
+			"correctAnswer": "Zodat je zelf geen slachtoffer wordt",
+
+			"feedback": {
+				"correct": "Correct! Je moet altijd eerst aan je eigen veiligheid denken.",
+				"wrong": "Helaas, probeer opnieuw!"
+			}
+		},
+
+		{
+			"id": 7,
+
+			"type": "meerkeuzevragen",
+
+			"image": "cpr.png",
+
+			"question": "Wanneer moet je de hulpdiensten bellen?",
+
+			"answers": [
+				"Bij een ernstige noodsituatie",
+				"Alleen bij kleine wondjes",
+				"Alleen als iemand dat vraagt",
+				"Nooit"
+			],
+
+			"correctAnswer": "Bij een ernstige noodsituatie",
+
+			"feedback": {
+				"correct": "Correct! Bel altijd de hulpdiensten bij een ernstige noodsituatie.",
+				"wrong": "Helaas, probeer opnieuw!"
+			}
+		}
+	]
+}

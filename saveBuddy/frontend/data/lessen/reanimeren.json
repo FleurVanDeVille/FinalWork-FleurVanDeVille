@@ -22,7 +22,12 @@
 				"Loop hulp zoeken zonder te kijken"
 			],
 
-			"correctAnswer": "Controleer veiligheid"
+			"correctAnswer": "Controleer veiligheid",
+
+			"feedback": {
+				"correct": "Goed gedaan! Je weet perfect wat je als eerst moet doen in een noodsituatie.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
 		},
 
 		{
@@ -65,7 +70,12 @@
 
 			"answers": ["Hals", "Midden borstkas", "Buik", "Schouder"],
 
-			"correctAnswer": "Midden borstkas"
+			"correctAnswer": "Midden borstkas",
+
+			"feedback": {
+				"correct": "Goed gedaan! Midden op de borstkas is de juiste plek voor borstcompressies.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
 		},
 
 		{
@@ -206,7 +216,12 @@
 				"Minstens 15 cm"
 			],
 
-			"correctAnswer": "Minstens 5 cm"
+			"correctAnswer": "Minstens 5 cm",
+
+			"feedback": {
+				"correct": "Goed gedaan! Minstens 5 cm is de aanbevolen diepte voor effectieve borstcompressies bij volwassenen.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
 		},
 
 		{
@@ -225,7 +240,12 @@
 				"20 compressies en 2 beademingen"
 			],
 
-			"correctAnswer": "30 compressies en 2 beademingen"
+			"correctAnswer": "30 compressies en 2 beademingen",
+
+			"feedback": {
+				"correct": "Goed gedaan! De juiste verhouding is 30 borstcompressies gevolgd door 2 beademingen.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
 		},
 
 		{
@@ -244,7 +264,12 @@
 				"Bel 112"
 			],
 
-			"correctAnswer": "Schakel de AED in"
+			"correctAnswer": "Schakel de AED in",
+
+			"feedback": {
+				"correct": "Goed gedaan! Je weet perfect wat de eerste stap is bij het gebruik van een AED.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
 		},
 
 		{
@@ -263,7 +288,12 @@
 				"Geef beademingen zonder compressies"
 			],
 
-			"correctAnswer": "Blijf borstcompressies geven"
+			"correctAnswer": "Blijf borstcompressies geven",
+
+			"feedback": {
+				"correct": "Goed gedaan! Blijf borstcompressies geven totdat de AED opnieuw analyseert of hulp arriveert.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
 		},
 
 		{
@@ -282,7 +312,12 @@
 				"120-150 compressies per minuut"
 			],
 
-			"correctAnswer": "100-120 compressies per minuut"
+			"correctAnswer": "100-120 compressies per minuut",
+
+			"feedback": {
+				"correct": "Goed gedaan! De aanbevolen frequentie is 100-120 borstcompressies per minuut.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
 		},
 
 		{
@@ -312,7 +347,12 @@
 					"image": "Nooduitgang.png",
 					"correct": false
 				}
-			]
+			],
+
+			"feedback": {
+				"correct": "Goed gedaan! Je herkende het juiste AED-pictogram.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
 		},
 
 		{
@@ -348,7 +388,7 @@
 					"correctItem": "electrode_1",
 
 					"feedback": {
-						"correct": "✅ Correct! Deze elektrode zit op de juiste plaats."
+						"correct": "Correct! Deze elektrode zit op de juiste plaats."
 					}
 				},
 
