@@ -1,0 +1,380 @@
+{
+	"id": "reanimeren",
+
+	"title": "Reanimeren en defibrilleren",
+
+	"description": "Leer hoe je correct moet reanimeren.",
+
+	"exercises": [
+		{
+			"id": 1,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat doe je als eerst bij een noodsituatie?",
+
+			"image": "cpr.png",
+
+			"answers": [
+				"Begin meteen borstcompressies",
+				"Controleer veiligheid",
+				"Geef water",
+				"Loop hulp zoeken zonder te kijken"
+			],
+
+			"correctAnswer": "Controleer veiligheid"
+		},
+
+		{
+			"id": 2,
+
+			"type": "volgorde-oefening",
+
+			"question": "Zet de stappen van CPR in de juiste volgorde.",
+
+			"options": [
+				"Bel 112 en vraag een AED",
+				"Controleer de ademhaling",
+				"Start borstcompressies",
+				"Controleer de veiligheid",
+				"Controleer het bewustzijn"
+			],
+
+			"correctOrder": [
+				"Controleer de veiligheid",
+				"Controleer het bewustzijn",
+				"Controleer de ademhaling",
+				"Bel 112 en vraag een AED",
+				"Start borstcompressies"
+			],
+
+			"feedback": {
+				"correct": "Goed gedaan! Je kent de juiste volgorde van CPR.",
+				"wrong": "Niet helemaal juist. Denk eerst aan veiligheid en controleer daarna het slachtoffer."
+			}
+		},
+
+		{
+			"id": 3,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Waar plaats je je handen voor CPR?",
+
+			"image": "cpr.png",
+
+			"answers": ["Hals", "Midden borstkas", "Buik", "Schouder"],
+
+			"correctAnswer": "Midden borstkas"
+		},
+
+		{
+			"id": 4,
+
+			"type": "interactieve-oefeningen",
+
+			"question": "Het slachtoffer ademt niet normaal. Tik ritmisch op de borstkas om borstcompressies uit te voeren.",
+
+			"image": "cpr.png",
+
+			"settings": {
+				"targetBPM": {
+					"min": 100,
+					"max": 120
+				},
+
+				"duration": 20,
+
+				"allowMusicModes": ["StayinAlive", "Metronome", "BeatGame"]
+			},
+
+			"successConditions": [
+				"Tempo blijft tussen 100–120 BPM",
+				"Minstens 85% regelmaat",
+				"Geen lange onderbrekingen"
+			],
+
+			"feedback": {
+				"perfect": "Perfect tempo! Je compressies waren sterk en regelmatig.",
+
+				"good": "Goed gedaan! Je hield bijna het volledige juiste ritme aan.",
+
+				"tooSlow": "Te traag. Druk sneller om voldoende bloed rond te pompen.",
+
+				"tooFast": "Te snel. Probeer een constanter tempo aan te houden.",
+
+				"inconsistent": "Onregelmatig ritme. Probeer constanter te drukken.",
+
+				"stopped": "Je stopte te lang tussen compressies."
+			}
+		},
+
+		{
+			"id": 5,
+
+			"type": "swipe-oefening",
+
+			"question": "Kijk naar het slachtoffer en bepaal of de ademhaling normaal is.?",
+
+			"instruction": [
+				"Swipe naar rechts als de ademhaling normaal is.",
+				"Swipe naar links als de ademhaling niet normaal is.",
+				"Let goed op de borstkas en ademhaling."
+			],
+
+			"swipeLabels": {
+				"right": "Normale ademhaling",
+				"left": "Geen normale ademhaling"
+			},
+
+			"scenarios": [
+				{
+					"id": 1,
+
+					"image": "cpr.png",
+
+					"situation": "Het slachtoffer ademt rustig en regelmatig.",
+
+					"correctSwipe": "right",
+
+					"feedback": {
+						"correct": "Correct! Dit is een normale ademhaling.",
+						"wrong": "Niet correct. Rustige en regelmatige ademhaling is normaal."
+					}
+				},
+
+				{
+					"id": 2,
+
+					"image": "cpr.png",
+
+					"situation": "De borstkas beweegt niet.",
+
+					"correctSwipe": "left",
+
+					"feedback": {
+						"correct": "Correct! Geen beweging betekent geen normale ademhaling.",
+						"wrong": "Niet correct. Zonder borstkasbeweging moet je CPR starten."
+					}
+				},
+
+				{
+					"id": 3,
+
+					"image": "cpr.png",
+
+					"situation": "Het slachtoffer hapt naar adem (gasping).",
+
+					"correctSwipe": "left",
+
+					"feedback": {
+						"correct": "Correct! Gasping is geen normale ademhaling.",
+						"wrong": "Niet correct. Happend ademen is een teken van hartstilstand."
+					}
+				},
+
+				{
+					"id": 4,
+
+					"image": "cpr.png",
+
+					"situation": "Het slachtoffer praat normaal.",
+
+					"correctSwipe": "right",
+
+					"feedback": {
+						"correct": "Correct! Iemand die normaal praat, ademt normaal.",
+						"wrong": "Niet correct. Als iemand normaal praat, is de ademhaling normaal."
+					}
+				}
+			]
+		},
+
+		{
+			"id": 6,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat is de aanbevolen diepte van borstcompressies bij volwassenen?",
+
+			"image": "cpr.png",
+
+			"answers": [
+				"Minstens 2 cm",
+				"Minstens 5 cm",
+				"Minstens 10 cm",
+				"Minstens 15 cm"
+			],
+
+			"correctAnswer": "Minstens 5 cm"
+		},
+
+		{
+			"id": 7,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Hoe vaak moet je borstcompressies en beademingen afwisselen bij CPR?",
+
+			"image": "cpr.png",
+
+			"answers": [
+				"30 compressies en 2 beademingen",
+				"15 compressies en 1 beademing",
+				"10 compressies en 1 beademing",
+				"20 compressies en 2 beademingen"
+			],
+
+			"correctAnswer": "30 compressies en 2 beademingen"
+		},
+
+		{
+			"id": 8,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat is de eerste stap bij het gebruik van een AED?",
+
+			"image": "aed.png",
+
+			"answers": [
+				"Plaats de elektroden op de borst",
+				"Schakel de AED in",
+				"Controleer de veiligheid",
+				"Bel 112"
+			],
+
+			"correctAnswer": "Schakel de AED in"
+		},
+
+		{
+			"id": 9,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat moet je doen als de AED aangeeft dat een schok niet nodig is?",
+
+			"image": "aed.png",
+
+			"answers": [
+				"Blijf borstcompressies geven",
+				"Stop met reanimeren",
+				"Wacht tot de AED opnieuw analyseert",
+				"Geef beademingen zonder compressies"
+			],
+
+			"correctAnswer": "Blijf borstcompressies geven"
+		},
+
+		{
+			"id": 10,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat is de aanbevolen frequentie van borstcompressies bij CPR?",
+
+			"image": "cpr.png",
+
+			"answers": [
+				"50-70 compressies per minuut",
+				"80-100 compressies per minuut",
+				"100-120 compressies per minuut",
+				"120-150 compressies per minuut"
+			],
+
+			"correctAnswer": "100-120 compressies per minuut"
+		},
+
+		{
+			"id": 11,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Duid het juiste AED-pictogram aan.",
+
+			"answers": [
+				{
+					"image": "AED-pictogram.png",
+					"correct": true
+				},
+
+				{
+					"image": "Brandblusser.png",
+					"correct": false
+				},
+
+				{
+					"image": "EHBO-koffer.png",
+					"correct": false
+				},
+
+				{
+					"image": "Nooduitgang.png",
+					"correct": false
+				}
+			]
+		},
+
+		{
+			"id": 12,
+
+			"type": "sleepoefeningen",
+
+			"question": "Plaats de AED-elektroden op de juiste plaats op het lichaam.",
+
+			"image": "cpr.png",
+
+			"draggableItems": [
+				{
+					"id": "electrode_1",
+					"label": "Elektrode 1"
+				},
+
+				{
+					"id": "electrode_2",
+					"label": "Elektrode 2"
+				}
+			],
+
+			"correctZones": [
+				{
+					"id": "right_upper_chest",
+
+					"x": 68,
+					"y": 30,
+
+					"radius": 12,
+
+					"correctItem": "electrode_1",
+
+					"feedback": {
+						"correct": "✅ Correct! Deze elektrode zit op de juiste plaats."
+					}
+				},
+
+				{
+					"id": "left_lower_chest",
+
+					"x": 38,
+					"y": 58,
+
+					"radius": 12,
+
+					"correctItem": "electrode_2",
+
+					"feedback": {
+						"correct": "Correct! Deze elektrode zit op de juiste plaats."
+					}
+				}
+			],
+
+			"globalFeedback": {
+				"near": "Bijna juist. Plaats de elektrode nog iets beter.",
+
+				"wrong": "Niet correct. Plaats één elektrode rechts boven de borst en één links onder de borst."
+			},
+
+			"successMessage": "Perfect! Je plaatste beide AED-elektroden correct."
+		}
+	]
+}
