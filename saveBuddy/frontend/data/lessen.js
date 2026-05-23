@@ -1,0 +1,65 @@
+export const lessen = [
+  {
+    id: 1,
+    title: "Vier stappen in eerste hulp",
+    duration: "10 min",
+    progress: 60,
+    locked: false,
+  },
+  {
+    id: 2,
+    title: "Reanimeren",
+    duration: "15 min",
+    progress: 40,
+    locked: false,
+  },
+  {
+    id: 3,
+    title: "Verslikking",
+    duration: "10 min",
+    progress: 0,
+    locked: false,
+  },
+  {
+    id: 4,
+    title: "Huidwonde",
+    duration: "10 min",
+    progress: 60,
+    locked: true,
+  },
+  {
+    id: 5,
+    title: "Brandwonde",
+    duration: "15 min",
+    progress: 40,
+    locked: true,
+  },
+  {
+    id: 6,
+    title: "Bloeding",
+    duration: "10 min",
+    progress: 0,
+    locked: true,
+  },
+  {
+    id: 7,
+    title: "Letsel aan botten, spieren of gewrichten",
+    duration: "10 min",
+    progress: 60,
+    locked: true,
+  },
+  {
+    id: 8,
+    title: "Vergiftiging",
+    duration: "15 min",
+    progress: 40,
+    locked: true,
+  },
+  {
+    id: 9,
+    title: "Verdrinking",
+    duration: "10 min",
+    progress: 0,
+    locked: true,
+  }
+];
