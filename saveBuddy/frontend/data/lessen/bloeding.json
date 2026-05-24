@@ -1,0 +1,206 @@
+{
+	"id": "bloeding",
+
+	"title": "Bloeding",
+
+	"description": "Leer hoe je lichte tot levensbedreigende bloedingen herkent, stelpt en correct verbindt.",
+
+	"exercises": [
+        {
+            "id": 1,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Wat is de eerste stap bij het verlenen van eerste hulp bij een hevige, spuitende bloeding?",
+
+            "image": "safety_first.png",
+
+            "answers": [
+                "Spoel de wond direct schoon onder stromend kraanwater",
+                "Zorg voor je eigen veiligheid en trek (indien mogelijk) handschoenen aan",
+                "Breng meteen een strak knelverband (tourniquet) aan om de arm of het been",
+                "Laat het slachtoffer veel water drinken tegen het vochtverlies"
+            ],
+
+            "correctAnswer": "Zorg voor je eigen veiligheid en trek (indien mogelijk) handschoenen aan",
+
+            "feedback": {
+                "correct": "Goed gedaan! Je eigen veiligheid staat altijd voorop.",
+                "wrong": "Niet helemaal juist. probeer opnieuw."
+            }
+        },
+
+        {
+            "id": 2,
+
+            "type": "volgorde-oefening",
+
+            "question": "Zet de stappen voor het helpen van een ernstige bloeding aan het onderbeen in de juiste volgorde.",
+
+            "options": [
+                "Breng een drukverband aan op de wond",
+                "Oefen direct handmatige druk uit op de wond (met een propere doek of handschoen)",
+                "Bel 112 als de bloeding niet stopt",
+                "Laat het slachtoffer liggen om de bloeddruk te verlagen"
+            ],
+
+            "correctOrder": [
+                "Laat het slachtoffer liggen om de bloeddruk te verlagen",
+                "Oefen direct handmatige druk uit op de wond (met een propere doek of handschoen)",
+                "Breng een drukverband aan op de wond",
+                "Bel 112 als de bloeding niet stopt"
+            ],
+
+            "feedback": {
+                "correct": "Perfect! Door het slachtoffer te laten liggen verlaag je de bloeddruk.",
+                "wrong": "Niet helemaal juist. Probeer opnieuw en let goed op de volgorde van de stappen."
+            }
+        },
+
+        {
+            "id": 4,
+
+            "type": "sleepoefeningen",
+
+            "question": "Sleep de onderdelen van het drukverband naar de juiste positie op de gewonde arm.",
+
+            "image": "arm_injury.png",
+
+            "draggableItems": [
+                {
+                    "id": "kompres",
+                    "label": "Steriel kompres"
+                },
+
+                {
+                    "id": "drukrol",
+                    "label": "Harde drukrol (of ongeopende zwachtel)"
+                },
+
+                {
+                    "id": "zwachtel",
+                    "label": "Elastische zwachtel"
+                }
+            ],
+
+            "correctZones": [
+                {
+                    "id": "zone_wond",
+
+                    "label": "Direct op de open wond",
+
+                    "correctItem": "kompres"
+                },
+
+                {
+                    "id": "zone_boven_kompres",
+
+                    "label": "Bovenop het kompres (om druk te concentreren)",
+
+                    "correctItem": "drukrol"
+                },
+
+                {
+                    "id": "zone_om_arm",
+
+                    "label": "Rondom het geheel om vast te zetten",
+
+                    "correctItem": "zwachtel"
+                }
+            ],
+
+            "feedback": {
+                "correct": "Uitstekend! Je weet precies hoe je een drukverband moet aanleggen.",
+                "wrong": "  Probeer nog eens opnieuw."
+            }
+        },
+
+        {
+            "id": 5,
+
+            "type": "drag-drop",
+
+            "question": "Koppel de juiste EHBO-handeling aan het type bloeding.",
+
+            "pairs": [
+                {
+                    "source": "Gewone neusbloeding",
+                    "target": "Hoofd licht voorover buigen ('schrijfhouding') en de neusvleugels 10 minuten dichtknijpen."
+                },
+
+                {
+                    "source": "Bloeding uit het oor (na harde klap op het hoofd)",
+                    "target": "Het oor losjes afdekken met een kompres en het bloed vrij laten weglopen."
+                },
+
+                {
+                    "source": "Ernstige open armbloeding",
+                    "target": "Direct druk uitoefenen op de wond en zo snel mogelijk een drukverband aanleggen."
+                }
+            ],
+
+            "feedback": {
+                "correct": "Uitstekend! Bij een neusbloeding buig je voorover zodat het bloed niet in de maag loopt.",
+                "wrong": "Niet helemaal juist."
+            }
+        },
+
+        {
+            "id": 6,
+
+            "type": "dropdown-oefening",
+
+            "question": "Wat doe je in de volgende specifieke situaties? Kies de juiste actie.",
+
+            "dropdownOptions": [
+                "Een tweede drukverband er strak bovenop aanleggen",
+                "Het verband verwijderen en een nieuwe poging doen",
+                "De wond onmiddellijk dichtschroeien met vuur"
+            ],
+
+            "scenarios": [
+                {
+                    "id": 1,
+
+                    "situation": "Je hebt een drukverband aangelegd bij een slachtoffer, maar na 2 minuten zie je dat het bloed er volledig doorheen begint te sijpelen.",
+
+                    "correctAnswer": "Een tweede drukverband er strak bovenop aanleggen",
+
+                    "feedback": {
+                        "correct": "Correct! Als je het eerste verband weghaalt, trek je de pas gevormde bloedstolsels weer los. Altijd een tweede verband eroverheen stapelen.",
+                        "wrong": "Onjuist. Haal het eerste verband nooit weg! Breng een tweede drukverband stevig aan over het eerste heen."
+                    }
+                }
+            ],
+
+            "feedback": {
+                "correct": "Geweldig! Je weet precies hoe je moet omgaan met doorbloedende verbanden.",
+                "wrong": "Kijk nog eens goed."
+            }
+        },
+
+        {
+            "id": 7,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Wat is de juiste manier om een lichte snijwond te verzorgen?",
+
+            "image": "minor_cut.png",
+
+            "answers": [
+                "Laat de wond open zodat deze kan ademen",
+                "Spoel de wond schoon met water, dep droog en breng een pleister aan",
+                "Smeer er een dikke laag vaseline op en dek het af met huishoudfolie",
+                "Draag strakke kleding over de wond om deze op zijn plaats te houden"
+            ],
+
+            "correctAnswer": "Spoel de wond schoon met water, dep droog en breng een pleister aan",
+
+            "feedback": {
+                "correct": "Helemaal juist! Een schone wond geneest sneller en voorkomt infecties.",
+                "wrong": "Niet helemaal juist. Probeer opnieuw."
+            }
+        }
+    ]
+}
