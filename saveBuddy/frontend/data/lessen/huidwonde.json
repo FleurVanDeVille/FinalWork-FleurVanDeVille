@@ -151,7 +151,7 @@
 		{
 			"id": 5,
 
-			"type": "dropdown-oefening",
+			"type": "drag-drop",
 
 			"question": "Beoordeel de wond na 2 dagen. Selecteer per situatie de juiste status in het uitklapmenu.",
 
@@ -196,6 +196,30 @@
 			"feedback": {
 				"correct": "Correct! Je beantwoordt de situatie goed.",
 				"wrong": "Onjuist. Denk nog eens na."
+			}
+		},
+
+		{
+			"id": 7,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat doe je als het eerste drukverband dat je hebt aangelegd volledig doorbloedt bij een hevige snijwonde?",
+
+			"image": "bleeding_wound.png",
+
+			"answers": [
+				"Verwijder het eerste verband en leg een nieuw, strakker verband aan",
+				"Laat het eerste verband zitten en breng er een tweede drukverband stevig bovenop aan",
+				"Stop met drukken en spoel de wond opnieuw onder de kraan",
+				"Breng een knelverband aan rond de nek"
+			],
+
+			"correctAnswer": "Laat het eerste verband zitten en breng er een tweede drukverband stevig bovenop aan",
+
+			"feedback": {
+				"correct": "Uitstekend! Goed geantwoord.",
+				"wrong": "Niet juist. Probeer een ander antwoord."
 			}
 		}
 	]

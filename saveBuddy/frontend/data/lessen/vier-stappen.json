@@ -36,7 +36,7 @@
 		{
 			"id": 2,
 
-			"type": "meerkeuze-oefening",
+			"type": "meerkeuzevragen",
 
 			"question": "Wat doe je als eerst in een noodsituatie?",
 
@@ -60,7 +60,7 @@
 		{
 			"id": 3,
 
-			"type": "meerkeuze-oefening",
+			"type": "meerkeuzevragen",
 
 			"question": "Hoe controleer je of iemand bewust is?",
 
