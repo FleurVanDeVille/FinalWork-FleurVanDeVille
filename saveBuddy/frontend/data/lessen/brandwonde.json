@@ -1,0 +1,241 @@
+{
+	"id": "brandwonde",
+
+	"title": "Brandwonde",
+
+	"description": "Leer hoe je de ernst van een brandwond inschat en hoe je deze direct correct koelt en verzorgt.",
+
+	"exercises": [
+		{
+			"id": 1,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat is de allerbelangrijkste eerste handeling bij het verzorgen van een brandwond?",
+
+			"image": "burn_cooling.png",
+
+			"answers": [
+				"Smeer er direct een speciale brandwondenzalf op",
+				"Koel de wond minstens 10 tot 20 minuten met lauw stromend water",
+				"Prik de blaren voorzichtig door met een propere naald",
+				"Dek de wond direct luchtdicht af met een dikke handdoek"
+			],
+
+			"correctAnswer": "Koel de wond minstens 10 tot 20 minuten met lauw stromend water",
+
+			"feedback": {
+				"correct": "Helemaal juist! 'Eerst water, de rest komt later.'",
+				"wrong": "Niet juist. Dit is een veelgemaakte fout. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 2,
+
+			"type": "sleepoefeningen",
+
+			"question": "Sleep de juiste graad naar de omschrijving van de brandwond.",
+
+			"image": "burn_degrees.png",
+
+			"draggableItems": [
+				{
+					"id": "graad_1",
+					"label": "1ste graads"
+				},
+
+				{
+					"id": "graad_2",
+					"label": "2de graads"
+				},
+
+				{
+					"id": "graad_3",
+					"label": "3de graads"
+				}
+			],
+
+			"correctZones": [
+				{
+					"id": "zone_red_pain",
+
+					"label": "Rode, droge en pijnlijke huid zonder blaren",
+
+					"correctItem": "graad_1",
+
+					"feedback": {
+						"correct": "Correct! Dit is een eerstegraadswond (zoals zonnebrand)."
+					}
+				},
+
+				{
+					"id": "zone_blisters",
+
+					"label": "Rode, zeer pijnlijke huid met vochtblaren",
+
+					"correctItem": "graad_2",
+
+					"feedback": {
+						"correct": "Correct! Blaren wijzen op een tweedegraadswond."
+					}
+				},
+
+				{
+					"id": "zone_black_white",
+
+					"label": "Wit of zwart verbrande huid, vaak nauwelijks pijnlijk",
+
+					"correctItem": "graad_3",
+
+					"feedback": {
+						"correct": "Correct! Dit is een diepe derdegraadswond. Omdat de zenuwen kapot zijn, voelt het slachtoffer vaak geen pijn op die plek."
+					}
+				}
+			],
+
+			"feedback": {
+				"correct": "Helemaal juist! Je hebt de kenmerken van de verschillende brandwondgraden goed herkend.",
+				"wrong": "Niet juist. Probeer eens opnieuw te slepen."
+			}
+		},
+
+		{
+			"id": 3,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Welke van de volgende stellingen over brandwonden is niet correct?",
+
+			"image": "burn_myths.png",
+
+			"answers": [
+				"Je mag een brandwond nooit met ijs koelen, omdat dit de huid nog meer kan beschadigen",
+				"Je mag een brandwond nooit met tandpasta of boter insmeren, omdat dit de wond kan verontreinigen",
+				"Je mag een brandwond nooit afdekken, omdat dit de genezing kan vertragen",
+				"Je mag een brandwond nooit doorprikken, omdat dit het risico op infectie verhoogt"
+			],
+
+			"correctAnswer": "Je mag een brandwond nooit afdekken, omdat dit de genezing kan vertragen",
+
+			"feedback": {
+				"correct": "Helemaal juist! Afdekken is juist belangrijk om infecties te voorkomen en het genezingsproces te ondersteunen.",
+				"wrong": "Niet juist. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 4,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat is de beste manier om een brandwond te beschermen nadat je deze hebt gekoeld?",
+
+			"image": "burn_protection.png",
+
+			"answers": [
+				"Dek de wond af met een steriel gaasje en plak het losjes vast",
+				"Laat de wond open zodat deze kan ademen",
+				"Smeer er een dikke laag vaseline op en dek het af met huishoudfolie",
+				"Draag strakke kleding over de wond om deze op zijn plaats te houden"
+			],
+
+			"correctAnswer": "Dek de wond af met een steriel gaasje en plak het losjes vast",
+
+			"feedback": {
+				"correct": "Helemaal juist! Een steriel gaasje beschermt de wond tegen infecties.",
+				"wrong": "Niet juist. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 5,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wanneer moet je altijd medische hulp zoeken bij een brandwond?",
+
+			"image": "burn_medical_help.png",
+
+			"answers": [
+				"Als de brandwond groter is dan de handpalm van het slachtoffer",
+				"Als de brandwond zich op het gezicht, de handen, voeten of geslachtsdelen bevindt",
+				"Als de brandwond diep is en er wit of zwart verbrande huid zichtbaar is",
+				"Alle bovenstaande situaties"
+			],
+
+			"correctAnswer": "Alle bovenstaande situaties",
+
+			"feedback": {
+				"correct": "Helemaal juist! In al deze gevallen is het belangrijk om professionele medische hulp in te schakelen.",
+				"wrong": "Niet juist. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 6,
+
+			"type": "dropdown-oefening",
+
+			"question": "Kijk goed naar de foto van de brandwond. Selecteer de juiste graad in het uitklapmenu.",
+
+			"dropdownOptions": [
+				"Eerstegraads brandwond",
+				"Tweedegraads brandwond",
+				"Derdegraads brandwond"
+			],
+
+			"scenarios": [
+				{
+					"id": 1,
+
+					"image": "burn_first_degree.png",
+
+					"situation": "De huid is na een dagje strand felrood, droog en pijnlijk. Er zijn geen blaren zichtbaar.",
+
+					"correctAnswer": "Eerstegraads brandwond",
+
+					"feedback": {
+						"correct": "Correct! Omdat de huid alleen rood, droog en pijnlijk is zonder blaren, is dit een eerstegraadswond.",
+						"wrong": "Niet juist. Kijk goed naar de kenmerken: de huid is alleen rood en droog. Dit hoort bij een eerstegraadswond."
+					}
+				},
+
+				{
+					"id": 2,
+
+					"image": "burn_second_degree.png",
+
+					"situation": "Er is hete koffie over de hand stroomt. De huid is rood, zeer pijnlijk en er ontstaan meteen vochtblaren.",
+
+					"correctAnswer": "Tweedegraads brandwond",
+
+					"feedback": {
+						"correct": "Correct! Het ontstaan van met vocht gevulde blaren is het typische kenmerk van een tweedegraadswond.",
+						"wrong": "Niet helemaal juist. Zodra er blaren op de huid ontstaan, spreken we altijd van een tweedegraadswond."
+					}
+				},
+
+				{
+					"id": 3,
+
+					"image": "burn_third_degree.png",
+
+					"situation": "Na contact met een steekvlam is de huid wit en lederachtig geworden. Het slachtoffer voelt op die plek verrassend genoeg geen pijn.",
+
+					"correctAnswer": "Derdegraads brandwond",
+
+					"feedback": {
+						"correct": "Correct! Een witte of zwarte, lederachtige huid die gevoelloos is omdat de zenuwen zijn vernietigd, wijst op een ernstige derdegraads brandwond.",
+						"wrong": "Pas op! Dit is een derdegraadswond. Gevoelloosheid en een witte/asachtige kleur betekenen dat de schade heel diep zit."
+					}
+				}
+			],
+
+			"globalFeedback": {
+				"perfect": "Super! Je kunt de drie graden van brandwonden nu perfect herkennen op basis van de visuele kenmerken.",
+				"incomplete": "Nog niet alle graden zijn correct toegewezen. Denk aan de vuistregel: rood = 1, blaren = 2, wit/zwart/gevoelloos = 3."
+			}
+		}
+	]
+}
