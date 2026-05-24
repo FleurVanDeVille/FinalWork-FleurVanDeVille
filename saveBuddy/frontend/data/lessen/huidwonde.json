@@ -1,0 +1,202 @@
+{
+	"id": "huidwonde",
+
+	"title": "Huidwonde",
+
+	"description": "Leer hoe je verschillende soorten wonden herkent, reinigt en correct verzorgt.",
+
+	"exercises": [
+		{
+			"id": 1,
+
+			"type": "sleepoefeningen",
+
+			"question": "Sleep de juiste beschrijving naar de correcte wonde.",
+
+			"draggableItems": [
+				{
+					"id": "desc_steekwonde",
+					"label": "Klein gaatje maar diep"
+				},
+
+				{
+					"id": "desc_schaafwonde",
+					"label": "Oppervlakkige huidbeschadiging"
+				},
+
+				{
+					"id": "desc_snijwonde",
+					"label": "Rechte wonde door scherp voorwerp"
+				}
+			],
+
+			"correctZones": [
+				{
+					"id": "zone_schaafwonde",
+
+					"label": "Schaafwonde",
+
+					"image": "schaafwonde.png",
+
+					"correctItem": "desc_schaafwonde"
+				},
+
+				{
+					"id": "zone_snijwonde",
+
+					"label": "Snijwonde",
+
+					"image": "snijwonde.png",
+
+					"correctItem": "desc_snijwonde"
+				},
+
+				{
+					"id": "zone_steekwonde",
+
+					"label": "Steekwonde",
+
+					"image": "steekwonde.png",
+
+					"correctItem": "desc_steekwonde"
+				}
+			],
+
+			"feedback": {
+				"correct": "Perfect! Je hebt alle beschrijvingen aan de juiste wonde gekoppeld.",
+				"wrong": "Niet helemaal juist. Kijk goed naar de diepte en de vorm van de wonden en probeer het opnieuw."
+			}
+		},
+
+		{
+			"id": 2,
+
+			"type": "volgorde-oefening",
+
+			"question": "Zet de stappen voor het verzorgen van een vuile schaafwonde in de juiste volgorde.",
+
+			"image": "cpr.png",
+
+			"options": [
+				"Droog de omgeving van de wond voorzichtig af met een propere doek",
+				"Reinig en spoel de wond grondig met lauw stromend kraantjeswater",
+				"Was je eigen handen grondig met water en zeep",
+				"Dek de wond af met een pleister of niet-klevend verband",
+				"Ontsmet de wond met een waterig, niet-verkleurend ontsmettingsmiddel"
+			],
+
+			"correctOrder": [
+				"Was je eigen handen grondig met water en zeep",
+				"Reinig en spoel de wond grondig met lauw stromend kraantjeswater",
+				"Ontsmet de wond met een waterig, niet-verkleurend ontsmettingsmiddel",
+				"Droog de omgeving van de wond voorzichtig af met een propere doek",
+				"Dek de wond af met een pleister of niet-klevend verband"
+			],
+
+			"feedback": {
+				"correct": "Goed gedaan! Door eerst te spoelen verwijder je het vuil, waarna het ontsmetten en afdekken optimaal werkt.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 3,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Er zit een groot stuk glas diep in een snijwonde. Wat doe je?",
+
+			"image": "glass_in_wound.png",
+
+			"answers": [
+				"Trek het glas er meteen uit zodat de wond gespoeld kan worden",
+				"Laat het glas zitten, druk de wondranden rondom het glas naar elkaar toe en verbind het zorgvuldig",
+				"Duw het glas dieper om het bloeden te stelpen",
+				"Giet ontsmettingsmiddel rechtstreeks op het glas"
+			],
+
+			"correctAnswer": "Laat het glas zitten, druk de wondranden rondom het glas naar elkaar toe en verbind het zorgvuldig",
+
+			"feedback": {
+				"correct": "Perfect! Een vreemd voorwerp dat diep in de huid zit, kan grote bloedvaten blokkeren.",
+				"wrong": "Pas op! Dit is niet de juiste aanpak. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 4,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat is het belangrijkste nadeel van een wonde ontsmetten met een gekleurd product (zoals jodium of eosin)?",
+
+			"image": "colored_disinfectant.png",
+
+			"answers": [
+				"Het product werkt minder goed tegen bacteriën",
+				"Het product maakt de huid te droog",
+				"De kleur maskeert de wond, waardoor je ontstekingen of wondheling minder goed kunt beoordelen",
+				"Het product zorgt ervoor dat de wond sneller gaat littekenen"
+			],
+
+			"correctAnswer": "De kleur maskeert de wond, waardoor je ontstekingen of wondheling minder goed kunt beoordelen",
+
+			"feedback": {
+				"correct": "Klopt helemaal! Gekleurde ontsmettingsmiddelen kleuren de wondranden, waardoor een arts een beginnende infectie (roodheid) minder snel kan opmerken. Gebruik bij voorkeur een kleurloze spray.",
+
+				"wrong": "Niet helemaal juist. De ontsmettende werking is vaak prima, maar de kleur verbergt de natuurlijke kleur van de huid, wat controle op infecties bemoeilijkt."
+			}
+		},
+
+		{
+			"id": 5,
+
+			"type": "dropdown-oefening",
+
+			"question": "Beoordeel de wond na 2 dagen. Selecteer per situatie de juiste status in het uitklapmenu.",
+
+			"image": "wondcontrole_overzicht.png",
+
+			"dropdownOptions": ["Alarm (Infectie)", "Veilig (Normale wondheling)"],
+
+			"scenarios": [
+				{
+					"id": 1,
+
+					"situation": "De huid rondom de snijwond is na 48 uur erg rood, gezwollen en voelt gloeiend heet aan.",
+
+					"correctAnswer": "Alarm (Infectie)"
+				},
+
+				{
+					"id": 2,
+
+					"situation": "Er heeft zich een droge, donkere korst gevormd op de schaafwonde. Het jeukt een beetje.",
+
+					"correctAnswer": "Veilig (Normale wondheling)"
+				},
+
+				{
+					"id": 3,
+
+					"situation": "Er komt dik, geelachtig en slecht ruikend vocht (pus) uit de wond.",
+
+					"correctAnswer": "Alarm (Infectie)"
+				},
+
+				{
+					"id": 4,
+
+					"situation": "Je ziet dunne, rode strepen vanuit de wond over de huid naar boven lopen richting de armholte of lies.",
+
+					"correctAnswer": "Alarm (Infectie)"
+				}
+			],
+
+			"feedback": {
+				"correct": "Correct! Je beantwoordt de situatie goed.",
+				"wrong": "Onjuist. Denk nog eens na."
+			}
+		}
+	]
+}
