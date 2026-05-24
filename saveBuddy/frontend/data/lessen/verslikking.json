@@ -1,0 +1,195 @@
+{
+	"id": "verslikking",
+
+	"title": "Verslikking",
+
+	"description": "In deze les leer je wat je moet doen als iemand zich verslikt.",
+
+	"exercises": [
+		{
+			"id": 1,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat mag je niet doen bij een verstikking?",
+
+			"answers": [
+				"De persoon aanmoedigen om te hoesten",
+				"Blind in de mond grijpen",
+				"Hulpdiensten bellen bij ernstige verstikking",
+				"Rugslagen geven"
+			],
+
+			"correctAnswer": "Blind in de mond grijpen",
+
+			"feedback": {
+				"correct": "Heel goed! Je mag nooit blind in de mond van een verstikkend persoon grijpen, omdat je het voorwerp verder naar binnen kunt duwen.",
+				"wrong": "Fout. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 2,
+
+			"type": "drag-drop",
+
+			"question": "Plaats je handen op de juiste plaats voor buikstoten.",
+
+			"image": "cpr.png",
+
+			"draggableItems": [
+				{
+					"id": "hands",
+					"label": "Handen"
+				}
+			],
+
+			"correctZones": [
+				{
+					"id": "above_navel",
+
+					"x": 50,
+					"y": 58,
+
+					"radius": 12,
+
+					"correctItem": "hands",
+
+					"feedback": {
+						"correct": "Correct! Buikstoten geef je net boven de navel."
+					}
+				}
+			],
+
+			"globalFeedback": {
+				"near": "Bijna juist.",
+
+				"wrong": "Niet correct. Probeer opnieuw."
+			},
+
+			"successMessage": "Goed gedaan! Je plaatste je handen correct voor buikstoten."
+		},
+
+		{
+			"id": 3,
+
+			"type": "volgorde-oefening",
+
+			"question": "Zet de stappen bij een ernstige verslikking (slachtoffer kan niet meer praten of hoesten) in de juiste volgorde.",
+
+			"image": "cpr.png",
+
+			"options": [
+				"Pas 5 buikstoten (Heimlich-manoeuvre) toe",
+				"Geef tot 5 stevige slagen tussen de schouderbladen",
+				"Controleer of de blokkade is opgeheven",
+				"Bel direct 112 als de blokkade blijft bestaan",
+				"Ondersteun de borstkas en laat het slachtoffer naar voren leunen"
+			],
+
+			"correctOrder": [
+				"Ondersteun de borstkas en laat het slachtoffer naar voren leunen",
+				"Geef tot 5 stevige slagen tussen de schouderbladen",
+				"Controleer of de blokkade is opgeheven",
+				"Pas 5 buikstoten (Heimlich-manoeuvre) toe",
+				"Bel direct 112 als de blokkade blijft bestaan"
+			],
+
+			"feedback": {
+				"correct": "Perfect! Dit is de exacte opeenvolging van handelingen bij een ernstige luchtwegbelemmering.",
+				"wrong": "Niet helemaal juist. Probeer iets opnieuw te doen."
+			}
+		},
+
+		{
+			"id": 4,
+
+			"type": "swipe-oefening",
+
+			"question": "Beoordeel de situatie van het slachtoffer en bepaal of er sprake is van een 'Lichte' of een 'Ernstige' verslikking.",
+
+			"image": "koffer.png",
+
+			"instruction": [
+				"Swipe naar rechts bij een LICHTE verslikking (moedig aan te hoesten).",
+				"Swipe naar links bij een ERNSTIGE verslikking (grijp direct in)."
+			],
+
+			"swipeLabels": {
+				"right": "Lichte verslikking",
+				"left": "Ernstige verslikking"
+			},
+
+			"scenarios": [
+				{
+					"id": 1,
+
+					"image": "choking_scenario.png",
+
+					"situation": "Het slachtoffer hoest heel luid en kan nog antwoorden op je vragen.",
+
+					"correctSwipe": "right",
+
+					"feedback": {
+						"correct": "Correct!",
+						"wrong": "Onjuist."
+					}
+				},
+
+				{
+					"id": 2,
+
+					"image": "choking_scenario.png",
+
+					"situation": "Het slachtoffer maakt een gierend geluid bij het inademen en kan niet meer praten.",
+
+					"correctSwipe": "left",
+
+					"feedback": {
+						"correct": "Correct!",
+						"wrong": "Onjuist."
+					}
+				},
+
+				{
+					"id": 3,
+
+					"image": "choking_scenario.png",
+
+					"situation": "Het slachtoffer knikt 'ja' als je vraagt of hij stikt, maar maakt helemaal geen geluid meer.",
+
+					"correctSwipe": "left",
+
+					"feedback": {
+						"correct": "Correct!",
+						"wrong": "Onjuist."
+					}
+				}
+			]
+		},
+
+		{
+			"id": 5,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Hoe pas je eerste hulp bij verslikking aan voor een baby jonger dan 1 jaar?",
+
+			"image": "baby_choking.png",
+
+			"answers": [
+				"Je past exact dezelfde buikstoten toe als bij een volwassene",
+				"Je geeft rugslagen en borststoten (met 2 vingers), maar NOOIT buikstoten",
+				"Je schudt de baby ondersteboven aan de voeten",
+				"Je doet niets en wacht tot de baby stopt met huilen"
+			],
+
+			"correctAnswer": "Je geeft rugslagen en borststoten (met 2 vingers), maar NOOIT buikstoten",
+
+			"feedback": {
+				"correct": "Goed gedaan! Bij baby's kunnen buikstoten ernstige interne bloedingen en schade aan de organen veroorzaken.",
+				"wrong": "Niet juist. Buikstoten mogen absoluut nooit bij baby's worden toegepast vanwege het risico op organische schade."
+			}
+		}
+	]
+}
