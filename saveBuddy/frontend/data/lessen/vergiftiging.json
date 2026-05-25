@@ -1,0 +1,209 @@
+{
+	"id": "vergiftiging",
+
+	"title": "Vergiftiging",
+
+	"description": "",
+
+	"exercises": [
+		{
+			"id": 1,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Een slachtoffer heeft per ongeluk een bijtend product ingeslikt. Wat mag je absoluut niet doen?",
+
+			"image": "corrosive_swallowed.png",
+
+			"answers": [
+				"De mond van het slachtoffer spoelen met water",
+				"Het slachtoffer laten braken",
+				"Het Antigifcentrum of 112 bellen",
+				"Restanten van het product veiligstellen voor de arts"
+			],
+
+			"correctAnswer": "Het slachtoffer laten braken",
+
+			"feedback": {
+				"correct": "Helemaal juist! Je mag een slachtoffer dat een bijtend of schuimend product heeft ingeslikt **nooit** laten braken. De chemische stof brandt dan voor een tweede keer de slokdarm en mondholte kapot.",
+				"wrong": "Niet correct. Het laten braken van een bijtend product is levensgevaarlijk, omdat de stof de slokdarm dan opnieuw beschadigt. Doe dit dus nooit!"
+			}
+		},
+
+		{
+			"id": 2,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat is het allereerste symptoom waaraan je een beginnende koolstofmonoxidevergiftiging (CO) kunt herkennen bij jezelf of anderen?",
+
+			"image": "co_symptoms.png",
+
+			"answers": [
+				"Hevige koorts en hoesten",
+				"Milde tot zware hoofdpijn, misselijkheid en duizeligheid",
+				"Acute pijn in de borststreek",
+				"Plotselinge huiduitslag op de armen"
+			],
+
+			"correctAnswer": "Milde tot zware hoofdpijn, misselijkheid en duizeligheid",
+
+			"feedback": {
+				"correct": "Klopt! Hoofdpijn, misselijkheid, vermoeidheid en duizeligheid zijn de eerste klachten. Omdat ze op een griepje lijken, wordt CO-vergiftiging helaas vaak te laat opgemerkt.",
+				"wrong": "Niet helemaal juist. CO-vergiftiging begint meestal met 'griepachtige' symptomen zonder koorts, zoals hoofdpijn, misselijkheid en duizeligheid."
+			}
+		},
+
+		{
+			"id": 3,
+
+			"type": "swipe-oefening",
+
+			"question": "Beoordeel de situatie: Mag je dit slachtoffer een paar slokken water te drinken geven?",
+
+			"instruction": [
+				"Swipe naar rechts als water drinken is toegestaan.",
+				"Swipe naar links als water srinken strikt verboden is."
+			],
+
+			"swipeLabels": {
+				"right": "Water drinken mag",
+				"left": "Strikt verboden te drinken"
+			},
+
+			"scenarios": [
+				{
+					"id": 1,
+
+					"image": "unconscious_poison.png",
+
+					"situation": "Het slachtoffer heeft giftige medicijnen ingenomen en is heel suf en half buiten bewustzijn.",
+
+					"correctSwipe": "left",
+
+					"feedback": {
+						"correct": "Correct!",
+						"wrong": "Onjuist!"
+					}
+				},
+
+				{
+					"id": 2,
+
+					"image": "bleach_swallowed.png",
+
+					"situation": "Het slachtoffer is volledig bij bewustzijn en heeft net een klein slokje bijtend bleekwater ingeslikt.",
+
+					"correctSwipe": "right",
+
+					"feedback": {
+						"correct": "Correct!",
+						"wrong": "Onjuist."
+					}
+				}
+			]
+		},
+
+		{
+			"id": 4,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Je treft een vriend aan die na een feestje extreem veel alcohol heeft gedronken. Hij reageert nergens meer op (bewusteloos), maar ademt wel nog normaal. Wat is de juiste EHBO-actie?",
+
+			"image": "alcohol_unconscious.png",
+
+			"answers": [
+				"Leg hem in de stabiele zijligging en bel direct 112",
+				"Geef hem een sterke tas zwarte koffie om te ontnuchteren",
+				"Laat hem buiten in de kou uitbramen en loop weg",
+				"Steek je vinger in zijn keel zodat hij gaat braken"
+			],
+
+			"correctAnswer": "Leg hem in de stabiele zijligging en bel direct 112",
+
+			"feedback": {
+				"correct": "Uitstekend! Bij een alcoholvergiftiging vallen de reflexen (zoals de slik- en kokhalsreflex) weg. Door hem in stabiele zijligging te leggen, kan hij niet stikken in zijn eigen braaksel. Bel altijd 112 bij bewusteloosheid.",
+				"wrong": "Gevaarlijk! Een bewusteloos slachtoffer mag nooit koffie of water krijgen (verstikkingsgevaar) en mag je nooit alleen laten. Leg hem in stabiele zijligging en bel direct 112."
+			}
+		},
+
+		{
+			"id": 5,
+
+			"type": "verbind-oefening",
+
+			"question": "Koppel de juiste EHBO-handeling aan de wijze van vergiftiging.",
+
+			"pairs": [
+				{
+					"source": "Vergiftiging via de ogen (chemische spatten)",
+					"target": "Spoel het oog direct minstens 15 minuten met lauw stromend water, van de neus naar de buitenkant van het gezicht."
+				},
+
+				{
+					"source": "Inslikken van een schuimend product (zoals zeep of shampoo)",
+					"target": "Laat het slachtoffer absoluut niets drinken (om schuimvorming in de longen te voorkomen) en eet eventueel iets hards zoals een droge beschuit."
+				},
+
+				{
+					"source": "Inademing van giftige gassen/roken",
+					"target": "Breng het slachtoffer in de frisse lucht, vermijd lichamelijke inspanning en laat hem rustig zitten."
+				}
+			],
+
+			"feedback": {
+				"correct": "Geweldig gedaan!",
+				"wrong": "Niet helemaal juist. Probeer het nog eens."
+			}
+		},
+
+		{
+			"id": 6,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Een kind heeft een kleine, ronde knoopcelbatterij (bijvoorbeeld uit een afstandsbediening) ingeslikt. Wat moet je doen?",
+
+			"image": "button_battery.png",
+
+			"answers": [
+				"Wacht rustig af tot de batterij via de natuurlijke weg de stoelgang verlaat",
+				"Geef het kind direct een glas melk om de maag te beschermen",
+				"Ga onmiddellijk naar de spoedafdeling van het ziekenhuis",
+				"Laat het kind veel springen zodat de batterij sneller zakt"
+			],
+
+			"correctAnswer": "Ga onmiddellijk naar de spoedafdeling van het ziekenhuis",
+
+			"feedback": {
+				"correct": "Super belangrijk! Een knoopcelbatterij die vast blijft zitten in de slokdarm kan binnen de 2 uur ernstige, levensgevaarlijke chemische brandwonden veroorzaken door elektrische stroom. Dit is altijd een spoedgeval!",
+				"wrong": "Pas op! Dit is een medisch noodgeval. Knoopcelbatterijen kunnen binnen 2 uur door de wand van de slokdarm heen branden. Ga direct naar het ziekenhuis."
+			}
+		},
+
+		{
+			"id": 7,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Er is per ongeluk een chemisch reinigingsmiddel in het oog van het slachtoffer gespat. Hoe richt je de waterstraal tijdens het spoelen?",
+
+			"image": "eye_rinse_direction.png",
+
+			"answers": [
+				"Van de buitenkant van het gezicht (de slaag) richting de neus",
+				"Van de binnenkant (de neuszijde) naar de buitenkant van het gezicht",
+				"Recht van voren, pal op de pupil",
+				"Je mag het oog absoluut niet spoelen met water"
+			],
+
+			"correctAnswer": "Van de binnenkant (de neuszijde) naar de buitenkant van het gezicht",
+
+			"feedback": {
+				"correct": "Perfect! Door van binnen (bij de neus) naar buiten te spoelen, voorkom je dat het chemische product en het vuile spoelwater in het andere, gezonde oog lopen.",
+				"wrong": "Niet correct. Je moet altijd van de neus naar de buitenkant van het gezicht spoelen. Zo bescherm je het andere (gezonde) oog tegen het product."
+			}
+		}
+	]
+}
