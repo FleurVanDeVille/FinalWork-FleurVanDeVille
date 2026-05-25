@@ -1,0 +1,227 @@
+{
+    "id": "letsel",
+
+	"title": "Letsel aan botten, spieren of gewrichten",
+
+	"description": "Leer hoe je verschillende soorten wonden herkent, reinigt en correct verzorgt.",
+
+    "exercises": [
+        {
+            "id": 1,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Wat is de allereerste prioriteit bij het vermoeden van een botbreuk of ontwrichting?",
+
+            "image": "broken_bone_immobile.png",
+
+            "answers": [
+                "Probeer het bot of gewricht zo snel mogelijk weer recht te trekken",
+                "Laat het slachtoffer het ledemaat voorzichtig bewegen om te testen of het gebroken is",
+                "Zorg voor absolute onbeweeglijkheid en verplaats het ledemaat niet",
+                "Smeer direct een warmtezalf op de pijnlijke plek"
+            ],
+
+            "correctAnswer": "Zorg voor absolute onbeweeglijkheid and verplaats het ledemaat niet",
+
+            "feedback": {
+                "correct": "Uitstekend! Rust en onbeweeglijkheid zijn cruciaal.",
+                "wrong": "Niet juist. Probeer iets anders."
+            }
+        },
+
+        {
+            "id": 2,
+
+            "type": "volgorde-oefening",
+
+            "question": "Zet de stappen van de bekende 'RICE-methode' bij een verstuiking (zoals een omslaande enkel) in de juiste volgorde.",
+
+            "options": [
+                "Compression (Breng een steunverband aan om zwelling tegen te gaan)",
+                "Ice (Koel het letsel 15 tot 20 minuten met ijs of een coldpack)",
+                "Rust (Geef het getroffen ledemaat direct rust)",
+                "Elevation (Leg het ledemaat hoog, bij voorkeur boven harthoogte)"
+            ],
+
+            "correctOrder": [
+                "Rust (Geef het getroffen ledemaat direct rust)",
+                "Ice (Koel het letsel 15 tot 20 minuten met ijs of een coldpack)",
+                "Compression (Breng een steunverband aan om zwelling tegen te gaan)",
+                "Elevation (Leg het ledemaat hoog, bij voorkeur boven harthoogte)"
+            ],
+
+            "feedback": {
+                "correct": "Perfect! R-I-C-E staat voor Rest, Ice, Compression, Elevation.",
+                "wrong": "Niet helemaal juist."
+            }
+        },
+
+        {
+            "id": 3,
+
+            "type": "swipe-oefening",
+
+            "question": "Beoordeel het letsel: Is er sprake van een open botbreuk (direct 112 bellen)?",
+
+            "instruction": [
+                "Swipe naar rechts bij een OPEN BOTBREUK (wond + zichtbaar bot).",
+                "Swipe naar links bij een GESLOTEN LETSEL (huid is nog volledig intact)."
+            ],
+
+            "swipeLabels": {
+                "right": "Open botbreuk (112)",
+                "left": "Gesloten letsel"
+            },
+
+            "scenarios": [
+                {
+                    "id": 1,
+
+                    "image": "open_fracture.png",
+
+                    "situation": "De onderarm staat in een abnormale stand en er steekt een stuk bot door de bloedende huid naar buiten.",
+
+                    "correctSwipe": "right",
+
+                    "exc-feedback": {
+                        "correct": "Correct!",
+                        "wrong": "Onjuist."
+                    }
+                },
+
+                {
+                    "id": 2,
+
+                    "image": "closed_injury.png",
+
+                    "situation": "De enkel is na een val enorm dik geworden en vertoont een blauwe plek, maar de huid is nergens gescheurd.",
+
+                    "correctSwipe": "left",
+
+                    "exc-feedback": {
+                        "correct": "Correct!",
+                        "wrong": "Onjuist."
+                    }
+                }
+            ],
+
+            "feedback": {
+                "correct": "Goed gedaan! Je herkent een open botbreuk aan de zichtbare wond en het uitstekende bot.",
+                "wrong": "Niet helemaal juist. Let goed op: bij een open botbreuk is er altijd een zichtbare wond en een stuk bot dat door de huid steekt."
+            }
+        },
+
+        {
+            "id": 4,
+
+            "type": "sleepoefeningen",
+
+            "question": "Sleep de juiste medische termen naar de bijbehorende definities.",
+
+            "image": "skeletal_anatomy.png",
+
+            "draggableItems": [
+                {
+                    "id": "term_fractuur",
+                    "label": "Botbreuk (Fractuur)"
+                },
+
+                {
+                    "id": "term_verstuiking",
+                    "label": "Verstuiking (Distorsie)"
+                },
+
+                {
+                    "id": "term_ontwrichting",
+                    "label": "Ontwrichting (Luxatie)"
+                }
+            ],
+
+            "correctZones": [
+                {
+                    "id": "zone_breuk",
+
+                    "label": "De continuïteit van het bot is onderbroken (scheur of volledige breuk).",
+
+                    "correctItem": "term_fractuur"
+                },
+
+                {
+                    "id": "zone_verstuiking",
+
+                    "label": "De gewrichtsbanden zijn extreem uitgerekend of ingescheurd, maar de botuiteinden zitten nog op hun plek.",
+
+                    "correctItem": "term_verstuiking"
+                },
+
+                {
+                    "id": "zone_ontwrichting",
+
+                    "label": "De botuiteinden zijn volledig uit de kom geschoten en blijven in een abnormale stand staan.",
+
+                    "correctItem": "term_ontwrichting"
+                }
+            ],
+
+            "feedback": {
+                "correct": "Uitstekend! Je weet precies wat een fractuur, verstuiking en ontwrichting inhoudt.",
+                "wrong": "Niet helemaal juist. Kijk goed naar de kenmerken van elk letsel en probeer het opnieuw."
+            }
+        },
+
+        {
+            "id": 5,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Wat is de belangrijkste reden om een open botbreuk NIET te manipuleren of te verplaatsen?",
+
+            "image": "do_not_move.png",
+
+            "answers": [
+                "Het kan de pijn tijdelijk verlichten, maar het is niet nodig",
+                "Het kan de bloedtoevoer naar het gebied verbeteren",
+                "Het kan ernstige bloedingen veroorzaken en verdere schade aan weefsels en zenuwen",
+                "Het helpt bij het sneller genezen van het bot"
+            ],
+
+            "correctAnswer": "Het kan ernstige bloedingen veroorzaken en verdere schade aan weefsels en zenuwen",
+
+            "feedback": {
+                "correct": "Uitstekend! Goed gedaan!",
+                "wrong": "Niet juist. Probeer iets anders."
+            }
+        },
+
+        {
+            "id": 6,
+
+            "type": "verbind-oefening",
+
+            "question": "Koppel het type letsel aan de juiste handeling.",
+
+            "pairs": [
+                {
+                    "source": "Open botbreuk",
+                    "target": "Dek de wond steriel af, oefen GEEN druk uit op het bot en bel direct 112."
+                },
+
+                {
+                    "source": "Vermoeden van rug- of nekletsel",
+                    "target": "Houd het slachtoffer volledig stil liggen en stabiliseer het hoofd handmatig in een neutrale positie."
+                },
+
+                {
+                    "source": "Verstuikte pols",
+                    "target": "Pas direct de RICE-methode toe (rust, koelen, steunverband en hoog leggen)."
+                }
+            ],
+
+            "feedback": {
+                "correct": "Geweldig gedaan! Bij een open breuk druk je nooit op het bot. Bij nekletsel beweeg je het slachtoffer absoluut niet om verlamming te voorkomen.",
+                "wrong": "Niet helemaal juist. Let op: bij rug- en nekletsel mag je het slachtoffer nooit zomaar verplaatsen!"
+            }
+        }
+    ]
+}
