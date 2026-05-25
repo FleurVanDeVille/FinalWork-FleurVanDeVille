@@ -1,0 +1,156 @@
+{
+	"id": "verdrinking",
+
+	"title": "Verdrinking",
+
+	"description": "Leer hoe je een slachtoffer veilig uit het water helpt en hoe je de specifieke reanimatie bij verdrinking toepast.",
+
+	"exercises": [
+		{
+			"id": 1,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Je ziet iemand in diep water in nood verkeren. Wat is je eerste actie wat betreft veiligheid?",
+
+			"image": "drowning_rescue.png",
+
+			"answers": [
+				"Spring direct het water in om naar het slachtoffer te zwemmen",
+				"Probeer het slachtoffer vanaf de kant te helpen (bvb. met een tak, werplijn of reddingsboei) en bel 112",
+				"Wacht rustig af tot het slachtoffer uit zichzelf naar de kant zwemt",
+				"Zoek een boot, ook al duurt dat een half uur"
+			],
+
+			"correctAnswer": "Probeer het slachtoffer vanaf de kant te helpen (bvb. met een tak, werplijn of reddingsboei) en bel 112",
+
+			"feedback": {
+				"correct": "Goed gedaan! Zelf in het water springen is de allerlaatste optie. ",
+				"wrong": "Niet juist. Probeer iets anders."
+			}
+		},
+
+		{
+			"id": 2,
+
+			"type": "volgorde-oefening",
+
+			"question": "Het slachtoffer is uit het water gehaald en ademt NIET normaal. Zet de stappen van de reanimatie bij verdrinking in de juiste volgorde.",
+
+			"options": [
+				"Start met 30 borstcompressies",
+				"Geef direct 5 initiële beademingen (mond-op-mond)",
+				"Wissel vanaf nu constant af: 30 compressies en 2 beademingen",
+				"Open de luchtweg (kin omhoog, hoofd achterover)"
+			],
+
+			"correctOrder": [
+				"Open de luchtweg (kin omhoog, hoofd achterover)",
+				"Geef direct 5 initiële beademingen (mond-op-mond)",
+				"Start met 30 borstcompressies",
+				"Wissel vanaf nu constant af: 30 compressies en 2 beademingen"
+			],
+
+			"feedback": {
+				"correct": "Perfect! Je hebt de juiste volgorde van handelingen bij een reanimatie na verdrinking gekozen.",
+				"wrong": "Niet helemaal juist. Probeer een andere volgorde of kijk nog eens goed naar de stappen."
+			}
+		},
+
+		{
+			"id": 3,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Je moet een AED aansluiten bij een slachtoffer dat net uit het water is gehaald. Wat moet je doen voordat je de elektroden opplakt?",
+
+			"image": "aed_wet_chest.png",
+
+			"answers": [
+				"Niets, je mag de stickers direct op de kletsnatte borstkas plakken",
+				"Droog de borstkas van het slachtoffer eerst grondig af",
+				"Scheer al het borsthaar weg en giet er ontsmettingsalcohol over",
+				"Wacht 15 minuten tot de huid door de buitenlucht is opgedroogd"
+			],
+
+			"correctAnswer": "Droog de borstkas van het slachtoffer eerst grondig af",
+
+			"feedback": {
+				"correct": "Perfect! Als de borstkas nat is, kan de stroom van de AED via het water over de huid lopen in plaats van door het hart.",
+				"wrong": "Niet correct. Stroom zoekt de weg van de minste weerstand. Dus denk nog eens na."
+			}
+		},
+
+		{
+			"id": 4,
+
+			"type": "swipe-oefening",
+
+			"question": "Moet je bij dit slachtoffer na een verdrinkingsincident alsnog naar het ziekenhuis?",
+
+			"instruction": [
+				"Swipe naar rechts als het slachtoffer direct naar het ziekenhuis moet.",
+				"Swipe naar links als het slachtoffer gewoon naar huis mag."
+			],
+
+			"swipeLabels": {
+				"right": "Direct naar ziekenhuis",
+				"left": "Mag naar huis"
+			},
+
+			"scenarios": [
+				{
+					"id": 1,
+
+					"image": "drowning_cough.png",
+
+					"situation": "Het slachtoffer was kort onder water, hoest flink, maar zegt dat alles prima gaat en wil naar huis.",
+
+					"correctSwipe": "right",
+
+					"feedback": {
+						"correct": "Correct! ",
+						"wrong": "Fout."
+					}
+				},
+
+				{
+					"id": 2,
+
+					"image": "drowning_cpr_success.png",
+
+					"situation": "Het slachtoffer ademde niet, maar na jouw 5 beademingen begint hij spontaan weer te ademen en komt hij bij bewustzijn.",
+
+					"correctSwipe": "right",
+
+					"feedback": {
+						"correct": "Correct! ",
+						"wrong": "Fout."
+					}
+				}
+			]
+		},
+
+		{
+			"id": 5,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Wat is een belangrijke reden waarom je bij een slachtoffer van verdrinking altijd moet blijven controleren op ademhaling en bewustzijn, zelfs als ze weer ademen?",
+
+			"answers": [
+				"Er is geen reden, als ze ademen is alles in orde",
+				"Ze kunnen nog steeds een secundaire verdrinking ontwikkelen waarbij water in de longen blijft zitten",
+				"Ze kunnen plotseling weer stoppen met ademen zonder waarschuwing",
+				"Ze kunnen een allergische reactie krijgen op het water"
+			],
+
+			"correctAnswer": "Ze kunnen nog steeds een secundaire verdrinking ontwikkelen waarbij water in de longen blijft zitten",
+
+			"feedback": {
+				"correct": "Perfect! Een secundaire verdrinking kan uren na de oorspronkelijke incident plaatsvinden.",
+				"wrong": "Niet correct. Een secundaire verdrinking kan uren na de oorspronkelijke incident plaatsvinden."
+			}
+		}
+	]
+}
