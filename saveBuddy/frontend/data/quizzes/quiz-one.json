@@ -1,0 +1,213 @@
+{
+	"id": "quiz1",
+
+	"title": "EHBO Herhalingsquiz",
+
+	"description": "Fris je kennis op over alle behandelde EHBO-thema's met deze interactieve eindquiz.",
+
+	"exercises": [
+		{
+			"id": 1,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Reanimeren: Wat is de juiste verhouding tussen borstcompressies en beademingen bij een volwassen slachtoffer?",
+
+			"image": "cpr_cycle.png",
+
+			"answers": [
+				"15 compressies and 2 beademingen",
+				"30 compressies and 2 beademingen",
+				"30 compressies and 5 beademingen",
+				"50 compressies and 2 beademingen"
+			],
+
+			"correctAnswer": "30 compressies and 2 beademingen",
+
+			"feedback": {
+				"correct": "Perfect! De universele richtlijn voor volwassenen is 30 borstcompressies afgewisseld met 2 beademingen.",
+				"wrong": "Niet juist. De juiste verhouding is altijd 30 compressies gevolgd door 2 beademingen."
+			}
+		},
+
+		{
+			"id": 2,
+
+			"type": "volgorde-oefening",
+
+			"question": "Verslikking: Het slachtoffer verslikt zich ernstig en kan helemaal niet meer hoesten of praten. Zet de fysieke handelingen in de juiste volgorde.",
+
+			"options": [
+				"Pas tot 5 buikstoten (Heimlich-manoeuvre) toe",
+				"Bel direct 112 als de blokkade blijft bestaan",
+				"Geef tot 5 stevige slagen met de hiel van je hand tussen de schouderbladen"
+			],
+
+			"correctOrder": [
+				"Geef tot 5 stevige slagen met de hiel van je hand tussen de schouderbladen",
+				"Pas tot 5 buikstoten (Heimlich-manoeuvre) toe",
+				"Bel direct 112 als de blokkade blijft bestaan"
+			],
+
+			"feedback": {
+				"correct": "Goed gedaan! Je begint altijd met de minst ingrijpende mechanische methode (rugslagen) voordat je overgaat naar buikstoten.",
+				"wrong": "Niet helemaal juist. Begin altijd eerst met rugslagen voordat je de krachtigere buikstoten (Heimlich) toepast."
+			}
+		},
+
+		{
+			"id": 3,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Huidwonden: Waarom mag je een diepzittend voorwerp (zoals een groot stuk glas) NOOIT zelf uit een snijwonde trekken?",
+
+			"image": "embedded_object.png",
+
+			"answers": [
+				"Omdat het voorwerp momenteel fungeert als een stop die een hevige bloeding tegenhoudt",
+				"Omdat de wond dan sneller geïnfecteerd raakt door de buitenlucht",
+				"Omdat de huid sneller dichtgroeit als het voorwerp blijft zitten",
+				"Omdat het ontsmetten van de wond anders mislukt"
+			],
+
+			"correctAnswer": "Oekomst het voorwerp momenteel fungeert als een stop die een hevige bloeding tegenhoudt",
+
+			"feedback": {
+				"correct": "Formidabel! Het voorwerp drukt beschadigde bloedvaten momenteel dicht.",
+				"wrong": "Onjuist. Probeer opnieuw."
+			}
+		},
+
+		{
+			"id": 4,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Bloedingen: Je hebt een drukverband aangelegd bij een zware bloeding, maar na een minuut zie je dat het bloed er volledig doorheen sijpelt. Wat doe je?",
+
+			"image": "bleeding_bleedthrough.png",
+
+			"answers": [
+				"Verwijder het natte verband en leg een volledig nieuw drukverband aan",
+				"Laat het eerste verband zitten en breng er een tweede drukverband stevig bovenop aan",
+				"Stop met verbinden en spoel de wond opnieuw onder de kraan",
+				"Breng een knelverband aan rond de hals van het slachtoffer"
+			],
+
+			"correctAnswer": "Laat het eerste verband zitten en breng er een tweede drukverband stevig bovenop aan",
+
+			"feedback": {
+				"correct": "Uitstekend! Als je het eerste verband weghaalt, trek je de pas gevormde bloedstolsels weer los. Altijd een extra verband eroverheen stapelen.",
+				"wrong": "Niet juist. Het verwijderen van het eerste verband verstoort de bloedstolling die al op gang is gekomen. Laat het zitten en stapel er een tweede bovenop."
+			}
+		},
+
+		{
+			"id": 5,
+
+			"type": "swipe-oefening",
+
+			"question": "Letsels: Mag je bij dit specifieke letsel aan botten of gewrichten de RICE-methode (compressie/drukverband) toepassen?",
+
+			"instruction": [
+				"Swipe naar rechts als compressie toegestaan is.",
+				"Swipe naar links als compressie (drukverband) verboden is."
+			],
+
+			"swipeLabels": {
+				"right": "Compressie toegestaan",
+				"left": "Strikt verboden"
+			},
+
+			"scenarios": [
+				{
+					"id": 1,
+
+					"image": "open_fracture_leg.png",
+
+					"situation": "Het slachtoffer heeft een open botbreuk aan het onderbeen waarbij het bot door de huid naar buiten steekt.",
+
+					"correctSwipe": "left",
+
+					"feedback": {
+						"correct": "Correct! Bij een open botbreuk mag je NOOIT druk uitoefenen of een drukverband aanleggen op het bot. Dek de wond losjes steriel af en bel 112.",
+						"wrong": "Gevaarlijk! Bij een open botbreuk mag je nooit druk uitoefenen. Je zou het bot dieper duwen en extra weefselschade veroorzaken."
+					}
+				}
+			]
+		},
+
+		{
+			"id": 6,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Vergiftiging: Een slachtoffer heeft per ongeluk een bijtend chemisch product (zoals ontstopper) ingeslikt en is volledig bij bewustzijn. Wat is de juiste actie?",
+
+			"image": "poison_ingestion.png",
+
+			"answers": [
+				"Steek je vinger in de keel zodat het slachtoffer alles uitbraakt",
+				"Geef het slachtoffer direct een groot glas volle melk om de maag te beschermen",
+				"Laat het slachtoffer een paar slokken water drinken om te verdunnen en bel het Antigifcentrum/112",
+				"Geef citroensap om het product te neutraliseren"
+			],
+
+			"correctAnswer": "Laat het slachtoffer een paar slokken water drinken om te verdunnen en bel het Antigifcentrum/112",
+
+			"feedback": {
+				"correct": "Juist! Alleen als het slachtoffer volledig bij bewustzijn is, mag je een paar slokken water geven om het bijtende product in de slokdarm te verdunnen. Braken is strikt verboden!",
+				"wrong": "Onjuist. Laat een slachtoffer met een bijtend product NOOIT braken (het brandt dan een tweede keer de slokdarm kapot). Een paar slokken water om te verdunnen is correct."
+			}
+		},
+
+		{
+			"id": 7,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Verdrinking: Wat is het cruciale verschil in de reanimatierichtlijn bij een slachtoffer van verdrinking in vergelijking met een standaard hartstilstand?",
+
+			"image": "drowning_cpr.png",
+
+			"answers": [
+				"Bij verdrinking start je de reanimatie ALTIJD direct met 5 initiële beademingen",
+				"Bij verdrinking mag je uitsluitend borstcompressies geven en nooit beademen",
+				"Bij verdrinking moet je het slachtoffer eerst ondersteboven houden om het water uit de longen te laten lopen",
+				"Bij verdrinking mag je geen AED gebruiken"
+			],
+
+			"correctAnswer": "Bij verdrinking start je de reanimatie ALTIJD direct met 5 initiële beademingen",
+
+			"feedback": {
+				"correct": "Geweldig! Omdat verdrinking een primair zuurstofprobleem is (asfixie), zijn de cellen volledig leeg. Je moet de longen eerst vullen met 5 startbeademingen.",
+				"wrong": "Niet correct. Verdrinking zorgt voor een acuut zuurstoftekort. Daarom geef je na het openen van de luchtweg altijd eerst 5 initiële beademingen voordat je de compressies start."
+			}
+		},
+
+		{
+			"id": 8,
+
+			"type": "meerkeuzevragen",
+
+			"question": "Verdrinking & AED: Je wilt een AED aansluiten bij een slachtoffer dat net uit het water is gehaald. Wat moet je doen vlak VOORDAT je de elektroden opplakt?",
+
+			"image": "aed_drowning.png",
+
+			"answers": [
+				"Niets, de stickers mogen direct op de natte huid gekleefd worden",
+				"Droog de borstkas van het slachtoffer eerst snel en grondig af",
+				"Wacht 15 minuten tot de huid door de zon is opgedroogd",
+				"Smeer de borstkas in met een speciale ontsmettingsalcohol"
+			],
+
+			"correctAnswer": "Droog de borstkas van het slachtoffer eerst snel en grondig af",
+
+			"feedback": {
+				"correct": "Perfect! Als de borstkas nat is, loopt de elektrische schok van de AED via het water over de huid in plaats van door het hart. Snel afdrogen is dus levensbelangrijk.",
+				"wrong": "Niet correct. Als de borstkas nat is, werkt de schok niet omdat de stroom via het oppervlaktewater wegvloeit. Altijd eerst snel droogwrijven!"
+			}
+		}
+	]
+}
