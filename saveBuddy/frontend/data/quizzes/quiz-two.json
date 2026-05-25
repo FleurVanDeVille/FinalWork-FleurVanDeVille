@@ -1,0 +1,232 @@
+{
+    "id": "quiz2",
+
+    "title": "EHBO Herhalingsquiz",
+
+    "description": "Test je vaardigheden met dit tweede deel vol meerkeuze- en volgorde-vragen over alle EHBO-thema's.",
+
+    "exercises": [
+        {
+            "id": 1,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Vier stappen: Je hebt de veiligheid gecontroleerd en nadert het slachtoffer dat roerloos op de grond ligt. Wat is de allereerste actie binnen Stap 2 (Beoordeel de toestand)?",
+
+            "image": "assess_victim.png",
+
+            "answers": [
+                "Controleer de ademhaling door te kijken, luisteren en voelen",
+                "Controleer het bewustzijn door zachtjes aan de schouders te schudden en luid te spreken",
+                "Bel direct 112",
+                "Kantel het hoofd achterover om de luchtweg te openen"
+            ],
+
+            "correctAnswer": "Controleer het bewustzijn door zachtjes aan de schouders te schudden en luid te spreken",
+
+            "feedback": {
+                "correct": "Goed gedaan! Je controleert altijd eerst het bewustzijn (schudden en aanspreken) voordat je de ademhaling gaat controleren.",
+                "wrong": "Niet helemaal juist. Je moet altijd eerst controleren of het slachtoffer nog reageert (bewustzijn) voordat je specifiek naar de ademhaling kijkt."
+            }
+        },
+
+        {
+            "id": 2,
+
+            "type": "volgorde-oefening",
+
+            "question": "Reanimeren: Wat zijn de juiste stappen als je een AED gaat gebruiken bij een slachtoffer?",
+
+            "options": [
+                "Bevestig de elektroden (stickers) op de ontblote borstkas",
+                "Volg de gesproken instructies van de AED strikt op",
+                "Schakel de AED onmiddellijk in (druk op de aan-knop)"
+            ],
+
+            "correctOrder": [
+                "Schakel de AED onmiddellijk in (druk op de aan-knop)",
+                "Bevestig de elektroden (stickers) op de ontblote borstkas",
+                "Volg de gesproken instructies van de AED strikt op"
+            ],
+
+            "feedback": {
+                "correct": "Perfect! De allereerste stap bij een AED is ALTIJD het inschakelen van het apparaat. Daarna vertelt de stem je exact wat je moet doen.",
+                "wrong": "Niet juist. Zet de AED altijd als allereerste aan. Vanaf dat moment loodst het apparaat je door de rest van de stappen."
+            }
+        },
+
+        {
+            "id": 3,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Verslikking: Je bent alleen met een baby van 6 maanden die zich ernstig verslikt. Wat is de juiste handeling als de rugslagen niet werken?",
+
+            "image": "baby_choking_help.png",
+
+            "answers": [
+                "Pas de Heimlich-manoeuvre (buikstoten) toe net boven de navel",
+                "Geef 5 borststoten met twee vingers midden op het borstbeen",
+                "Schud de baby hardsteboven aan de voeten",
+                "Wacht rustig af tot de baby stopt met huilen"
+            ],
+
+            "correctAnswer": "Geef 5 borststoten met twee vingers midden op het borstbeen",
+
+            "feedback": {
+                "correct": "Uitstekend! Bij baby's onder de 1 jaar mag je NOOIT buikstoten (Heimlich) toepassen wegens risico op zware organische schade. Je wisselt rugslagen af met 5 borststoten.",
+                "wrong": "Gevaarlijk! Buikstoten (Heimlich) mogen nooit bij baby's gebruikt worden. Gebruik in plaats daarvan 5 borststoten met twee vingers midden op de borstkas."
+            }
+        },
+
+        {
+            "id": 4,
+
+            "type": "volgorde-oefening",
+
+            "question": "Huidwonden: Zet de stappen voor de basisverzorging van een gewone, vuile schaafwond in de juiste volgorde.",
+
+            "options": [
+                "Droog de omgeving af en dek de wond af met een pleister of niet-klevend verband",
+                "Was je eigen handen met water en zeep",
+                "Ontsmet de wond met een waterig, kleurloos ontsmettingsmiddel",
+                "Reinig en spoel de wond grondig onder lauw stromend kraantjeswater"
+            ],
+
+            "correctOrder": [
+                "Was je eigen handen met water en zeep",
+                "Reinig en spoel de wond grondig onder lauw stromend kraantjeswater",
+                "Ontsmet de wond met een waterig, kleurloos ontsmettingsmiddel",
+                "Droog de omgeving af en dek de wond af met een pleister of niet-klevend verband"
+            ],
+
+            "feedback": {
+                "correct": "Perfect! Eerst je eigen hygiëne, dan mechanisch vuil wegspoelen, chemisch ontsmetten en als laatste steriel beschermen.",
+                "wrong": "Niet helemaal juist. Je moet de wond eerst grondig spoelen met water om het vuil te verwijderen voordat je een ontsmettingsmiddel aanbrengt."
+            }
+        },
+
+        {
+            "id": 5,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Brandwonden: Welke graad brandwond herken je aan een roze/rode, zeer pijnlijke huid die bedekt is met vochtblaren?",
+
+            "image": "burn_blisters_view.png",
+
+            "answers": [
+                "Eerstegraads brandwond",
+                "Tweedegraads brandwond",
+                "Derdegraads brandwond",
+                "Vierdegraads brandwond"
+            ],
+
+            "correctAnswer": "Tweedegraads brandwond",
+
+            "feedback": {
+                "correct": "Klopt helemaal! Vochtblaren zijn het kenmerk van een tweedegraads brandwond, waarbij de lederhuid is aangetast.",
+                "wrong": "Niet correct. Blaren wijzen altijd op een tweedegraads brandwond. Eerstegraads is alleen rood en droog, derdegraads is wit of zwart."
+            }
+        },
+
+        {
+            "id": 6,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Bloedingen: Hoe herken je een levensbedreigende slagaderlijke bloeding ten opzichte van een aderlijke bloeding?",
+
+            "image": "arterial_vs_venous.png",
+
+            "answers": [
+                "Het bloed is donkerrood en stroomt heel traag en gelijkmatig uit de wond",
+                "Het bloed is helderrood en spuit of golft pulserend naar buiten op het ritme van het hart",
+                "Er komt helemaal geen bloed uit de wond, maar de huid wordt direct blauw",
+                "Het bloed schuimt heel hard en ruikt chemisch"
+            ],
+
+            "correctAnswer": "Het bloed is helderrood en spuit of golft pulserend naar buiten op het ritme van het hart",
+
+            "feedback": {
+                "correct": "Perfect! Slagaders staan onder hoge druk direct vanaf het hart en vervoeren zuurstofrijk (helderrood) bloed. Dit spuit er dus pulserend uit.",
+                "wrong": "Niet juist. Slagaderlijk bloed spuit pulserend synchroon met de hartslag naar buiten en is helderrood. Gelijkmatig stromend donker bloed is aderlijk."
+            }
+        },
+
+        {
+            "id": 7,
+
+            "type": "volgorde-oefening",
+
+            "question": "Letsels: Een slachtoffer heeft een zwaar verstuikte enkel. Zet de acties van de RICE-methode in de juiste volgorde.",
+
+            "options": [
+                "Ice (Koel het gewricht 15-20 minuten met een coldpack en een tussenliggende doek)",
+                "Rest (Zorg dat het slachtoffer stopt met bewegen en geef het gewricht rust)",
+                "Elevation (Leg het been omhoog, liefst boven harthoogte)",
+                "Compression (Breng een steunverband aan om de zwelling te beperken)"
+            ],
+
+            "correctOrder": [
+                "Rest (Zorg dat het slachtoffer stopt met bewegen and geef het gewricht rust)",
+                "Ice (Koel het gewricht 15-20 minuten met een coldpack en een tussenliggende doek)",
+                "Compression (Breng een steunverband aan om de zwelling te beperken)",
+                "Elevation (Leg het been omhoog, liefst boven harthoogte)"
+            ],
+
+            "feedback": {
+                "correct": "Uitstekend! R-I-C-E: Rest, Ice, Compression, Elevation is de absolute opeenvolging voor een effectieve behandeling van gewrichts- en spierletsels.",
+                "wrong": "Niet helemaal juist. Volg simpelweg de letters van het woord RICE: Rest (Rust), Ice (Koelen), Compression (Verband), Elevation (Hoog leggen)."
+            }
+        },
+
+        {
+            "id": 8,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Vergiftiging: Wat is de juiste behandeling bij een slachtoffer dat een schuimend product (zoals vloeibare zeep of shampoo) heeft ingeslikt?",
+
+            "image": "soap_swallowed.png",
+
+            "answers": [
+                "Laat het slachtoffer direct veel water drinken om de zeep weg te spoelen",
+                "Laat het slachtoffer absoluut NIETS drinken (tegen schuimvorming) en laat hem eventueel iets hards eten zoals een droge beschuit of boterham",
+                "Steek je vinger in de keel om het schuim eruit te braken",
+                "Geef een glas koolzuurhoudende frisdrank"
+            ],
+
+            "correctAnswer": "Laat het slachtoffer absoluut NIETS drinken (tegen schuimvorming) and laat hem eventueel iets hards eten zoals een droge beschuit of boterham",
+
+            "feedback": {
+                "correct": "Heel goed! Bij schuimende producten mag je geen vloeistoffen geven, omdat er dan een enorme schuimmassa ontstaat die in de longen kan overlopen en verstikking veroorzaakt. Iets hards eten breekt de bellen.",
+                "wrong": "Pas op! Bij zeep of shampoo mag je NOOIT water of vloeistof geven. Dit zorgt voor massale schuimvorming die de ademhaling blokkeert. Geef een droge beschuit of boterham."
+            }
+        },
+
+        {
+            "id": 9,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Verdrinking: Je bent alleen en treft een drenkeling aan op het droge die bewusteloos is en NIET ademt. Wat doe je na het bellen van 112?",
+
+            "image": "drowning_unconscious.png",
+
+            "answers": [
+                "Start direct met 30 borstcompressies",
+                "Open de luchtweg en geef direct 5 initiële beademingen",
+                "Houd het slachtoffer ondersteboven om het water uit de longen te schudden",
+                "Wacht tot de ambulance er is en doe zelf niets"
+            ],
+
+            "correctAnswer": "Open de luchtweg and geef direct 5 initiële beademingen",
+
+            "feedback": {
+                "correct": "Geweldig! Omdat verdrinking een zuurstoftekort veroorzaakt, wijk je af van de normale reanimatie en geef je ALTIJD eerst 5 startbeademingen.",
+                "wrong": "Onjuist. Bij een verdrinking moet je de reanimatie altijd starten met 5 beademingen (na het openen van de luchtweg) omdat het een verstikkingsprobleem is."
+            }
+        }
+    ]
+}
