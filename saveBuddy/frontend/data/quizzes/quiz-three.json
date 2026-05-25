@@ -1,0 +1,204 @@
+{
+    "id": "quiz3",
+
+    "title": "EHBO Herhalingsquiz",
+
+    "description": "Fris je kennis op over alle behandelde EHBO-thema's met deze interactieve eindquiz.",
+
+    "exercises": [
+        {
+            "id": 1,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Vier stappen: Wanneer je 112 belt om een noodsituatie te melden, wat is dan de allerbelangrijkste informatie die de operator als eerste moet weten?",
+
+            "image": "call_112_info.png",
+
+            "answers": [
+                "De exacte locatie van het incident en wát er precies is gebeurd",
+                "De naam en geboortedatum van het slachtoffer",
+                "Hoeveel getuigen er in totaal aanwezig zijn",
+                "Welke eerste hulp je al hebt toegepast"
+            ],
+
+            "correctAnswer": "De exacte locatie van het incident en wát er precies is gebeurd",
+
+            "feedback": {
+                "correct": "Uitstekend! De hulpdiensten moeten als allereerste weten wáár ze naartoe moeten rijden en welke disciplines (ambulance, brandweer, politie) nodig zijn. De rest volgt daarna.",
+                "wrong": "Niet helemaal juist. Als de verbinding wegvalt, moeten de hulpdiensten tenminste weten wáár het incident is. Locatie en aard van het incident zijn altijd prioritair."
+            }
+        },
+
+        {
+            "id": 2,
+
+            "type": "volgorde-oefening",
+
+            "question": "Reanimeren: Je bent aan het reanimeren en de AED is aangesloten. Het apparaat zegt: 'Schok aanbevolen. Raak het slachtoffer niet aan. Druk op de schokknop.' Zet je acties in de juiste volgorde.",
+
+            "options": [
+                "Druk op de knipperende schokknop",
+                "Start direct weer met 30 borstcompressies en 2 beademingen",
+                "Roep luid 'Iedereen los!' en controleer visueel of niemand het slachtoffer aanraakt"
+            ],
+
+            "correctOrder": [
+                "Roep luid 'Iedereen los!' en controleer visueel of niemand het slachtoffer aanraakt",
+                "Druk op de knipperende schokknop",
+                "Start direct weer met 30 borstcompressies en 2 beademingen"
+            ],
+
+            "feedback": {
+                "correct": "Perfect! Veiligheid staat voorop: zorg dat niemand stroom krijgt, dien de schok toe, en hervat direct de CPR om het hart weer op gang te helpen.",
+                "wrong": "Niet juist. Zorg er altijd éérst voor dat niemand het slachtoffer aanraakt voordat je op de schokknop drukt, en begin onmiddellijk daarna weer met reanimeren."
+            }
+        },
+
+        {
+            "id": 3,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Verslikking: Een volwassen slachtoffer heeft zich ernstig verslikt. Je hebt 5 rugslagen gegeven, maar de blokkade is niet verdwenen. Wat is je volgende stap?",
+
+            "image": "heimlich_maneuver.png",
+
+            "answers": [
+                "Geef opnieuw 5 rugslagen, maar dit keer veel harder",
+                "Pas tot 5 buikstoten (Heimlich-manoeuvre) toe tussen de navel en de onderkant van het borstbeen",
+                "Laat het slachtoffer plat op de grond liggen",
+                "Probeer het voorwerp met een pincet uit de keel te halen"
+            ],
+
+            "correctAnswer": "Pas tot 5 buikstoten (Heimlich-manoeuvre) toe tussen de navel en de onderkant van het borstbeen",
+
+            "feedback": {
+                "correct": "Goed gedaan! Als 5 rugslagen niet werken, wissel je dit direct af met maximaal 5 buikstoten (Heimlich) om een krachtige kunstmatige hoest op te wekken.",
+                "wrong": "Niet correct. Het protocol schrijft voor dat je na 5 onsuccesvolle rugslagen overgaat naar 5 buikstoten (Heimlich-manoeuvre)."
+            }
+        },
+
+        {
+            "id": 4,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Huidwonden: Je bent een diepe snijwonde aan het verzorgen. Wat is het belangrijkste kenmerk waaraan je een beginnende infectie na een paar dagen herkent?",
+
+            "image": "infected_wound_signs.png",
+
+            "answers": [
+                "De wondranden worden wit en de huid eromheen begint af te schilferen",
+                "De huid rond de wond wordt warm, rood, gezwollen en de pijn neemt toe",
+                "Er vormt zich een droge, harde, donkere korst op de wond",
+                "De wond begint heel erg te jeuken, maar ziet er proper uit"
+            ],
+
+            "correctAnswer": "De huid rond de wond wordt warm, rood, gezwollen en de pijn neemt toe",
+
+            "feedback": {
+                "correct": "Klopt helemaal! Roodheid, warmte, zwelling en toenemende pijn (eventueel met pus) zijn de klassieke alarmsignalen van een wondinfectie.",
+                "wrong": "Niet helemaal juist. Een droge korst of lichte jeuk hoort bij een normale genezing. Toenemende roodheid, warmte en zwelling wijzen op een infectie."
+            }
+        },
+
+        {
+            "id": 5,
+
+            "type": "volgorde-oefening",
+
+            "question": "Brandwonden: Een slachtoffer heeft hete vloeistof over zijn been gekregen en de broek plakt gedeeltelijk vast aan de brandwond. Zet de stappen in de juiste volgorde.",
+
+            "options": [
+                "Trek de kleding die *niet* vastplakt voorzichtig uit, maar laat vastgeplakte delen absoluut zitten",
+                "Dek de wond na het koelen losjes af met een steriel verband of propere huishoudfolie",
+                "Koel de brandwond (en de kleding die eraan vastzit) direct 10 tot 20 minuten onder lauw stromend water"
+            ],
+
+            "correctOrder": [
+                "Koel de brandwond (en de kleding die eraan vastzit) direct 10 tot 20 minuten onder lauw stromend water",
+                "Trek de kleding die *niet* vastplakt voorzichtig uit, maar laat vastgeplakte delen absoluut zitten",
+                "Dek de wond na het koelen losjes af met een steriel verband of propere huishoudfolie"
+            ],
+
+            "feedback": {
+                "correct": "Uitstekend! Eerst koelen heeft absolute prioriteit. Trek vastgeplakte kleding nooit los, want dan trek je de gezonde huid mee kapot. Koel er gewoon overheen.",
+                "wrong": "Niet helemaal juist. Begin altijd direct met koelen, ook over de kleding heen. Pas tijdens of na het koelen verwijder je de losse kledingdelen."
+            }
+        },
+
+        {
+            "id": 7,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Letsels: Een slachtoffer is hard op zijn achterhoofd gevallen. Hij is kort buiten bewustzijn geweest, is misselijk en kan zich het ongeval niet meer herinneren. Waarop wijzen deze symptomen?",
+
+            "image": "concussion_signs.png",
+
+            "answers": [
+                "Een banale hoofdpijn die met rust overgaat",
+                "Een mogelijke hersenschudding of zwaarder hoofdletsel",
+                "Een acute hyperventilatieaanval",
+                "Een tijdelijk tekort aan suiker (hypoglykemie)"
+            ],
+
+            "correctAnswer": "Een mogelijke hersenschudding of zwaarder hoofdletsel",
+
+            "feedback": {
+                "correct": "Juist! Geheugenverlies (amnesie), kort bewustzijnsverlies en misselijkheid na hoofdletsel zijn duidelijke signalen van een hersenschudding of hersenletsel. Raadpleeg altijd een arts.",
+                "wrong": "Niet correct. Bewustzijnsverlies en geheugenverlies na een klap op het hoofd zijn alarmsignalen die wijzen op een hersenschudding of ernstiger hersentrauma."
+            }
+        },
+
+        {
+            "id": 8,
+
+            "type": "meerkeuzevragen",
+
+            "question": "Vergiftiging: Een volwassen slachtoffer heeft een grote hoeveelheid onbekende pillen (medicatie) doorgeslikt. Hij ademt normaal, maar is zo suf dat hij niet meer reageert op aanspreken. Wat doe je?",
+
+            "image": "poison_unconscious_help.png",
+
+            "answers": [
+                "Dwing hem om veel water te drinken om de medicatie in de maag op te lossen",
+                "Leg hem in de stabiele zijligging, bel direct 112 en monitor constant de ademhaling",
+                "Laat hem plat op zijn rug liggen en wacht tot hij uitslaapt",
+                "Steek je vinger in zijn keel om hem te laten braken"
+            ],
+
+            "correctAnswer": "Leg hem in de stabiele zijligging, bel direct 112 en monitor constant de ademhaling",
+
+            "feedback": {
+                "correct": "Uitstekend! Omdat het slachtoffer suf/bewusteloos is, vallen zijn reflexen uit. In de stabiele zijligging blijft de ademweg vrij (bijvoorbeeld bij braken). Bel direct 112.",
+                "wrong": "Gevaarlijk! Een suf of bewusteloos slachtoffer mag je nooit laten drinken of braken wegens acuut stikkingsgevaar. Leg hem in de stabiele zijligging en bel direct 112."
+            }
+        },
+
+        {
+            "id": 9,
+
+            "type": "volgorde-oefening",
+
+            "question": "Verdrinking: Je hebt een drenkeling op het droge gebracht. Hij ademt zelfstandig, maar is bewusteloos en kletsnat. Het is een koude herfstdag. Zet je acties in de juiste volgorde.",
+
+            "options": [
+                "Verwijder de natte kleding en droog het slachtoffer snel af",
+                "Leg het slachtoffer in de stabiele zijligging om de ademweg vrij te houden",
+                "Wikkel het slachtoffer in warme deken(s) of een isolatiedeken om onderkoeling tegen te gaan"
+            ],
+
+            "correctOrder": [
+                "Leg het slachtoffer in de stabiele zijligging om de ademweg vrij te houden",
+                "Verwijder de natte kleding en droog het slachtoffer snel af",
+                "Wikkel het slachtoffer in warme deken(s) of een isolatiedeken om onderkoeling tegen te gaan"
+            ],
+
+            "feedback": {
+                "correct": "Perfect! De ademweg vrijhouden heeft altijd de hoogste prioriteit (stabiele zijligging). Direct daarna moet je de natte kleding weghalen en isoleren, omdat drenkelingen extreem snel onderkoeld raken.",
+                "wrong": "Niet helemaal juist. Zorg altijd eerst dat de ademweg veilig is (stabiele zijligging). Pak daarna direct de natte kleding en onderkoeling aan."
+            }
+        }
+    ]
+}
