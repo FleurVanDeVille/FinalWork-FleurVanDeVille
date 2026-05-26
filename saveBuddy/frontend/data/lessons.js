@@ -1,6 +1,7 @@
 export const lessen = [
   {
     id: 1,
+    slug: "vier-stappen",
     title: "Vier stappen in eerste hulp",
     duration: "10 min",
     progress: 60,
@@ -8,6 +9,7 @@ export const lessen = [
   },
   {
     id: 2,
+    slug: "reanimeren",
     title: "Reanimeren",
     duration: "15 min",
     progress: 40,
@@ -15,6 +17,7 @@ export const lessen = [
   },
   {
     id: 3,
+    slug: "verslikking",
     title: "Verslikking",
     duration: "10 min",
     progress: 0,
@@ -22,6 +25,7 @@ export const lessen = [
   },
   {
     id: 4,
+    slug: "huidwonde",
     title: "Huidwonde",
     duration: "10 min",
     progress: 60,
@@ -29,6 +33,7 @@ export const lessen = [
   },
   {
     id: 5,
+    slug: "brandwonde",
     title: "Brandwonde",
     duration: "15 min",
     progress: 40,
@@ -36,6 +41,7 @@ export const lessen = [
   },
   {
     id: 6,
+    slug: "bloeding",
     title: "Bloeding",
     duration: "10 min",
     progress: 0,
@@ -43,6 +49,7 @@ export const lessen = [
   },
   {
     id: 7,
+    slug: "letsels",
     title: "Letsel aan botten, spieren of gewrichten",
     duration: "10 min",
     progress: 60,
@@ -50,6 +57,7 @@ export const lessen = [
   },
   {
     id: 8,
+    slug: "vergiftiging",
     title: "Vergiftiging",
     duration: "15 min",
     progress: 40,
@@ -57,6 +65,7 @@ export const lessen = [
   },
   {
     id: 9,
+    slug: "verdrinking",
     title: "Verdrinking",
     duration: "10 min",
     progress: 0,
