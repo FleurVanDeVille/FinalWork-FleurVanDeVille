@@ -61,7 +61,7 @@ export default function Login() {
 
 			<TouchableOpacity
 				style={styles.button}
-				onPress={() => router.push("/register")}
+				onPress={() => router.push("/(tabs)/index.jsx")}
 			>
 				<Text style={styles.buttonText}>Login</Text>
 			</TouchableOpacity>
@@ -120,7 +120,6 @@ const styles = StyleSheet.create({
 		color: "#12384C",
 		fontSize: 16,
 		fontWeight: "700",
-		marginTop: 5,
 		marginBottom: 8,
 	},
 

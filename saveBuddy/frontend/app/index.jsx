@@ -39,8 +39,9 @@ const styles = StyleSheet.create({
 	},
 
 	logo: {
-		width: 280,
+		width: 360,
 		height: 280,
+		marginTop: 90,
 	},
 
 	button: {
