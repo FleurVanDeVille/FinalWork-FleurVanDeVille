@@ -73,8 +73,7 @@ export default function Register() {
 
 			<TouchableOpacity
 				style={styles.button}
-				onPress={() => router.push("/(tabs)/index.jsx")}
-			>
+				onPress={() => router.replace("/(tabs)")}>
 				<Text style={styles.buttonText}>Registreer</Text>
 			</TouchableOpacity>
 		</ImageBackground>
