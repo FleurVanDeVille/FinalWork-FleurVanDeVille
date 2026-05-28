@@ -1,33 +1,90 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { Tabs } from "expo-router";
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import HomeIcon from "../../assets/images/home.svg";
+import TrophyIcon from "../../assets/images/trophy.svg";
+import AnalyseIcon from "../../assets/images/stats.svg";
+import ProfileIcon from "../../assets/images/user.svg";
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+
+        tabBarStyle: {
+          position: "absolute",
+          bottom: 25,
+          marginHorizontal: 30,
+          borderRadius: 999,
+          height: 74,
+          backgroundColor: "#12384C",
+
+          paddingTop: 15,
+
+          borderTopWidth: 0,
+
+          shadowColor: "#000",
+          shadowOffset: {
+            width: 0,
+            height: 8,
+          },
+          shadowOpacity: 0.12,
+          shadowRadius: 10,
+          elevation: 10,
+        },
+
+        tabBarShowLabel: false,
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ focused }) => (
+            <HomeIcon
+              width={24}
+              height={24}
+              fill={focused ? "white" : "#D9D9D9"}
+            />
+          ),
         }}
       />
+
       <Tabs.Screen
-        name="explore"
+        name="badges"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ focused }) => (
+            <TrophyIcon
+              width={24}
+              height={24}
+              fill={focused ? "white" : "#D9D9D9"}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="analysis"
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <AnalyseIcon
+              width={24}
+              height={24}
+              fill={focused ? "white" : "#D9D9D9"}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <ProfileIcon
+              width={24}
+              height={24}
+              fill={focused ? "white" : "#D9D9D9"}
+            />
+          ),
         }}
       />
     </Tabs>
