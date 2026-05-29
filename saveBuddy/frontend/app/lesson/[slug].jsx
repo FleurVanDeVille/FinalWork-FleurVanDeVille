@@ -47,6 +47,8 @@ export default function LessonPage() {
 
 	const [orderAnswer, setOrderAnswer] = useState([]);
 
+	const [connectAnswers, setConnectAnswers] = useState({});
+
 	const [checked, setChecked] = useState(false);
 	const [isCorrect, setIsCorrect] = useState(false);
 
@@ -79,6 +81,20 @@ export default function LessonPage() {
 					JSON.stringify(orderAnswer) === JSON.stringify(exercise.correctOrder);
 			}
 
+			if (exercise.type === "drag-drop") {
+				correct = JSON.stringify(selectedAnswer) === JSON.stringify(exercise.correctAnswer);
+			}
+
+			if (exercise.type === "dropdown-oefening") {
+				correct = JSON.stringify(selectedAnswer) === JSON.stringify(exercise.correctAnswer);
+			}
+
+			if (exercise.type === "verbind-oefening") {
+				correct = JSON.stringify(connectAnswers) === JSON.stringify(exercise.correctConnections);
+			}
+
+
+
 			setIsCorrect(correct);
 			setChecked(true);
 			return;
@@ -99,6 +115,8 @@ export default function LessonPage() {
 
 			setSelectedAnswer(null);
 			setOrderAnswer([]);
+
+			setConnectAnswers({});
 
 			setChecked(false);
 			setIsCorrect(false);
@@ -144,6 +162,9 @@ export default function LessonPage() {
 						setSelectedAnswer={setSelectedAnswer}
 						orderAnswer={orderAnswer}
 						setOrderAnswer={setOrderAnswer}
+						connectOptions={exercise.connectOptions}
+						connectAnswers={connectAnswers}
+						setConnectAnswers={setConnectAnswers}
 					/>
 
 					{checked && (
