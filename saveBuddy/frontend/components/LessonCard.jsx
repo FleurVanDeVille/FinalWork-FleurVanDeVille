@@ -1,103 +1,62 @@
 import { router } from "expo-router";
-import { Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
 export default function LessonCard({ lesson }) {
 	const LessonImage = lesson.Image;
 
+	const cardStyle = [
+		styles.card,
+		lesson.id === 1 ? styles.darkCard : styles.lightCard,
+		lesson.locked && styles.lockedCard,
+	];
+
+	const textStyle = lesson.id === 1 ? styles.whiteText : styles.darkText;
+
 	return (
 		<TouchableOpacity
 			activeOpacity={0.8}
+			style={styles.wrapper}
 			onPress={() => {
 				if (!lesson.locked) {
 					router.push(`/lesson/${lesson.slug}`);
 				}
 			}}
 		>
-			<View
-				style={{
-					height: 340,
-					backgroundColor: "#12384C",
-					borderRadius: 36,
-					padding: 28,
-					marginBottom: 20,
-					opacity: lesson.locked ? 0.5 : 1,
-					justifyContent: "space-between",
-					shadowColor: "#000",
-					shadowOffset: { width: 0, height: 8 },
-					shadowOpacity: 0.15,
-					shadowRadius: 12,
-					elevation: 6,
-				}}
-			>
-				{/* TOP */}
+			<View style={cardStyle}>
 				<View>
-					{LessonImage && (
-						<View
-							style={{
-								width: 62,
-								height: 62,
-								borderRadius: 999,
-								backgroundColor: "white",
-								justifyContent: "center",
-								alignItems: "center",
-								marginBottom: 40,
-							}}
-						>
-							<LessonImage width={38} height={38} fill="#12384C" />
-						</View>
-					)}
-
-					<Text
-						style={{
-							color: "white",
-							fontSize: 22,
-							fontWeight: "300",
-							marginBottom: 20,
-						}}
-					>
-						{lesson.duration}
-					</Text>
-
-					<Text
-						style={{
-							color: "white",
-							fontSize: 32,
-							fontWeight: "bold",
-							lineHeight: 40,
-						}}
-					>
-						{lesson.title}
-					</Text>
+					<View style={styles.iconCircle}>
+						{LessonImage && (
+							<LessonImage width={22} height={22} fill="#12384C" />
+						)}
+					</View>
 				</View>
 
-				{/* BOTTOM */}
+				{lesson.locked && 
 				<View>
-					<Text
-						style={{
-							color: "white",
-							alignSelf: "flex-end",
-							fontSize: 24,
-							marginBottom: 10,
-						}}
-					>
+					<Image source={require("../assets/images/lock.png")} style={styles.lockImage} />
+					<Text style={styles.lock}>Gesloten</Text>
+				</View>}
+
+				<View>
+					<Text style={[styles.duration, textStyle]}>{lesson.duration}</Text>
+
+					<Text style={[styles.title, textStyle]} numberOfLines={2}>
+						{lesson.locked ? "Gesloten les" : lesson.title}
+					</Text>
+
+					<Text style={[styles.progressText, textStyle]}>
 						{lesson.progress}%
 					</Text>
 
-					<View
-						style={{
-							height: 14,
-							backgroundColor: "#9EC9F3",
-							borderRadius: 999,
-							overflow: "hidden",
-						}}
-					>
+					<View style={styles.progressBackground}>
 						<View
-							style={{
-								width: `${lesson.progress}%`,
-								height: "100%",
-								backgroundColor: "white",
-								borderRadius: 999,
-							}}
+							style={[
+								styles.progressFill,
+								lesson.id === 1 ? styles.darkProgress : styles.lightProgress,
+								{
+									width: `${lesson.progress}%`,
+								},
+							]}
 						/>
 					</View>
 				</View>
@@ -105,3 +64,104 @@ export default function LessonCard({ lesson }) {
 		</TouchableOpacity>
 	);
 }
+
+const styles = StyleSheet.create({
+	wrapper: {
+		width: "48%",
+		marginBottom: 22,
+	},
+
+	card: {
+		height: 150,
+		borderRadius: 14,
+		padding: 10,
+		justifyContent: "space-between",
+		shadowColor: "#000",
+		shadowOffset: { width: 0, height: 6 },
+		shadowOpacity: 0.12,
+		shadowRadius: 8,
+		elevation: 5,
+	},
+
+	darkCard: {
+		backgroundColor: "#12384C",
+	},
+
+	lightCard: {
+		backgroundColor: "#A7CCF2",
+	},
+
+	lockedCard: {
+		backgroundColor: "#1F2527",
+		opacity: 0.9,
+	},
+
+	iconCircle: {
+		width: 34,
+		height: 34,
+		borderRadius: 999,
+		backgroundColor: "#FFFFFF",
+		justifyContent: "center",
+		alignItems: "center",
+	},
+
+	duration: {
+		fontSize: 12,
+		marginBottom: 4,
+	},
+
+	title: {
+		fontSize: 17,
+		fontWeight: "900",
+		lineHeight: 21,
+	},
+
+	progressText: {
+		fontSize: 11,
+		textAlign: "right",
+		marginTop: 4,
+	},
+
+	progressBackground: {
+		height: 4,
+		backgroundColor: "#EAF2F8",
+		borderRadius: 999,
+		overflow: "hidden",
+	},
+
+	progressFill: {
+		height: "100%",
+		backgroundColor: "#12384C",
+	},
+
+	darkProgress: {
+		backgroundColor: "#9EC9F3",
+	},
+
+	lightProgress: {
+		backgroundColor: "#12384C",
+	},
+
+	whiteText: {
+		color: "#FFFFFF",
+	},
+
+	darkText: {
+		color: "#12384C",
+	},
+
+	lock: {
+		position: "absolute",
+		alignSelf: "center",
+		fontSize: 18,
+		top: 32,
+		color: "#FFFFFF",
+	},
+	
+	lockImage: {
+		position: "absolute",
+		alignSelf: "center",
+		width: 26,
+		height: 26,
+	},
+});
