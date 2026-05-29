@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
 	quizCard: {
 		width: 145,
 		height: 180,
-		backgroundColor: "#F93832",
+		backgroundColor: "#F8CD00",
 		borderRadius: 14,
 		marginRight: 14,
 		padding: 14,
