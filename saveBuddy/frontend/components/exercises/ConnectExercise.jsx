@@ -1,68 +1,107 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function ConnectExercise({
-    exercise,
-    connectAnswers,
-    connectOptions,
+	exercise,
+	connectAnswers,
+	setConnectAnswers,
 }) {
-    return (
-        <View>
-            <Text style={styles.question}>{exercise.question}</Text>
+	const sources = exercise.pairs.map((pair) => pair.source);
+	const targets = exercise.pairs.map((pair) => pair.target);
 
-            {exercise.answers.map((answer, index) => (
-                <TouchableOpacity
-                    key={answer}
-                    onPress={() => setConnectAnswers({...connectAnswers, [answer]: !connectAnswers[answer]})}
-                    style={[
-                        styles.answer,
-                        connectAnswers[answer] && styles.selectedAnswer,
-                    ]}
-                >
-                    <Text
-                        style={[
-                            styles.answerText,
-                            connectAnswers[answer] && styles.selectedAnswerText,
-                        ]}
-                    >
-                        {String.fromCharCode(65 + index)}. {answer}
-                    </Text>
-                </TouchableOpacity>
-            ))}
-        </View>
-    );
+	function handleConnect(source, target) {
+		setConnectAnswers({
+			...connectAnswers,
+			[source]: target,
+		});
+	}
+
+	return (
+		<View>
+			<Text style={styles.question}>{exercise.question}</Text>
+			{sources.map((source) => (
+				<View key={source} style={styles.row}>
+					<View style={styles.sourceCard}>
+						<Text style={styles.sourceText}>{source}</Text>
+					</View>
+
+					<View style={styles.options}>
+						{targets.map((target) => (
+							<TouchableOpacity
+								key={target}
+								onPress={() => handleConnect(source, target)}
+								style={[
+									styles.targetCard,
+									connectAnswers[source] === target && styles.selectedTarget,
+								]}
+							>
+								<Text
+									style={[
+										styles.targetText,
+										connectAnswers[source] === target &&
+											styles.selectedTargetText,
+									]}
+								>
+									{target}
+								</Text>
+							</TouchableOpacity>
+						))}
+					</View>
+				</View>
+			))}
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    question: {
-        color: "#12384C",
-        fontSize: 20,
-        fontWeight: "900",
-        lineHeight: 26,
-        marginBottom: 24,
-    },
+	question: {
+		color: "#12384C",
+		fontSize: 20,
+		fontWeight: "900",
+		lineHeight: 26,
+		marginBottom: 24,
+	},
 
-    answer: {
-        backgroundColor: "#FFFFFF",
-        borderRadius: 8,
-        paddingVertical: 14,
-        paddingHorizontal: 16,
-        marginBottom: 12,
-        borderWidth: 1,
-        borderColor: "#D5D5D5",
-    },
+	row: {
+		marginBottom: 20,
+	},
 
-    selectedAnswer: {
-        backgroundColor: "#12384C",
-        borderColor: "#12384C",
-    },
+	sourceCard: {
+		backgroundColor: "#12384C",
+		borderRadius: 10,
+		padding: 14,
+		marginBottom: 8,
+	},
 
-    answerText: {
-        color: "#12384C",
-        fontSize: 16,
-        fontWeight: "700",
-    },
+	sourceText: {
+		color: "#FFFFFF",
+		fontSize: 16,
+		fontWeight: "800",
+	},
 
-  selectedAnswerText: {
-    color: "#FFFFFF",
-  }
+	options: {
+		gap: 8,
+	},
+
+	targetCard: {
+		backgroundColor: "#FFFFFF",
+		borderRadius: 10,
+		padding: 12,
+		borderWidth: 1,
+		borderColor: "#D5D5D5",
+	},
+
+	selectedTarget: {
+		backgroundColor: "#8FC3A3",
+		borderColor: "#8FC3A3",
+	},
+
+	targetText: {
+		color: "#12384C",
+		fontSize: 14,
+		fontWeight: "700",
+	},
+
+	selectedTargetText: {
+		color: "#FFFFFF",
+	},
 });

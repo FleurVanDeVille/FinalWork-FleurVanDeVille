@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
 	Image,
 	ImageBackground,
+	ScrollView,
 	StyleSheet,
 	Text,
 	TouchableOpacity,
@@ -82,18 +83,27 @@ export default function LessonPage() {
 			}
 
 			if (exercise.type === "drag-drop") {
-				correct = JSON.stringify(selectedAnswer) === JSON.stringify(exercise.correctAnswer);
+				correct =
+					JSON.stringify(selectedAnswer) ===
+					JSON.stringify(exercise.correctAnswer);
 			}
 
 			if (exercise.type === "dropdown-oefening") {
-				correct = JSON.stringify(selectedAnswer) === JSON.stringify(exercise.correctAnswer);
+				correct =
+					JSON.stringify(selectedAnswer) ===
+					JSON.stringify(exercise.correctAnswer);
 			}
 
 			if (exercise.type === "verbind-oefening") {
-				correct = JSON.stringify(connectAnswers) === JSON.stringify(exercise.correctConnections);
+				const correctConnections = {};
+
+				exercise.pairs.forEach((pair) => {
+					correctConnections[pair.source] = pair.target;
+				});
+
+				correct =
+					JSON.stringify(connectAnswers) === JSON.stringify(correctConnections);
 			}
-
-
 
 			setIsCorrect(correct);
 			setChecked(true);
@@ -156,16 +166,32 @@ export default function LessonPage() {
 						/>
 					)}
 
-					<ExerciseRenderer
-						exercise={exercise}
-						selectedAnswer={selectedAnswer}
-						setSelectedAnswer={setSelectedAnswer}
-						orderAnswer={orderAnswer}
-						setOrderAnswer={setOrderAnswer}
-						connectOptions={exercise.connectOptions}
-						connectAnswers={connectAnswers}
-						setConnectAnswers={setConnectAnswers}
-					/>
+					{exercise.type === "verbind-oefening" ? (
+						<ScrollView
+							style={styles.connectScroll}
+							showsVerticalScrollIndicator={false}
+						>
+							<ExerciseRenderer
+								exercise={exercise}
+								selectedAnswer={selectedAnswer}
+								setSelectedAnswer={setSelectedAnswer}
+								orderAnswer={orderAnswer}
+								setOrderAnswer={setOrderAnswer}
+								connectAnswers={connectAnswers}
+								setConnectAnswers={setConnectAnswers}
+							/>
+						</ScrollView>
+					) : (
+						<ExerciseRenderer
+							exercise={exercise}
+							selectedAnswer={selectedAnswer}
+							setSelectedAnswer={setSelectedAnswer}
+							orderAnswer={orderAnswer}
+							setOrderAnswer={setOrderAnswer}
+							connectAnswers={connectAnswers}
+							setConnectAnswers={setConnectAnswers}
+						/>
+					)}
 
 					{checked && (
 						<View
@@ -289,5 +315,9 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
+	},
+
+	connectScroll: {
+		maxHeight: 620,
 	},
 });

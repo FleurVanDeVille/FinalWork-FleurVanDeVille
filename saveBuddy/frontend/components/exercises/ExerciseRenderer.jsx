@@ -13,8 +13,8 @@ export default function ExerciseRenderer({
 	setSelectedAnswer,
 	orderAnswer,
 	setOrderAnswer,
-  connectOptions,
-  connectAnswers,
+	connectAnswers,
+	setConnectAnswers,
 }) {
 	switch (exercise.type) {
 		case "meerkeuzevragen":
@@ -48,8 +48,8 @@ export default function ExerciseRenderer({
 			return (
 				<ConnectExercise
 					exercise={exercise}
-					connectOptions={exercise.connectOptions}
-					connectAnswers={exercise.connectAnswers}
+					connectAnswers={connectAnswers}
+					setConnectAnswers={setConnectAnswers}
 				/>
 			);
 

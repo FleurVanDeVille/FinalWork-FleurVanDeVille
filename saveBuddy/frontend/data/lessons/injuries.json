@@ -208,7 +208,7 @@
                 },
 
                 {
-                    "source": "Vermoeden van rug- of nekletsel",
+                    "source": "Rug- of nekletsel",
                     "target": "Houd het slachtoffer volledig stil liggen en stabiliseer het hoofd handmatig in een neutrale positie."
                 },
 
@@ -219,8 +219,8 @@
             ],
 
             "feedback": {
-                "correct": "Geweldig gedaan! Bij een open breuk druk je nooit op het bot. Bij nekletsel beweeg je het slachtoffer absoluut niet om verlamming te voorkomen.",
-                "wrong": "Niet helemaal juist. Let op: bij rug- en nekletsel mag je het slachtoffer nooit zomaar verplaatsen!"
+                "correct": "Geweldig gedaan!",
+                "wrong": "Niet helemaal juist."
             }
         }
     ]
