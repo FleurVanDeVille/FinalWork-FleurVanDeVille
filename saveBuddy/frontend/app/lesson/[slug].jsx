@@ -50,6 +50,8 @@ export default function LessonPage() {
 
 	const [connectAnswers, setConnectAnswers] = useState({});
 
+	const [textAnswer, setTextAnswer] = useState("");
+
 	const [checked, setChecked] = useState(false);
 	const [isCorrect, setIsCorrect] = useState(false);
 
@@ -105,6 +107,14 @@ export default function LessonPage() {
 					JSON.stringify(connectAnswers) === JSON.stringify(correctConnections);
 			}
 
+			if (exercise.type === "tekst-input") {
+				correct = exercise.correctAnswers.some(
+					(answer) =>
+						textAnswer.trim().toLowerCase() ===
+						String(answer).trim().toLowerCase(),
+				);
+			}
+
 			setIsCorrect(correct);
 			setChecked(true);
 			return;
@@ -127,6 +137,8 @@ export default function LessonPage() {
 			setOrderAnswer([]);
 
 			setConnectAnswers({});
+
+			setTextAnswer("");
 
 			setChecked(false);
 			setIsCorrect(false);
@@ -179,6 +191,8 @@ export default function LessonPage() {
 								setOrderAnswer={setOrderAnswer}
 								connectAnswers={connectAnswers}
 								setConnectAnswers={setConnectAnswers}
+								textAnswer={textAnswer}
+								setTextAnswer={setTextAnswer}
 							/>
 						</ScrollView>
 					) : (
@@ -190,6 +204,8 @@ export default function LessonPage() {
 							setOrderAnswer={setOrderAnswer}
 							connectAnswers={connectAnswers}
 							setConnectAnswers={setConnectAnswers}
+							textAnswer={textAnswer}
+							setTextAnswer={setTextAnswer}
 						/>
 					)}
 

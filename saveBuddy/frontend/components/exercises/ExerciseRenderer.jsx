@@ -15,6 +15,8 @@ export default function ExerciseRenderer({
 	setOrderAnswer,
 	connectAnswers,
 	setConnectAnswers,
+  textAnswer,
+  setTextAnswer,
 }) {
 	switch (exercise.type) {
 		case "meerkeuzevragen":
@@ -32,6 +34,15 @@ export default function ExerciseRenderer({
 					exercise={exercise}
 					orderAnswer={orderAnswer}
 					setOrderAnswer={setOrderAnswer}
+				/>
+			);
+
+		case "tekst-input":
+			return (
+				<TextInputExercise
+					exercise={exercise}
+					textAnswer={textAnswer}
+					setTextAnswer={setTextAnswer}
 				/>
 			);
 
