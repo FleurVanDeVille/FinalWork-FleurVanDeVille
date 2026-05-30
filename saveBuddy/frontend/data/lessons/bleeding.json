@@ -118,36 +118,6 @@
         {
             "id": 5,
 
-            "type": "drag-drop",
-
-            "question": "Koppel de juiste EHBO-handeling aan het type bloeding.",
-
-            "pairs": [
-                {
-                    "source": "Gewone neusbloeding",
-                    "target": "Hoofd licht voorover buigen ('schrijfhouding') en de neusvleugels 10 minuten dichtknijpen."
-                },
-
-                {
-                    "source": "Bloeding uit het oor (na harde klap op het hoofd)",
-                    "target": "Het oor losjes afdekken met een kompres en het bloed vrij laten weglopen."
-                },
-
-                {
-                    "source": "Ernstige open armbloeding",
-                    "target": "Direct druk uitoefenen op de wond en zo snel mogelijk een drukverband aanleggen."
-                }
-            ],
-
-            "feedback": {
-                "correct": "Uitstekend! Bij een neusbloeding buig je voorover zodat het bloed niet in de maag loopt.",
-                "wrong": "Niet helemaal juist."
-            }
-        },
-
-        {
-            "id": 6,
-
             "type": "dropdown-oefening",
 
             "question": "Wat doe je in de volgende specifieke situaties? Kies de juiste actie.",
@@ -180,7 +150,7 @@
         },
 
         {
-            "id": 7,
+            "id": 6,
 
             "type": "meerkeuzevragen",
 

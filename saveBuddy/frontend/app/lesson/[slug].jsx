@@ -52,6 +52,8 @@ export default function LessonPage() {
 
 	const [textAnswer, setTextAnswer] = useState("");
 
+	const [dropdownAnswers, setDropdownAnswers] = useState({});
+
 	const [checked, setChecked] = useState(false);
 	const [isCorrect, setIsCorrect] = useState(false);
 
@@ -84,16 +86,19 @@ export default function LessonPage() {
 					JSON.stringify(orderAnswer) === JSON.stringify(exercise.correctOrder);
 			}
 
-			if (exercise.type === "drag-drop") {
-				correct =
-					JSON.stringify(selectedAnswer) ===
-					JSON.stringify(exercise.correctAnswer);
-			}
-
 			if (exercise.type === "dropdown-oefening") {
+				if (Object.keys(dropdownAnswers).length !== exercise.scenarios.length)
+					return;
+
+				const correctDropdownAnswers = {};
+
+				exercise.scenarios.forEach((scenario) => {
+					correctDropdownAnswers[scenario.id] = scenario.correctAnswer;
+				});
+
 				correct =
-					JSON.stringify(selectedAnswer) ===
-					JSON.stringify(exercise.correctAnswer);
+					JSON.stringify(dropdownAnswers) ===
+					JSON.stringify(correctDropdownAnswers);
 			}
 
 			if (exercise.type === "verbind-oefening") {
@@ -140,6 +145,8 @@ export default function LessonPage() {
 
 			setTextAnswer("");
 
+			setDropdownAnswers({});
+
 			setChecked(false);
 			setIsCorrect(false);
 		}
@@ -178,7 +185,7 @@ export default function LessonPage() {
 						/>
 					)}
 
-					{exercise.type === "verbind-oefening" ? (
+					{exercise.type === "verbind-oefening" || exercise.type === "dropdown-oefening" ? (
 						<ScrollView
 							style={styles.connectScroll}
 							showsVerticalScrollIndicator={false}
@@ -193,6 +200,8 @@ export default function LessonPage() {
 								setConnectAnswers={setConnectAnswers}
 								textAnswer={textAnswer}
 								setTextAnswer={setTextAnswer}
+								dropdownAnswers={dropdownAnswers}
+								setDropdownAnswers={setDropdownAnswers}
 							/>
 						</ScrollView>
 					) : (
@@ -206,6 +215,8 @@ export default function LessonPage() {
 							setConnectAnswers={setConnectAnswers}
 							textAnswer={textAnswer}
 							setTextAnswer={setTextAnswer}
+							dropdownAnswers={dropdownAnswers}
+							setDropdownAnswers={setDropdownAnswers}
 						/>
 					)}
 
@@ -218,8 +229,12 @@ export default function LessonPage() {
 						>
 							<Text style={styles.feedbackText}>
 								{isCorrect
-									? exercise.feedback?.correct || "Juist!"
-									: exercise.feedback?.wrong || "Niet juist."}
+									? exercise.globalFeedback?.perfect ||
+										exercise.feedback?.correct ||
+										"Juist!"
+									: exercise.globalFeedback?.incomplete ||
+										exercise.feedback?.wrong ||
+										"Niet juist."}
 							</Text>
 						</View>
 					)}

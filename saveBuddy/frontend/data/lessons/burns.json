@@ -234,7 +234,7 @@
 
 			"globalFeedback": {
 				"perfect": "Super! Je kunt de drie graden van brandwonden nu perfect herkennen op basis van de visuele kenmerken.",
-				"incomplete": "Nog niet alle graden zijn correct toegewezen. Denk aan de vuistregel: rood = 1, blaren = 2, wit/zwart/gevoelloos = 3."
+				"incomplete": "Nog niet helemaal juist. Probeer opnieuw."
 			}
 		}
 	]

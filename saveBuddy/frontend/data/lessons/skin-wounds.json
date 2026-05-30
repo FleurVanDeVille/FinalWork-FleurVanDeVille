@@ -151,57 +151,6 @@
 		{
 			"id": 5,
 
-			"type": "drag-drop",
-
-			"question": "Beoordeel de wond na 2 dagen. Selecteer per situatie de juiste status in het uitklapmenu.",
-
-			"image": "wondcontrole_overzicht.png",
-
-			"dropdownOptions": ["Alarm (Infectie)", "Veilig (Normale wondheling)"],
-
-			"scenarios": [
-				{
-					"id": 1,
-
-					"situation": "De huid rondom de snijwond is na 48 uur erg rood, gezwollen en voelt gloeiend heet aan.",
-
-					"correctAnswer": "Alarm (Infectie)"
-				},
-
-				{
-					"id": 2,
-
-					"situation": "Er heeft zich een droge, donkere korst gevormd op de schaafwonde. Het jeukt een beetje.",
-
-					"correctAnswer": "Veilig (Normale wondheling)"
-				},
-
-				{
-					"id": 3,
-
-					"situation": "Er komt dik, geelachtig en slecht ruikend vocht (pus) uit de wond.",
-
-					"correctAnswer": "Alarm (Infectie)"
-				},
-
-				{
-					"id": 4,
-
-					"situation": "Je ziet dunne, rode strepen vanuit de wond over de huid naar boven lopen richting de armholte of lies.",
-
-					"correctAnswer": "Alarm (Infectie)"
-				}
-			],
-
-			"feedback": {
-				"correct": "Correct! Je beantwoordt de situatie goed.",
-				"wrong": "Onjuist. Denk nog eens na."
-			}
-		},
-
-		{
-			"id": 7,
-
 			"type": "meerkeuzevragen",
 
 			"question": "Wat doe je als het eerste drukverband dat je hebt aangelegd volledig doorbloedt bij een hevige snijwonde?",

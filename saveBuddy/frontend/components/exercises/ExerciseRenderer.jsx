@@ -1,5 +1,4 @@
 import ConnectExercise from "./ConnectExercise.jsx";
-import DragDropExercise from "./DragDropExercise.jsx";
 import DropdownExercise from "./DropdownExercise.jsx";
 import InteractiveExercise from "./InteractiveExercise.jsx";
 import MultipleChoiceExercise from "./MultipleChoiceExercise.jsx";
@@ -15,8 +14,10 @@ export default function ExerciseRenderer({
 	setOrderAnswer,
 	connectAnswers,
 	setConnectAnswers,
-  textAnswer,
-  setTextAnswer,
+	textAnswer,
+	setTextAnswer,
+  dropdownAnswers,
+  setDropdownAnswers,
 }) {
 	switch (exercise.type) {
 		case "meerkeuzevragen":
@@ -46,15 +47,17 @@ export default function ExerciseRenderer({
 				/>
 			);
 
-		case "drag-drop":
-			return <DragDropExercise exercise={exercise} />;
-
 		case "sleepoefeningen":
 			return <DragDropExercise exercise={exercise} />;
 
 		case "dropdown-oefening":
-			return <DropdownExercise exercise={exercise} />;
-
+			return (
+				<DropdownExercise
+					exercise={exercise}
+					dropdownAnswers={dropdownAnswers}
+					setDropdownAnswers={setDropdownAnswers}
+				/>
+			);
 		case "verbind-oefening":
 			return (
 				<ConnectExercise
