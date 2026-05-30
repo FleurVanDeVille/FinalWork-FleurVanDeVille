@@ -54,6 +54,8 @@ export default function LessonPage() {
 
 	const [dropdownAnswers, setDropdownAnswers] = useState({});
 
+	const [swipeCorrect, setSwipeCorrect] = useState(null);
+
 	const [checked, setChecked] = useState(false);
 	const [isCorrect, setIsCorrect] = useState(false);
 
@@ -68,6 +70,27 @@ export default function LessonPage() {
 	const exercise = lesson.exercises[currentExerciseIndex];
 
 	const progress = ((currentExerciseIndex + 1) / lesson.exercises.length) * 100;
+
+	function handleNextExercise() {
+		const isLastExercise = currentExerciseIndex === lesson.exercises.length - 1;
+
+		if (isLastExercise) {
+			router.replace("/(tabs)");
+			return;
+		}
+
+		setCurrentExerciseIndex(currentExerciseIndex + 1);
+
+		setSelectedAnswer(null);
+		setOrderAnswer([]);
+		setConnectAnswers({});
+		setTextAnswer("");
+		setDropdownAnswers({});
+		setSwipeCorrect(null);
+
+		setChecked(false);
+		setIsCorrect(false);
+	}
 
 	function handleCheck() {
 		if (!checked) {
@@ -120,6 +143,12 @@ export default function LessonPage() {
 				);
 			}
 
+			if (exercise.type === "swipe-oefening") {
+				if (swipeCorrect === null) return;
+
+				correct = swipeCorrect;
+			}
+
 			setIsCorrect(correct);
 			setChecked(true);
 			return;
@@ -146,6 +175,8 @@ export default function LessonPage() {
 			setTextAnswer("");
 
 			setDropdownAnswers({});
+
+			setSwipeCorrect(null);
 
 			setChecked(false);
 			setIsCorrect(false);
@@ -185,7 +216,8 @@ export default function LessonPage() {
 						/>
 					)}
 
-					{exercise.type === "verbind-oefening" || exercise.type === "dropdown-oefening" ? (
+					{exercise.type === "verbind-oefening" ||
+					exercise.type === "dropdown-oefening" ? (
 						<ScrollView
 							style={styles.connectScroll}
 							showsVerticalScrollIndicator={false}
@@ -202,6 +234,8 @@ export default function LessonPage() {
 								setTextAnswer={setTextAnswer}
 								dropdownAnswers={dropdownAnswers}
 								setDropdownAnswers={setDropdownAnswers}
+								swipeCorrect={swipeCorrect}
+								setSwipeCorrect={setSwipeCorrect}
 							/>
 						</ScrollView>
 					) : (
@@ -217,6 +251,8 @@ export default function LessonPage() {
 							setTextAnswer={setTextAnswer}
 							dropdownAnswers={dropdownAnswers}
 							setDropdownAnswers={setDropdownAnswers}
+							swipeCorrect={swipeCorrect}
+							setSwipeCorrect={setSwipeCorrect}
 						/>
 					)}
 

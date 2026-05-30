@@ -16,8 +16,10 @@ export default function ExerciseRenderer({
 	setConnectAnswers,
 	textAnswer,
 	setTextAnswer,
-  dropdownAnswers,
-  setDropdownAnswers,
+	dropdownAnswers,
+	setDropdownAnswers,
+  swipeCorrect,
+  setSwipeCorrect,
 }) {
 	switch (exercise.type) {
 		case "meerkeuzevragen":
@@ -71,7 +73,9 @@ export default function ExerciseRenderer({
 			return <InteractiveExercise exercise={exercise} />;
 
 		case "swipe-oefening":
-			return <SwipeExercise exercise={exercise} />;
+			return (
+				<SwipeExercise exercise={exercise} setSwipeCorrect={setSwipeCorrect} />
+			);
 
 		case "tekstinvoer-oefening":
 			return <TextInputExercise exercise={exercise} />;
