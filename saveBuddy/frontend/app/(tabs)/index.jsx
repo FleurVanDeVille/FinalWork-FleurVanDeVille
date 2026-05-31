@@ -5,11 +5,13 @@ import {
 	ScrollView,
 	StyleSheet,
 	Text,
+	TouchableOpacity,
 	View,
-  TouchableOpacity,
 } from "react-native";
 import LessonCard from "../../components/LessonCard";
+import QuizCard from "../../components/QuizCard";
 import { lessen } from "../../data/lessons";
+import { quizzes } from "../../data/quizzes";
 
 export default function Home() {
 	const [showAll, setShowAll] = useState(false);
@@ -77,17 +79,9 @@ export default function Home() {
 					showsHorizontalScrollIndicator={false}
 					style={styles.quizScroll}
 				>
-					<View style={styles.quizCard}>
-						<Text style={styles.quizTitle}>Quiz 1</Text>
-					</View>
-
-					<View style={styles.quizCard}>
-						<Text style={styles.quizTitle}>Quiz 2</Text>
-					</View>
-
-					<View style={styles.quizCard}>
-						<Text style={styles.quizTitle}>Quiz 3</Text>
-					</View>
+					{quizzes.map((quiz) => (
+						<QuizCard key={quiz.id} quiz={quiz} />
+					))}
 				</ScrollView>
 			</ScrollView>
 		</ImageBackground>
@@ -142,7 +136,7 @@ const styles = StyleSheet.create({
 
 	lessonWrapper: {
 		width: "48%",
-    marginBottom: -30,
+		marginBottom: -30,
 	},
 
 	rightColumn: {
@@ -165,7 +159,7 @@ const styles = StyleSheet.create({
 		color: "#12384C",
 		fontSize: 34,
 		fontWeight: "900",
-		marginBottom: 18,
+		marginBottom: 5,
 	},
 
 	link: {
@@ -189,21 +183,5 @@ const styles = StyleSheet.create({
 	quizScroll: {
 		marginBottom: 125,
 		marginRight: -22,
-	},
-
-	quizCard: {
-		width: 145,
-		height: 180,
-		backgroundColor: "#F8CD00",
-		borderRadius: 14,
-		marginRight: 14,
-		padding: 14,
-	},
-
-	quizTitle: {
-		color: "white",
-		fontSize: 18,
-		fontWeight: "900",
-		marginTop: 50,
 	},
 });
