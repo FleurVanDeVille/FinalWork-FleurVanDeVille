@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
 	Image,
 	ImageBackground,
@@ -9,7 +10,6 @@ import {
 } from "react-native";
 import LessonCard from "../../components/LessonCard";
 import { lessen } from "../../data/lessons";
-import { useState } from "react";
 
 export default function Home() {
 	const [showAll, setShowAll] = useState(false);
@@ -22,17 +22,27 @@ export default function Home() {
 			style={styles.container}
 			resizeMode="cover"
 		>
-			<ScrollView showsVerticalScrollIndicator={false}>
-				<View style={styles.header}>
-					<View>
-						<Text style={styles.welcome}>Welkom terug,</Text>
-						<Text style={styles.name}>Anne-Marie!</Text>
-					</View>
-
+			<ScrollView
+				showsVerticalScrollIndicator={false}
+				contentContainerStyle={styles.scrollContent}
+			>
+				<View style={styles.headerWrapper}>
 					<Image
-						source={require("../../assets/images/mascotte-head.png")}
-						style={styles.mascot}
+						source={require("../../assets/images/bg-header.png")}
+						style={styles.headerBg}
 					/>
+
+					<View style={styles.header}>
+						<View>
+							<Text style={styles.welcome}>Welkom terug,</Text>
+							<Text style={styles.name}>Anne-Marie!</Text>
+						</View>
+
+						<Image
+							source={require("../../assets/images/mascotte.png")}
+							style={styles.mascot}
+						/>
+					</View>
 				</View>
 
 				<View style={styles.sectionHeader}>
@@ -54,7 +64,11 @@ export default function Home() {
 				<Text style={styles.title}>Quizzen</Text>
 				<Text style={styles.subtitle}>Herhaal lessen die je al maakte.</Text>
 
-				<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+				<ScrollView
+					horizontal
+					showsHorizontalScrollIndicator={false}
+					style={styles.quizScroll}
+				>
 					<View style={styles.quizCard}>
 						<Text style={styles.quizTitle}>Quiz 1</Text>
 					</View>
@@ -75,15 +89,36 @@ export default function Home() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+	},
+
+	scrollContent: {
 		paddingHorizontal: 22,
 		paddingTop: 70,
+	},
+
+	headerWrapper: {
+		marginHorizontal: -22,
+		paddingHorizontal: 22,
+		marginTop: -70,
+		paddingTop: 70,
+		height: 245,
+		position: "relative",
+		marginBottom: 25,
+	},
+
+	headerBg: {
+		position: "absolute",
+		top: 0,
+		left: 0,
+		right: 0,
+		width: "screenWidth",
+		height: 255,
 	},
 
 	header: {
 		flexDirection: "row",
 		justifyContent: "space-between",
 		alignItems: "center",
-		marginBottom: 45,
 	},
 
 	welcome: {
@@ -98,8 +133,8 @@ const styles = StyleSheet.create({
 	},
 
 	mascot: {
-		width: 120,
-		height: 120,
+		width: 165,
+		height: 165,
 		resizeMode: "contain",
 	},
 
@@ -132,6 +167,11 @@ const styles = StyleSheet.create({
 	subtitle: {
 		fontSize: 15,
 		marginBottom: 18,
+	},
+
+	quizScroll: {
+		marginBottom: 50,
+		marginRight: -22,
 	},
 
 	quizCard: {
