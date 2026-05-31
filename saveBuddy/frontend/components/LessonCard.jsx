@@ -1,16 +1,17 @@
 import { router } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function LessonCard({ lesson }) {
 	const LessonImage = lesson.Image;
 
-	const cardStyle = [
-		styles.card,
-		lesson.id === 1 ? styles.darkCard : styles.lightCard,
-		lesson.locked && styles.lockedCard,
-	];
+	const isDark =
+		Math.floor((lesson.id - 1) / 2) % 2 === 0
+			? lesson.id % 2 !== 0
+			: lesson.id % 2 === 0;
 
-	const textStyle = lesson.id === 1 ? styles.whiteText : styles.darkText;
+	const cardStyle = [styles.card, isDark ? styles.darkCard : styles.lightCard];
+
+	const textStyle = isDark ? styles.whiteText : styles.darkText;
 
 	return (
 		<TouchableOpacity
@@ -30,12 +31,6 @@ export default function LessonCard({ lesson }) {
 						)}
 					</View>
 				</View>
-
-				{lesson.locked && 
-				<View>
-					<Image source={require("../assets/images/lock.png")} style={styles.lockImage} />
-					<Text style={styles.lock}>Gesloten</Text>
-				</View>}
 
 				<View>
 					<Text style={[styles.duration, textStyle]}>{lesson.duration}</Text>
@@ -60,6 +55,15 @@ export default function LessonCard({ lesson }) {
 						/>
 					</View>
 				</View>
+				{lesson.locked && (
+					<View style={styles.lockedOverlay}>
+						<Image
+							source={require("../assets/images/lock.png")}
+							style={styles.lockImage}
+						/>
+						<Text style={styles.lock}>Gesloten</Text>
+					</View>
+				)}
 			</View>
 		</TouchableOpacity>
 	);
@@ -67,8 +71,7 @@ export default function LessonCard({ lesson }) {
 
 const styles = StyleSheet.create({
 	wrapper: {
-		width: "48%",
-		marginBottom: 22,
+		width: "100%",
 	},
 
 	card: {
@@ -81,6 +84,15 @@ const styles = StyleSheet.create({
 		shadowOpacity: 0.12,
 		shadowRadius: 8,
 		elevation: 5,
+	},
+
+	lockedOverlay: {
+		...StyleSheet.absoluteFillObject,
+		backgroundColor: "rgba(0,0,0,0.45)",
+		justifyContent: "center",
+		alignItems: "center",
+		zIndex: 10,
+		borderRadius: 14,
 	},
 
 	darkCard: {
@@ -151,17 +163,15 @@ const styles = StyleSheet.create({
 	},
 
 	lock: {
-		position: "absolute",
-		alignSelf: "center",
-		fontSize: 18,
-		top: 32,
 		color: "#FFFFFF",
+		fontSize: 18,
+		fontWeight: "600",
+		marginTop: 7,
 	},
-	
+
 	lockImage: {
-		position: "absolute",
-		alignSelf: "center",
-		width: 26,
-		height: 26,
+		width: 25,
+		height: 25,
+		resizeMode: "contain",
 	},
 });

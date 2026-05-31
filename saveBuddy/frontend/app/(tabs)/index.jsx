@@ -5,8 +5,8 @@ import {
 	ScrollView,
 	StyleSheet,
 	Text,
-	TouchableOpacity,
 	View,
+  TouchableOpacity,
 } from "react-native";
 import LessonCard from "../../components/LessonCard";
 import { lessen } from "../../data/lessons";
@@ -56,8 +56,16 @@ export default function Home() {
 				</View>
 
 				<View style={styles.lessonGrid}>
-					{visibleLessons.map((lesson) => (
-						<LessonCard key={lesson.id} lesson={lesson} />
+					{visibleLessons.map((lesson, index) => (
+						<View
+							key={lesson.id}
+							style={[
+								styles.lessonWrapper,
+								index % 2 !== 0 && styles.rightColumn,
+							]}
+						>
+							<LessonCard lesson={lesson} />
+						</View>
 					))}
 				</View>
 
@@ -132,6 +140,15 @@ const styles = StyleSheet.create({
 		fontWeight: "900",
 	},
 
+	lessonWrapper: {
+		width: "48%",
+    marginBottom: -30,
+	},
+
+	rightColumn: {
+		marginTop: 55,
+	},
+
 	mascot: {
 		width: 165,
 		height: 165,
@@ -161,7 +178,7 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		flexWrap: "wrap",
 		justifyContent: "space-between",
-		marginBottom: 28,
+		marginBottom: 65,
 	},
 
 	subtitle: {
@@ -170,7 +187,7 @@ const styles = StyleSheet.create({
 	},
 
 	quizScroll: {
-		marginBottom: 50,
+		marginBottom: 125,
 		marginRight: -22,
 	},
 
