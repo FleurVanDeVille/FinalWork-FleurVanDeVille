@@ -15,7 +15,7 @@ export const lessen = [
     slug: "vierStappen",
     title: "Vier stappen in eerste hulp",
     duration: "10 min",
-    progress: 60,
+    progress: 100,
     locked: false,
   },
   {
@@ -24,7 +24,7 @@ export const lessen = [
     slug: "reanimeren",
     title: "Reanimeren",
     duration: "15 min",
-    progress: 40,
+    progress: 100,
     locked: false,
   },
   {
@@ -33,7 +33,7 @@ export const lessen = [
     slug: "verslikking",
     title: "Verslikking",
     duration: "10 min",
-    progress: 0,
+    progress: 40,
     locked: false,
   },
   {
@@ -42,7 +42,7 @@ export const lessen = [
     slug: "huidwonde",
     title: "Huidwonde",
     duration: "10 min",
-    progress: 60,
+    progress: 0,
     locked: true,
   },
   {
@@ -51,7 +51,7 @@ export const lessen = [
     slug: "brandwonde",
     title: "Brandwonde",
     duration: "15 min",
-    progress: 40,
+    progress: 0,
     locked: true,
   },
   {
@@ -69,7 +69,7 @@ export const lessen = [
     slug: "letsels",
     title: "Letsels",
     duration: "10 min",
-    progress: 60,
+    progress: 0,
     locked: true,
   },
   {
@@ -78,7 +78,7 @@ export const lessen = [
     slug: "vergiftiging",
     title: "Vergiftiging",
     duration: "15 min",
-    progress: 40,
+    progress: 0,
     locked: true,
   },
   {

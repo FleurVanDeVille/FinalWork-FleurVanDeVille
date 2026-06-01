@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
 		color: "#12384C",
 		fontSize: 34,
 		fontWeight: "900",
-		marginBottom: 5,
+		marginBottom: 15,
 	},
 
 	link: {
