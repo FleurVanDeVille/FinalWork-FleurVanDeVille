@@ -59,6 +59,8 @@ export default function LessonPage() {
 	const [checked, setChecked] = useState(false);
 	const [isCorrect, setIsCorrect] = useState(false);
 
+	const [dragDropCorrectItems, setDragDropCorrectItems] = useState([]);
+
 	if (!lesson) {
 		return (
 			<View style={styles.notFound}>
@@ -87,6 +89,7 @@ export default function LessonPage() {
 		setTextAnswer("");
 		setDropdownAnswers({});
 		setSwipeCorrect(null);
+		setDragDropCorrectItems([]);
 
 		setChecked(false);
 		setIsCorrect(false);
@@ -149,6 +152,12 @@ export default function LessonPage() {
 				correct = swipeCorrect;
 			}
 
+			if (exercise.type === "drag-drop-koffer") {
+				const correctItems = exercise.items.filter((item) => item.correct);
+
+				correct = dragDropCorrectItems.length === correctItems.length;
+			}
+
 			setIsCorrect(correct);
 			setChecked(true);
 			return;
@@ -177,6 +186,8 @@ export default function LessonPage() {
 			setDropdownAnswers({});
 
 			setSwipeCorrect(null);
+			
+			setDragDropCorrectItems([]);
 
 			setChecked(false);
 			setIsCorrect(false);
@@ -236,6 +247,8 @@ export default function LessonPage() {
 								setDropdownAnswers={setDropdownAnswers}
 								swipeCorrect={swipeCorrect}
 								setSwipeCorrect={setSwipeCorrect}
+								dragDropCorrectItems={dragDropCorrectItems}
+								setDragDropCorrectItems={setDragDropCorrectItems}
 							/>
 						</ScrollView>
 					) : (
@@ -253,6 +266,8 @@ export default function LessonPage() {
 							setDropdownAnswers={setDropdownAnswers}
 							swipeCorrect={swipeCorrect}
 							setSwipeCorrect={setSwipeCorrect}
+							dragDropCorrectItems={dragDropCorrectItems}
+							setDragDropCorrectItems={setDragDropCorrectItems}
 						/>
 					)}
 				</View>
