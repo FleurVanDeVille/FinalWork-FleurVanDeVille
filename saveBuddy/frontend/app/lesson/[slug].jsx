@@ -168,6 +168,12 @@ export default function LessonPage() {
 				correct = dragDropCorrectItems.length === correctItems.length;
 			}
 
+			if (exercise.type === "sleepoefeningen") {
+				if (interactiveCorrect === null) return;
+
+				correct = interactiveCorrect;
+			}
+
 			setIsCorrect(correct);
 			setChecked(true);
 			return;

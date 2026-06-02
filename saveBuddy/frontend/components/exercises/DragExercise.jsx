@@ -3,10 +3,8 @@ import {
 	Animated,
 	Image,
 	PanResponder,
-	ScrollView,
 	StyleSheet,
 	Text,
-	TouchableOpacity,
 	View,
 } from "react-native";
 
@@ -59,20 +57,18 @@ function DraggableOption({ option, onDrop }) {
 	);
 }
 
-export default function DragDropWoundExercise({
-	exercise,
-	setInteractiveCorrect,
-}) {
+export default function DragExercise({ exercise, setInteractiveCorrect }) {
 	const [placements, setPlacements] = useState({});
 	const [feedback, setFeedback] = useState(null);
-	const zoneRefs = useRef({});
+	const [usedItems, setUsedItems] = useState([]);
+	const dropAreaRefs = useRef({});
 
 	function handleDrop(item, x, y, position) {
 		let droppedZone = null;
 		let checkedZones = 0;
 
 		exercise.correctZones.forEach((zone) => {
-			const ref = zoneRefs.current[zone.id];
+			const ref = dropAreaRefs.current[zone.id];
 
 			if (!ref) return;
 
@@ -89,20 +85,31 @@ export default function DragDropWoundExercise({
 					droppedZone = zone;
 				}
 
-				if (checkedZones === exercise.correctZones.length) {
-					if (droppedZone) {
-						setPlacements((prev) => ({
+				if (droppedZone) {
+					setPlacements((prev) => {
+						const updatedPlacements = {
 							...prev,
 							[droppedZone.id]: item,
-						}));
+						};
 
-						setFeedback(null);
-					} else {
-						Animated.spring(position, {
-							toValue: { x: 0, y: 0 },
-							useNativeDriver: false,
-						}).start();
-					}
+						const allCorrect = exercise.correctZones.every((zone) => {
+							const placedItem = updatedPlacements[zone.id];
+							return placedItem?.id === zone.correctItem;
+						});
+
+						setTimeout(() => {
+							setInteractiveCorrect?.(allCorrect);
+						}, 0);
+
+						return updatedPlacements;
+					});
+
+					setUsedItems((prev) => [...prev, item.id]);
+
+					Animated.spring(position, {
+						toValue: { x: 0, y: 0 },
+						useNativeDriver: false,
+					}).start();
 				}
 			});
 		});
@@ -133,12 +140,13 @@ export default function DragDropWoundExercise({
 
 	function resetExercise() {
 		setPlacements({});
+		setUsedItems([]);
 		setFeedback(null);
 		setInteractiveCorrect?.(false);
 	}
 
 	return (
-		<ScrollView style={styles.container}>
+		<View style={styles.container}>
 			<Text style={styles.question}>{exercise.question}</Text>
 
 			{feedback && (
@@ -154,49 +162,54 @@ export default function DragDropWoundExercise({
 				</View>
 			)}
 
-			<View style={styles.zonesContainer}>
-				{exercise.correctZones.map((zone) => (
-					<View
-						key={zone.id}
-						ref={(ref) => {
-							zoneRefs.current[zone.id] = ref;
-						}}
-						style={styles.zone}
-					>
-						<Image source={images[zone.image]} style={styles.zoneImage} />
+			<View style={styles.exerciseRow}>
+				<View style={styles.zonesColumn}>
+					{exercise.correctZones.map((zone) => (
+						<View
+							key={zone.id}
+							ref={(ref) => {
+								dropAreaRefs.current[zone.id] = ref;
+							}}
+							style={styles.zone}
+						>
+							<Text style={styles.zoneTitle}>{zone.label}</Text>
 
-						<Text style={styles.zoneTitle}>{zone.label}</Text>
+							<Image source={images[zone.image]} style={styles.zoneImage} />
 
-						<View style={styles.dropArea}>
-							<Text style={styles.dropText}>
-								{placements[zone.id]?.label || "Sleep hier"}
-							</Text>
+							<View
+								ref={(ref) => {
+									dropAreaRefs.current[zone.id] = ref;
+								}}
+								style={styles.dropArea}
+							>
+								<Text style={styles.dropText}>
+									{placements[zone.id]?.label || "Laat hier los"}
+								</Text>
+							</View>
 						</View>
-					</View>
-				))}
-			</View>
+					))}
+				</View>
 
-			<View style={styles.itemsContainer}>
-				{exercise.draggableItems.map((item) => (
-					<DraggableOption
-						key={item.id}
-						option={item}
-						onDrop={handleDrop}
-					/>
-				))}
+				<View style={styles.itemsColumn}>
+					{exercise.draggableItems
+						.filter((item) => !usedItems.includes(item.id))
+						.map((item) => (
+							<DraggableOption
+								key={item.id}
+								option={item}
+								onDrop={handleDrop}
+							/>
+						))}
+				</View>
 			</View>
-		</ScrollView>
+		</View>
 	);
 }
 
 const styles = StyleSheet.create({
-	container: {
-		padding: 20,
-	},
-
 	question: {
-		fontSize: 22,
-		fontWeight: "700",
+		fontSize: 20,
+		fontWeight: "800",
 		color: "#12384C",
 		marginBottom: 20,
 	},
@@ -216,103 +229,87 @@ const styles = StyleSheet.create({
 	},
 
 	feedbackText: {
-		fontSize: 16,
-		fontWeight: "600",
+		fontSize: 15,
+		fontWeight: "700",
 		color: "#12384C",
 	},
 
-	zonesContainer: {
-		gap: 16,
-		marginBottom: 24,
+	exerciseRow: {
+		flexDirection: "row",
+		alignItems: "flex-start",
+		gap: 30,
+		marginBottom: 22,
+	},
+
+	zonesColumn: {
+		width: 125,
+		gap: 12,
+	},
+
+	itemsColumn: {
+		flex: 1,
+		gap: 95,
+		paddingTop: 42,
 	},
 
 	zone: {
 		backgroundColor: "#FFFFFF",
-		borderRadius: 18,
-		padding: 16,
-		alignItems: "center",
-		borderWidth: 2,
-		borderColor: "#DDE8EE",
-	},
-
-	zoneImage: {
-		width: 130,
-		height: 100,
-		resizeMode: "contain",
-		marginBottom: 8,
+		borderRadius: 8,
+		overflow: "hidden",
+		borderWidth: 1,
+		borderColor: "#D7D7D7",
 	},
 
 	zoneTitle: {
-		fontSize: 18,
+		backgroundColor: "#12384C",
+		color: "#FFFFFF",
+		fontSize: 14,
 		fontWeight: "700",
-		color: "#12384C",
-		marginBottom: 10,
+		textAlign: "center",
+		paddingVertical: 8,
+	},
+
+	zoneImage: {
+		width: "100%",
+		height: 80,
+		resizeMode: "cover",
 	},
 
 	dropArea: {
-		width: "100%",
-		minHeight: 48,
-		borderRadius: 12,
-		backgroundColor: "#F1F7FA",
+		margin: 6,
+		minHeight: 56,
+		borderRadius: 8,
 		borderWidth: 1,
 		borderStyle: "dashed",
-		borderColor: "#8FC3A3",
+		borderColor: "#777",
 		alignItems: "center",
 		justifyContent: "center",
-		paddingHorizontal: 10,
+		paddingHorizontal: 6,
+		backgroundColor: "#FFFFFF",
 	},
 
 	dropText: {
-		fontSize: 15,
-		fontWeight: "600",
+		fontSize: 11,
 		color: "#12384C",
 		textAlign: "center",
-	},
-
-	itemsContainer: {
-		gap: 12,
-		marginBottom: 60,
 	},
 
 	item: {
-		backgroundColor: "#FFD166",
-		padding: 14,
-		borderRadius: 14,
+		backgroundColor: "#A8CDF2",
+		minHeight: 100,
+		width: 200,
+		borderRadius: 6,
 		alignItems: "center",
 		justifyContent: "center",
+		paddingHorizontal: 14,
+		borderWidth: 1,
+		borderColor: "#7DB3EA",
 	},
 
 	itemText: {
-		fontSize: 16,
-		fontWeight: "700",
+		fontSize: 13,
+		fontWeight: "500",
 		color: "#12384C",
 		textAlign: "center",
-	},
-
-	checkButton: {
-		backgroundColor: "#4A90E2",
-		padding: 16,
-		borderRadius: 16,
-		alignItems: "center",
-		marginBottom: 10,
-	},
-
-	checkButtonText: {
-		color: "#FFFFFF",
-		fontSize: 16,
-		fontWeight: "700",
-	},
-
-	resetButton: {
-		backgroundColor: "#EAF2F6",
-		padding: 14,
-		borderRadius: 16,
-		alignItems: "center",
-	},
-
-	resetButtonText: {
-		color: "#12384C",
-		fontSize: 16,
-		fontWeight: "700",
 	},
 });

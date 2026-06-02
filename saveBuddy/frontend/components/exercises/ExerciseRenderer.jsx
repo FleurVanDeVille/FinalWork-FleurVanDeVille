@@ -1,12 +1,12 @@
 import ConnectExercise from "./ConnectExercise.jsx";
 import DragDropCaseExercise from "./DragDropCaseExercise.jsx";
+import DragExercise from "./DragExercise.jsx";
 import DropdownExercise from "./DropdownExercise.jsx";
 import InteractiveExercise from "./InteractiveExercise.jsx";
 import MultipleChoiceExercise from "./MultipleChoiceExercise.jsx";
 import OrderExercise from "./OrderExercise.jsx";
 import SwipeExercise from "./SwipeExercise.jsx";
 import TextInputExercise from "./TextInputExercise.jsx";
-import DragExercise from "./DragExercise.jsx";
 
 export default function ExerciseRenderer({
 	exercise,
@@ -65,7 +65,12 @@ export default function ExerciseRenderer({
 			);
 
 		case "sleepoefeningen":
-			return <DragExercise exercise={exercise} />;
+			return (
+				<DragExercise
+					exercise={exercise}
+					setInteractiveCorrect={setInteractiveCorrect}
+				/>
+			);
 
 		case "dropdown-oefening":
 			return (
