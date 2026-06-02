@@ -23,6 +23,8 @@ export default function ExerciseRenderer({
 	setSwipeCorrect,
 	dragDropCorrectItems,
 	setDragDropCorrectItems,
+	interactiveCorrect,
+	setInteractiveCorrect,
 }) {
 	switch (exercise.type) {
 		case "drag-drop-koffer":
@@ -81,8 +83,13 @@ export default function ExerciseRenderer({
 				/>
 			);
 
-		case "interactieve-oefening":
-			return <InteractiveExercise exercise={exercise} />;
+		case "interactieve-oefeningen":
+			return (
+				<InteractiveExercise
+					exercise={exercise}
+					setInteractiveCorrect={setInteractiveCorrect}
+				/>
+			);
 
 		case "swipe-oefening":
 			return (

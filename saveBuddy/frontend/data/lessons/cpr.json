@@ -93,9 +93,7 @@
 					"max": 120
 				},
 
-				"duration": 20,
-
-				"allowMusicModes": ["StayinAlive", "Metronome", "BeatGame"]
+				"duration": 20
 			},
 
 			"successConditions": [
@@ -118,7 +116,6 @@
 				"stopped": "Je stopte te lang tussen compressies."
 			}
 		},
-
 		{
 			"id": 5,
 

@@ -41,6 +41,8 @@ const images = {
 export default function LessonPage() {
 	const { slug } = useLocalSearchParams();
 
+	const [retryKey, setRetryKey] = useState(0);
+
 	const lesson = lessonsMap[slug];
 
 	const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
@@ -60,6 +62,8 @@ export default function LessonPage() {
 	const [isCorrect, setIsCorrect] = useState(false);
 
 	const [dragDropCorrectItems, setDragDropCorrectItems] = useState([]);
+
+	const [interactiveCorrect, setInteractiveCorrect] = useState(null);
 
 	if (!lesson) {
 		return (
@@ -152,6 +156,12 @@ export default function LessonPage() {
 				correct = swipeCorrect;
 			}
 
+			if (exercise.type === "interactieve-oefeningen") {
+				if (interactiveCorrect === null) return;
+
+				correct = interactiveCorrect;
+			}
+
 			if (exercise.type === "drag-drop-koffer") {
 				const correctItems = exercise.items.filter((item) => item.correct);
 
@@ -166,6 +176,12 @@ export default function LessonPage() {
 		if (!isCorrect) {
 			setChecked(false);
 			setSelectedAnswer(null);
+
+			setSwipeCorrect(null);
+			setInteractiveCorrect(null);
+
+			setRetryKey((prev) => prev + 1);
+
 			return;
 		}
 
@@ -186,11 +202,13 @@ export default function LessonPage() {
 			setDropdownAnswers({});
 
 			setSwipeCorrect(null);
-			
+
 			setDragDropCorrectItems([]);
 
 			setChecked(false);
 			setIsCorrect(false);
+
+			setInteractiveCorrect(null);
 		}
 	}
 
@@ -219,13 +237,15 @@ export default function LessonPage() {
 						</View>
 					</View>
 
-					{exercise.image && images[exercise.image] && (
-						<Image
-							source={images[exercise.image]}
-							style={styles.exerciseImage}
-							resizeMode="contain"
-						/>
-					)}
+					{exercise.type !== "interactieve-oefeningen" &&
+						exercise.image &&
+						images[exercise.image] && (
+							<Image
+								source={images[exercise.image]}
+								style={styles.exerciseImage}
+								resizeMode="contain"
+							/>
+						)}
 
 					{exercise.type === "verbind-oefening" ||
 					exercise.type === "dropdown-oefening" ? (
@@ -234,6 +254,7 @@ export default function LessonPage() {
 							showsVerticalScrollIndicator={false}
 						>
 							<ExerciseRenderer
+								key={retryKey}
 								exercise={exercise}
 								selectedAnswer={selectedAnswer}
 								setSelectedAnswer={setSelectedAnswer}
@@ -249,10 +270,13 @@ export default function LessonPage() {
 								setSwipeCorrect={setSwipeCorrect}
 								dragDropCorrectItems={dragDropCorrectItems}
 								setDragDropCorrectItems={setDragDropCorrectItems}
+								interactiveCorrect={interactiveCorrect}
+								setInteractiveCorrect={setInteractiveCorrect}
 							/>
 						</ScrollView>
 					) : (
 						<ExerciseRenderer
+							key={retryKey}
 							exercise={exercise}
 							selectedAnswer={selectedAnswer}
 							setSelectedAnswer={setSelectedAnswer}
@@ -268,6 +292,8 @@ export default function LessonPage() {
 							setSwipeCorrect={setSwipeCorrect}
 							dragDropCorrectItems={dragDropCorrectItems}
 							setDragDropCorrectItems={setDragDropCorrectItems}
+							interactiveCorrect={interactiveCorrect}
+							setInteractiveCorrect={setInteractiveCorrect}
 						/>
 					)}
 				</View>

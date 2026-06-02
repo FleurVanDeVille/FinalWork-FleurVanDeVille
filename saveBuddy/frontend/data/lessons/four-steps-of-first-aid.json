@@ -7,7 +7,7 @@
 
 	"exercises": [
 		{
-			"id": 0,
+			"id": 1,
 
 			"type": "drag-drop-koffer",
 
@@ -125,7 +125,7 @@
 			"successMessage": "Goed gedaan! Je vulde de EHBO-koffer correct."
 		},
 		{
-			"id": 1,
+			"id": 2,
 
 			"type": "volgorde-oefening",
 
@@ -152,7 +152,7 @@
 		},
 
 		{
-			"id": 2,
+			"id": 3,
 
 			"type": "meerkeuzevragen",
 
@@ -176,7 +176,7 @@
 		},
 
 		{
-			"id": 3,
+			"id": 4,
 
 			"type": "meerkeuzevragen",
 
@@ -197,125 +197,6 @@
 				"correct": "Goed gedaan! Spreek het slachtoffer luid aan en schud voorzichtig aan de schouders.",
 				"wrong": "Helaas, dat is niet correct. Probeer opnieuw."
 			}
-		},
-
-		{
-			"id": 4,
-
-			"type": "drag-drop-koffer",
-
-			"question": "Sleep de juiste materialen die echt in een EHBO-koffer horen in de koffer.",
-
-			"image": "koffer.png",
-
-			"basket": {
-				"id": "first_aid_kit",
-				"label": "EHBO-koffer"
-			},
-
-			"items": [
-				{
-					"id": "pijnstillers",
-					"image": "pijnstillers.png",
-					"text": "Pijnstillers",
-					"correct": false,
-
-					"feedback": {
-						"correct": "Juist!"
-					},
-					"resetPosition": true
-				},
-
-				{
-					"id": "pincet",
-					"image": "pincet.png",
-					"text": "Pincet",
-					"correct": true,
-
-					"feedback": {
-						"correct": "Juist!"
-					}
-				},
-
-				{
-					"id": "schaar",
-					"image": "schaar.png",
-					"text": "Schaar",
-					"correct": true,
-
-					"feedback": {
-						"correct": "Juist!"
-					}
-				},
-
-				{
-					"id": "pleisters",
-					"image": "pleisters.png",
-					"text": "Pleisters",
-					"correct": true,
-
-					"feedback": {
-						"correct": "Juist!"
-					}
-				},
-
-				{
-					"id": "water",
-					"image": "water.png",
-					"text": "Water",
-					"correct": false,
-
-					"feedback": {
-						"wrong": "Fout."
-					},
-					"resetPosition": true
-				},
-
-				{
-					"id": "wondgaas",
-					"image": "wondgaas.png",
-					"text": "Wondgaas",
-					"correct": true,
-
-					"feedback": {
-						"correct": "Juist!"
-					}
-				},
-
-				{
-					"id": "watten",
-					"image": "watten.png",
-					"text": "Watten",
-					"correct": false,
-
-					"feedback": {
-						"wrong": "Fout."
-					},
-
-					"resetPosition": true
-				},
-
-				{
-					"id": "thermometer",
-					"image": "thermometer.png",
-					"text": "Thermometer",
-					"correct": false,
-
-					"feedback": {
-						"wrong": "Fout."
-					},
-
-					"resetPosition": true
-				}
-			],
-
-			"settings": {
-				"removeCorrectItems": true,
-				"resetWrongItems": true,
-				"showInstantFeedback": true
-			},
-
-			"successMessage": "Goed gedaan! Je vulde de EHBO-koffer correct."
 		},
 
 		{
