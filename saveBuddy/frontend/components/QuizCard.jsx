@@ -8,11 +8,11 @@ export default function QuizCard({ quiz }) {
 		<TouchableOpacity
 			activeOpacity={0.85}
 			style={styles.wrapper}
-			onPress={() => router.push(`/quiz/${quiz.slug}`)}
+			onPress={() => router.push(`quizzes/${quiz.slug}`)}
 		>
 			<View style={styles.card}>
 				<View style={styles.iconCircle}>
-					{QuizIcon && <QuizIcon width={22} height={22} fill="#12384C" />}
+					{QuizIcon && <QuizIcon width={22} height={22} fill="#FFFFFF" />}
 				</View>
 
 				<Text style={styles.title} numberOfLines={2}>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 	},
 
 	card: {
-		height: 230,
+		height: 215,
 		backgroundColor: "#F8CD00",
 		borderRadius: 14,
 		padding: 10,
@@ -54,24 +54,24 @@ const styles = StyleSheet.create({
 		width: 34,
 		height: 34,
 		borderRadius: 999,
-		backgroundColor: "#FFFFFF",
+		backgroundColor: "#12384C",
 		justifyContent: "center",
 		alignItems: "center",
 		marginBottom: 25,
 	},
 
 	title: {
-		color: "#FFFFFF",
-		fontSize: 17,
+		color: "#12384C",
+		fontSize: 25,
 		fontWeight: "900",
 		lineHeight: 25,
 	},
 
 	mascot: {
 		position: "absolute",
-		right: 5,
-		bottom: 5,
-		width: 110,
-		height: 110,
+		right: 0,
+		bottom: 0,
+		width: 130,
+		height: 130,
 	},
 });

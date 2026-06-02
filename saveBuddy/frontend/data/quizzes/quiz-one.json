@@ -16,13 +16,13 @@
 			"image": "cpr_cycle.png",
 
 			"answers": [
-				"15 compressies and 2 beademingen",
-				"30 compressies and 2 beademingen",
-				"30 compressies and 5 beademingen",
-				"50 compressies and 2 beademingen"
+				"15 compressies en 2 beademingen",
+				"30 compressies en 2 beademingen",
+				"30 compressies en 5 beademingen",
+				"50 compressies en 2 beademingen"
 			],
 
-			"correctAnswer": "30 compressies and 2 beademingen",
+			"correctAnswer": "30 compressies en 2 beademingen",
 
 			"feedback": {
 				"correct": "Perfect! De universele richtlijn voor volwassenen is 30 borstcompressies afgewisseld met 2 beademingen.",
@@ -71,7 +71,7 @@
 				"Omdat het ontsmetten van de wond anders mislukt"
 			],
 
-			"correctAnswer": "Oekomst het voorwerp momenteel fungeert als een stop die een hevige bloeding tegenhoudt",
+			"correctAnswer": "Omdat het voorwerp momenteel fungeert als een stop die een hevige bloeding tegenhoudt",
 
 			"feedback": {
 				"correct": "Formidabel! Het voorwerp drukt beschadigde bloedvaten momenteel dicht.",
