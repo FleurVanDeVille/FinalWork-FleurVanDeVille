@@ -6,51 +6,7 @@ import {
 	Text,
 	View,
 } from "react-native";
-
-const badges = [
-	{
-		id: 1,
-		title: "Eerste helper",
-		text: "Voltooi je eerste les",
-		earned: true,
-		icon: require("../../assets/images/badge1.png"),
-	},
-	{
-		id: 2,
-		title: "Reanimatieheld",
-		text: "Voltooi de reanimatie les",
-		earned: true,
-		icon: require("../../assets/images/badge1.png"),
-	},
-	{
-		id: 3,
-		title: "Quizmaster",
-		text: "Behaal 100% op een quiz",
-		earned: true,
-		icon: require("../../assets/images/badge1.png"),
-	},
-	{
-		id: 4,
-		title: "Leergierige held",
-		text: "Voltooi 5 lessen",
-		earned: false,
-		icon: require("../../assets/images/badge1.png"),
-	},
-	{
-		id: 5,
-		title: "Snelle hulp",
-		text: "Voltooi een les in minder dan 10 minuten",
-		earned: false,
-		icon: require("../../assets/images/badge1.png"),
-	},
-	{
-		id: 6,
-		title: "Doorzetter",
-		text: "Voltooi alle lessen",
-		earned: false,
-		icon: require("../../assets/images/badge1.png"),
-	},
-];
+import { badges } from "../../data/badges.js";
 
 export default function Badges() {
 	return (
@@ -84,13 +40,10 @@ export default function Badges() {
 					{badges.map((badge) => (
 						<View
 							key={badge.id}
-							style={[
-								styles.badgeCard,
-								!badge.earned && styles.lockedBadgeCard,
-							]}
+							style={[styles.badgeCard, badge.locked && styles.lockedBadgeCard]}
 						>
 							<View style={styles.statusCircle}>
-								{badge.earned ? (
+								{!badge.locked ? (
 									<Text style={styles.statusText}>✓</Text>
 								) : (
 									<Image
@@ -100,17 +53,12 @@ export default function Badges() {
 								)}
 							</View>
 
-							<View
-								style={[
-									styles.badgeIconCircle,
-									!badge.earned && styles.lockedCircle,
-								]}
-							>
-								<Image source={badge.icon} style={styles.badgeIcon} />
+							<View style={styles.badgeIconCircle}>
+								<Image source={badge.Image} style={styles.badgeIcon} />
 							</View>
 
 							<Text style={styles.badgeTitle}>{badge.title}</Text>
-							<Text style={styles.badgeText}>{badge.text}</Text>
+							<Text style={styles.badgeText}>{badge.description}</Text>
 						</View>
 					))}
 				</View>
@@ -254,7 +202,7 @@ const styles = StyleSheet.create({
 		width: 26,
 		height: 26,
 		borderRadius: 999,
-		backgroundColor: "#8FC3A3",
+		backgroundColor: "#F8CD00",
 		justifyContent: "center",
 		alignItems: "center",
 	},
@@ -280,11 +228,11 @@ const styles = StyleSheet.create({
 		resizeMode: "contain",
 	},
 
-  statusIcon: {
-    width: 14,
-    height: 16,
-    resizeMode: "contain",
-  },
+	statusIcon: {
+		width: 14,
+		height: 16,
+		resizeMode: "contain",
+	},
 
 	badgeTitle: {
 		color: "#12384C",
