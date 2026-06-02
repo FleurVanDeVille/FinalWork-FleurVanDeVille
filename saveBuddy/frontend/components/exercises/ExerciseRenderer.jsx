@@ -5,6 +5,7 @@ import MultipleChoiceExercise from "./MultipleChoiceExercise.jsx";
 import OrderExercise from "./OrderExercise.jsx";
 import SwipeExercise from "./SwipeExercise.jsx";
 import TextInputExercise from "./TextInputExercise.jsx";
+import DragDropCaseExercise from "./DragDropCaseExercise.jsx";
 
 export default function ExerciseRenderer({
 	exercise,
@@ -18,10 +19,13 @@ export default function ExerciseRenderer({
 	setTextAnswer,
 	dropdownAnswers,
 	setDropdownAnswers,
-  swipeCorrect,
-  setSwipeCorrect,
+	swipeCorrect,
+	setSwipeCorrect,
 }) {
 	switch (exercise.type) {
+		case "drag-drop-koffer":
+			return <DragDropCaseExercise exercise={exercise} />;
+		
 		case "meerkeuzevragen":
 			return (
 				<MultipleChoiceExercise
