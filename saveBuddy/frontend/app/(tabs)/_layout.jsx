@@ -43,7 +43,7 @@ export default function TabsLayout() {
             <HomeIcon
               width={24}
               height={24}
-              fill={focused ? "white" : "#D9D9D9"}
+              fill={focused ? "white" : "#a1a1a1aa"}
             />
           ),
         }}
@@ -56,7 +56,7 @@ export default function TabsLayout() {
             <TrophyIcon
               width={24}
               height={24}
-              fill={focused ? "white" : "#D9D9D9"}
+              fill={focused ? "white" : "#a1a1a1aa"}
             />
           ),
         }}
@@ -69,7 +69,7 @@ export default function TabsLayout() {
             <AnalyseIcon
               width={24}
               height={24}
-              fill={focused ? "white" : "#D9D9D9"}
+              fill={focused ? "white" : "#a1a1a1aa"}
             />
           ),
         }}
@@ -82,7 +82,7 @@ export default function TabsLayout() {
             <ProfileIcon
               width={24}
               height={24}
-              fill={focused ? "white" : "#D9D9D9"}
+              fill={focused ? "white" : "#a1a1a1aa"}
             />
           ),
         }}
