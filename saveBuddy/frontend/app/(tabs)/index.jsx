@@ -144,8 +144,8 @@ const styles = StyleSheet.create({
 	},
 
 	mascot: {
-		width: 165,
-		height: 165,
+		width: 170,
+		height: 170,
 		resizeMode: "contain",
 	},
 
