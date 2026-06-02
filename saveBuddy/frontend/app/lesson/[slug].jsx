@@ -255,30 +255,32 @@ export default function LessonPage() {
 							setSwipeCorrect={setSwipeCorrect}
 						/>
 					)}
-
-					{checked && (
-						<View
-							style={[
-								styles.feedbackBox,
-								isCorrect ? styles.correctBox : styles.wrongBox,
-							]}
-						>
-							<Text style={styles.feedbackText}>
-								{isCorrect
-									? exercise.globalFeedback?.perfect ||
-										exercise.feedback?.correct ||
-										"Juist!"
-									: exercise.globalFeedback?.incomplete ||
-										exercise.feedback?.wrong ||
-										"Niet juist."}
-							</Text>
-						</View>
-					)}
 				</View>
+
+				{checked && (
+					<View
+						style={[
+							styles.feedbackBox,
+							isCorrect ? styles.correctBox : styles.wrongBox,
+						]}
+					>
+						<Text style={styles.feedbackText}>
+							{isCorrect
+								? exercise.globalFeedback?.perfect ||
+									exercise.feedback?.correct ||
+									"Super! Heel goed."
+								: exercise.globalFeedback?.incomplete ||
+									exercise.feedback?.wrong ||
+									"Niet helemaal. Probeer opnieuw."}
+						</Text>
+					</View>
+				)}
 
 				<TouchableOpacity
 					style={[
 						styles.button,
+						checked && isCorrect && styles.correctButton,
+						checked && !isCorrect && styles.wrongButton,
 						!checked &&
 							!selectedAnswer &&
 							exercise.type === "meerkeuzevragen" &&
@@ -287,7 +289,7 @@ export default function LessonPage() {
 					onPress={handleCheck}
 				>
 					<Text style={styles.buttonText}>
-						{checked ? "Volgende" : "Controleer"}
+						{checked ? (isCorrect ? "Volgende" : "Opnieuw") : "Controleer"}
 					</Text>
 				</TouchableOpacity>
 			</View>
@@ -306,6 +308,7 @@ const styles = StyleSheet.create({
 		paddingTop: 60,
 		paddingBottom: 40,
 		justifyContent: "space-between",
+		position: "relative",
 	},
 
 	topBar: {
@@ -341,23 +344,31 @@ const styles = StyleSheet.create({
 	},
 
 	feedbackBox: {
-		padding: 16,
-		borderRadius: 12,
-		marginTop: 20,
+		position: "absolute",
+		left: 0,
+		right: 0,
+		bottom: 0,
+		paddingHorizontal: 22,
+		paddingTop: 18,
+		paddingBottom: 96,
+		borderTopLeftRadius: 22,
+		borderTopRightRadius: 22,
 	},
 
 	correctBox: {
-		backgroundColor: "#8FC3A3",
+		backgroundColor: "#8ACF91",
 	},
 
 	wrongBox: {
-		backgroundColor: "#e73636",
+		backgroundColor: "#F24B4B",
 	},
 
 	feedbackText: {
 		color: "#FFFFFF",
 		fontSize: 16,
-		fontWeight: "800",
+		fontWeight: "900",
+		lineHeight: 20,
+		marginBottom: 16,
 	},
 
 	button: {
@@ -366,6 +377,15 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 		justifyContent: "center",
 		alignItems: "center",
+		zIndex: 10,
+	},
+
+	correctButton: {
+		backgroundColor: "#175420",
+	},
+
+	wrongButton: {
+		backgroundColor: "#B70D0D",
 	},
 
 	disabledButton: {

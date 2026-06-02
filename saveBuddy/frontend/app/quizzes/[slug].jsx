@@ -139,28 +139,43 @@ export default function QuizPage() {
 						swipeCorrect={swipeCorrect}
 						setSwipeCorrect={setSwipeCorrect}
 					/>
-
-					{checked && (
-						<View
-							style={[
-								styles.feedbackBox,
-								isCorrect ? styles.correctBox : styles.wrongBox,
-							]}
-						>
-							<Text style={styles.feedbackText}>
-								{isCorrect
-									? exercise.feedback?.correct || "Juist!"
-									: exercise.feedback?.wrong || "Niet juist."}
-							</Text>
-						</View>
-					)}
 				</View>
 
-				<TouchableOpacity style={styles.button} onPress={handleCheck}>
-					<Text style={styles.buttonText}>
-						{checked ? "Volgende" : "Controleer"}
-					</Text>
-				</TouchableOpacity>
+                {checked && (
+                    <View
+                        style={[
+                            styles.feedbackBox,
+                            isCorrect ? styles.correctBox : styles.wrongBox,
+                        ]}
+                    >
+                        <Text style={styles.feedbackText}>
+                            {isCorrect
+                                ? exercise.globalFeedback?.perfect ||
+                                    exercise.feedback?.correct ||
+                                    "Super! Heel goed."
+                                : exercise.globalFeedback?.incomplete ||
+                                    exercise.feedback?.wrong ||
+                                    "Niet helemaal. Probeer opnieuw."}
+                        </Text>
+                    </View>
+                )}
+
+                <TouchableOpacity
+                    style={[
+                        styles.button,
+                        checked && isCorrect && styles.correctButton,
+                        checked && !isCorrect && styles.wrongButton,
+                        !checked &&
+                            !selectedAnswer &&
+                            exercise.type === "meerkeuzevragen" &&
+                            styles.disabledButton,
+                    ]}
+                    onPress={handleCheck}
+                >
+                    <Text style={styles.buttonText}>
+                        {checked ? (isCorrect ? "Volgende" : "Opnieuw") : "Controleer"}
+                    </Text>
+                </TouchableOpacity>
 			</View>
 		</ImageBackground>
 	);
