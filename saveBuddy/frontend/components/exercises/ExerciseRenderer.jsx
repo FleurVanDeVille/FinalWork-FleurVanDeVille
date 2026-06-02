@@ -6,6 +6,7 @@ import MultipleChoiceExercise from "./MultipleChoiceExercise.jsx";
 import OrderExercise from "./OrderExercise.jsx";
 import SwipeExercise from "./SwipeExercise.jsx";
 import TextInputExercise from "./TextInputExercise.jsx";
+import DragExercise from "./DragExercise.jsx";
 
 export default function ExerciseRenderer({
 	exercise,
@@ -64,7 +65,7 @@ export default function ExerciseRenderer({
 			);
 
 		case "sleepoefeningen":
-			return <DragDropExercise exercise={exercise} />;
+			return <DragExercise exercise={exercise} />;
 
 		case "dropdown-oefening":
 			return (
