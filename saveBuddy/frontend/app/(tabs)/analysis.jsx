@@ -8,6 +8,7 @@ import {
 	TouchableOpacity,
 	View,
 } from "react-native";
+import { BarChart } from "react-native-gifted-charts";
 import LessonCard from "../../components/LessonCard";
 import { lessen } from "../../data/lessons";
 
@@ -91,24 +92,26 @@ export default function Analyse() {
 						Activiteit <Text style={styles.smallText}>(min)</Text>
 					</Text>
 
-					<View style={styles.chart}>
-						<View style={styles.yAxis}>
-							{[25, 20, 15, 10, 5, 0].map((number) => (
-								<Text key={number} style={styles.axisText}>
-									{number}
-								</Text>
-							))}
-						</View>
-
-						<View style={styles.bars}>
-							{activity.map((item) => (
-								<View key={item.day} style={styles.barItem}>
-									<View style={[styles.bar, { height: item.value * 5 }]} />
-									<Text style={styles.dayText}>{item.day}</Text>
-								</View>
-							))}
-						</View>
-					</View>
+					<BarChart
+						data={activity.map((item) => ({
+							value: item.value,
+							label: item.day,
+							frontColor: "#8FC3A3",
+						}))}
+						height={180}
+						maxValue={25}
+						noOfSections={5}
+						barWidth={22}
+						spacing={18}
+						roundedTop
+						roundedBottom
+						yAxisThickness={0}
+						xAxisThickness={0}
+						hideRules={false}
+						rulesColor="#E5E5E5"
+						yAxisTextStyle={styles.axisText}
+						xAxisLabelTextStyle={styles.dayText}
+					/>
 				</View>
 
 				<View style={styles.card}>
@@ -298,44 +301,14 @@ const styles = StyleSheet.create({
 		fontWeight: "400",
 	},
 
-	chart: {
-		flexDirection: "row",
-		height: 150,
-	},
-
-	yAxis: {
-		width: 28,
-		justifyContent: "space-between",
-		paddingBottom: 20,
-	},
-
 	axisText: {
-		color: "#000000",
+		color: "#8A8A8A",
 		fontSize: 12,
-	},
-
-	bars: {
-		flex: 1,
-		flexDirection: "row",
-		justifyContent: "space-between",
-		alignItems: "flex-end",
-	},
-
-	barItem: {
-		alignItems: "center",
-		justifyContent: "flex-end",
-	},
-
-	bar: {
-		width: 26,
-		backgroundColor: "#12384C",
-		borderRadius: 999,
 	},
 
 	dayText: {
-		marginTop: 8,
+		color: "#8A8A8A",
 		fontSize: 12,
-		color: "#000000",
 	},
 
 	categoryItem: {
