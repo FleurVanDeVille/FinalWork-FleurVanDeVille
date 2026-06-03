@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { useEffect } from "react";
+import DraggableFlatList from "react-native-draggable-flatlist";
 
 export default function OrderExercise({
 	exercise,
@@ -13,41 +13,34 @@ export default function OrderExercise({
 		setOrderAnswer(items);
 	}, []);
 
-	function moveItem(index, direction) {
-		const newItems = [...items];
-		const newIndex = index + direction;
-
-		if (newIndex < 0 || newIndex >= newItems.length) return;
-
-		const item = newItems[index];
-		newItems[index] = newItems[newIndex];
-		newItems[newIndex] = item;
-
-		setItems(newItems);
-		setOrderAnswer(newItems);
-	}
-
 	return (
 		<View>
 			<Text style={styles.question}>{exercise.question}</Text>
 
-			{items.map((item, index) => (
-				<View key={item} style={styles.answer}>
-					<Text style={styles.answerText}>
-						{index + 1}. {item}
-					</Text>
+			<DraggableFlatList
+				data={items}
+				keyExtractor={(item) => item}
+				onDragEnd={({ data }) => {
+					setItems(data);
+					setOrderAnswer(data);
+				}}
+				renderItem={({ item, drag, isActive, getIndex }) => (
+					<TouchableOpacity
+						onLongPress={drag}
+						disabled={isActive}
+						style={[
+							styles.answer,
+							isActive && styles.activeAnswer,
+						]}
+					>
+						<Text style={styles.answerText}>
+							{getIndex() + 1}. {item}
+						</Text>
 
-					<View style={styles.buttons}>
-						<TouchableOpacity onPress={() => moveItem(index, -1)}>
-							<Text style={styles.arrow}>↑</Text>
-						</TouchableOpacity>
-
-						<TouchableOpacity onPress={() => moveItem(index, 1)}>
-							<Text style={styles.arrow}>↓</Text>
-						</TouchableOpacity>
-					</View>
-				</View>
-			))}
+						<Text style={styles.dragIcon}>☰</Text>
+					</TouchableOpacity>
+				)}
+			/>
 		</View>
 	);
 }
@@ -74,6 +67,11 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 	},
 
+	activeAnswer: {
+		backgroundColor: "#EAF6EF",
+		borderColor: "#8FC3A3",
+	},
+
 	answerText: {
 		color: "#12384C",
 		fontSize: 16,
@@ -81,15 +79,10 @@ const styles = StyleSheet.create({
 		flex: 1,
 	},
 
-	buttons: {
-		flexDirection: "row",
-		gap: 14,
-		marginLeft: 12,
-	},
-
-	arrow: {
+	dragIcon: {
 		color: "#12384C",
 		fontSize: 22,
 		fontWeight: "900",
+		marginLeft: 12,
 	},
 });
