@@ -1,9 +1,7 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import {
-	Image,
 	ImageBackground,
-	ScrollView,
 	StyleSheet,
 	Text,
 	TouchableOpacity,
@@ -13,8 +11,8 @@ import {
 import ExerciseRenderer from "../../components/exercises/ExerciseRenderer";
 
 import quiz1 from "../../data/quizzes/quiz-one.json";
-import quiz2 from "../../data/quizzes/quiz-two.json";
 import quiz3 from "../../data/quizzes/quiz-three.json";
+import quiz2 from "../../data/quizzes/quiz-two.json";
 
 const quizzesMap = {
 	quiz1,
@@ -26,7 +24,7 @@ export default function QuizPage() {
 	const { slug } = useLocalSearchParams();
 
 	const quiz = quizzesMap[slug];
-
+	const [retryKey, setRetryKey] = useState(0);
 	const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
 	const [selectedAnswer, setSelectedAnswer] = useState(null);
 	const [orderAnswer, setOrderAnswer] = useState([]);
@@ -34,6 +32,8 @@ export default function QuizPage() {
 	const [textAnswer, setTextAnswer] = useState("");
 	const [dropdownAnswers, setDropdownAnswers] = useState({});
 	const [swipeCorrect, setSwipeCorrect] = useState(null);
+	const [dragDropCorrectItems, setDragDropCorrectItems] = useState([]);
+	const [interactiveCorrect, setInteractiveCorrect] = useState(null);
 
 	const [checked, setChecked] = useState(false);
 	const [isCorrect, setIsCorrect] = useState(false);
@@ -56,6 +56,7 @@ export default function QuizPage() {
 		setTextAnswer("");
 		setDropdownAnswers({});
 		setSwipeCorrect(null);
+		setDragDropCorrectItems([]);
 		setChecked(false);
 		setIsCorrect(false);
 	}
@@ -115,12 +116,7 @@ export default function QuizPage() {
 						</TouchableOpacity>
 
 						<View style={styles.progressBackground}>
-							<View
-								style={[
-									styles.progressFill,
-									{ width: `${progress}%` },
-								]}
-							/>
+							<View style={[styles.progressFill, { width: `${progress}%` }]} />
 						</View>
 					</View>
 
@@ -141,41 +137,41 @@ export default function QuizPage() {
 					/>
 				</View>
 
-                {checked && (
-                    <View
-                        style={[
-                            styles.feedbackBox,
-                            isCorrect ? styles.correctBox : styles.wrongBox,
-                        ]}
-                    >
-                        <Text style={styles.feedbackText}>
-                            {isCorrect
-                                ? exercise.globalFeedback?.perfect ||
-                                    exercise.feedback?.correct ||
-                                    "Super! Heel goed."
-                                : exercise.globalFeedback?.incomplete ||
-                                    exercise.feedback?.wrong ||
-                                    "Niet helemaal. Probeer opnieuw."}
-                        </Text>
-                    </View>
-                )}
+				{checked && (
+					<View
+						style={[
+							styles.feedbackBox,
+							isCorrect ? styles.correctBox : styles.wrongBox,
+						]}
+					>
+						<Text style={styles.feedbackText}>
+							{isCorrect
+								? exercise.globalFeedback?.perfect ||
+									exercise.feedback?.correct ||
+									"Super! Heel goed."
+								: exercise.globalFeedback?.incomplete ||
+									exercise.feedback?.wrong ||
+									"Niet helemaal. Probeer opnieuw."}
+						</Text>
+					</View>
+				)}
 
-                <TouchableOpacity
-                    style={[
-                        styles.button,
-                        checked && isCorrect && styles.correctButton,
-                        checked && !isCorrect && styles.wrongButton,
-                        !checked &&
-                            !selectedAnswer &&
-                            exercise.type === "meerkeuzevragen" &&
-                            styles.disabledButton,
-                    ]}
-                    onPress={handleCheck}
-                >
-                    <Text style={styles.buttonText}>
-                        {checked ? (isCorrect ? "Volgende" : "Opnieuw") : "Controleer"}
-                    </Text>
-                </TouchableOpacity>
+				<TouchableOpacity
+					style={[
+						styles.button,
+						checked && isCorrect && styles.correctButton,
+						checked && !isCorrect && styles.wrongButton,
+						!checked &&
+							!selectedAnswer &&
+							exercise.type === "meerkeuzevragen" &&
+							styles.disabledButton,
+					]}
+					onPress={handleCheck}
+				>
+					<Text style={styles.buttonText}>
+						{checked ? (isCorrect ? "Volgende" : "Opnieuw") : "Controleer"}
+					</Text>
+				</TouchableOpacity>
 			</View>
 		</ImageBackground>
 	);
@@ -221,9 +217,15 @@ const styles = StyleSheet.create({
 	},
 
 	feedbackBox: {
-		padding: 16,
-		borderRadius: 12,
-		marginTop: 20,
+		position: "absolute",
+		left: 0,
+		right: 0,
+		bottom: 0,
+		paddingHorizontal: 22,
+		paddingTop: 18,
+		paddingBottom: 96,
+		borderTopLeftRadius: 22,
+		borderTopRightRadius: 22,
 	},
 
 	correctBox: {
@@ -231,13 +233,15 @@ const styles = StyleSheet.create({
 	},
 
 	wrongBox: {
-		backgroundColor: "#e73636",
+		backgroundColor: "#F24B4B",
 	},
 
 	feedbackText: {
 		color: "#FFFFFF",
 		fontSize: 16,
-		fontWeight: "800",
+		fontWeight: "900",
+		lineHeight: 20,
+		marginBottom: 16,
 	},
 
 	button: {
@@ -246,12 +250,25 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 		justifyContent: "center",
 		alignItems: "center",
+		zIndex: 10,
 	},
 
 	buttonText: {
 		color: "#FFFFFF",
 		fontSize: 18,
 		fontWeight: "900",
+	},
+
+	correctButton: {
+		backgroundColor: "#175420",
+	},
+
+	wrongButton: {
+		backgroundColor: "#B70D0D",
+	},
+
+	disabledButton: {
+		opacity: 0.5,
 	},
 
 	notFound: {

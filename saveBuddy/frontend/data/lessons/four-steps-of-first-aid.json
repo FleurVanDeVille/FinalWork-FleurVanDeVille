@@ -7,67 +7,6 @@
 
 	"exercises": [
 		{
-			"id": 0,
-
-			"type": "sleepoefeningen",
-
-			"question": "Sleep de juiste beschrijving naar de correcte wonde.",
-
-			"draggableItems": [
-				{
-					"id": "desc_steekwonde",
-					"label": "Klein gaatje maar diep"
-				},
-
-				{
-					"id": "desc_schaafwonde",
-					"label": "Oppervlakkige huidbeschadiging"
-				},
-
-				{
-					"id": "desc_snijwonde",
-					"label": "Rechte wonde door scherp voorwerp"
-				}
-			],
-
-			"correctZones": [
-				{
-					"id": "zone_schaafwonde",
-
-					"label": "Schaafwonde",
-
-					"image": "schaafwonde.png",
-
-					"correctItem": "desc_schaafwonde"
-				},
-
-				{
-					"id": "zone_snijwonde",
-
-					"label": "Snijwonde",
-
-					"image": "snijwonde.png",
-
-					"correctItem": "desc_snijwonde"
-				},
-
-				{
-					"id": "zone_steekwonde",
-
-					"label": "Steekwonde",
-
-					"image": "steekwonde.png",
-
-					"correctItem": "desc_steekwonde"
-				}
-			],
-
-			"feedback": {
-				"correct": "Perfect! Je hebt alle beschrijvingen aan de juiste wonde gekoppeld.",
-				"wrong": "Niet helemaal juist. Kijk goed naar de diepte en de vorm van de wonden en probeer het opnieuw."
-			}
-		},
-		{
 			"id": 1,
 
 			"type": "drag-drop-koffer",
