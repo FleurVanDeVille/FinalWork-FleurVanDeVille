@@ -117,18 +117,20 @@ export default function LessonPage() {
 			}
 
 			if (exercise.type === "dropdown-oefening") {
-				if (Object.keys(dropdownAnswers).length !== exercise.scenarios.length)
+				const allAnswered = exercise.scenarios.every(
+					(scenario) => dropdownAnswers[String(scenario.id)],
+				);
+
+				if (!allAnswered) {
+					setIsCorrect(false);
+					setChecked(true);
 					return;
+				}
 
-				const correctDropdownAnswers = {};
-
-				exercise.scenarios.forEach((scenario) => {
-					correctDropdownAnswers[scenario.id] = scenario.correctAnswer;
-				});
-
-				correct =
-					JSON.stringify(dropdownAnswers) ===
-					JSON.stringify(correctDropdownAnswers);
+				correct = exercise.scenarios.every(
+					(scenario) =>
+						dropdownAnswers[String(scenario.id)] === scenario.correctAnswer,
+				);
 			}
 
 			if (exercise.type === "verbind-oefening") {

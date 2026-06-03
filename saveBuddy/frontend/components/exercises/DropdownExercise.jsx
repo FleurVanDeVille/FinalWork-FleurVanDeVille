@@ -36,11 +36,11 @@ export default function DropdownExercise({
 						labelField="label"
 						valueField="value"
 						placeholder="Kies een antwoord"
-						value={dropdownAnswers[scenario.id]}
+						value={dropdownAnswers[String(scenario.id)]}
 						onChange={(item) => {
 							setDropdownAnswers({
 								...dropdownAnswers,
-								[scenario.id]: item.value,
+								[String(scenario.id)]: item.value,
 							});
 						}}
 					/>

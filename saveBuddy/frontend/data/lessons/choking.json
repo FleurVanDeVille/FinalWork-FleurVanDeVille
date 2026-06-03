@@ -31,73 +31,22 @@
 		{
 			"id": 2,
 
-			"type": "sleepoefingen",
+			"type": "meerkeuzevragen",
 
-			"question": "Plaats je handen op de juiste plaats voor buikstoten.",
+			"question": "Wat is een belangrijk teken van een ernstige verstikking?",
 
-			"image": "cpr.png",
-
-			"draggableItems": [
-				{
-					"id": "hands",
-					"label": "Handen"
-				}
+			"answers": [
+				"De persoon kan nog praten en hoesten",
+				"De persoon maakt gierende geluiden bij het ademen",
+				"De persoon knikt 'ja' als je vraagt of hij stikt",
+				"De persoon lacht en heeft geen moeite met ademen"
 			],
 
-			"correctZones": [
-				{
-					"id": "above_navel",
-
-					"x": 50,
-					"y": 58,
-
-					"radius": 12,
-
-					"correctItem": "hands",
-
-					"feedback": {
-						"correct": "Correct! Buikstoten geef je net boven de navel."
-					}
-				}
-			],
-
-			"globalFeedback": {
-				"near": "Bijna juist.",
-
-				"wrong": "Niet correct. Probeer opnieuw."
-			},
-
-			"successMessage": "Goed gedaan! Je plaatste je handen correct voor buikstoten."
-		},
-
-		{
-			"id": 3,
-
-			"type": "volgorde-oefening",
-
-			"question": "Zet de stappen bij een ernstige verslikking (slachtoffer kan niet meer praten of hoesten) in de juiste volgorde.",
-
-			"image": "cpr.png",
-
-			"options": [
-				"Pas 5 buikstoten (Heimlich-manoeuvre) toe",
-				"Geef tot 5 stevige slagen tussen de schouderbladen",
-				"Controleer of de blokkade is opgeheven",
-				"Bel direct 112 als de blokkade blijft bestaan",
-				"Ondersteun de borstkas en laat het slachtoffer naar voren leunen"
-			],
-
-			"correctOrder": [
-				"Ondersteun de borstkas en laat het slachtoffer naar voren leunen",
-				"Geef tot 5 stevige slagen tussen de schouderbladen",
-				"Controleer of de blokkade is opgeheven",
-				"Pas 5 buikstoten (Heimlich-manoeuvre) toe",
-				"Bel direct 112 als de blokkade blijft bestaan"
-			],
+			"correctAnswer": "De persoon maakt gierende geluiden bij het ademen",
 
 			"feedback": {
-				"correct": "Perfect! Dit is de exacte opeenvolging van handelingen bij een ernstige luchtwegbelemmering.",
-				"wrong": "Niet helemaal juist. Probeer iets opnieuw te doen."
+				"correct": "Goed gedaan! Gierende geluiden bij het ademen zijn een belangrijk teken van een ernstige verstikking.",
+				"wrong": "Niet helemaal juist. Probeer opnieuw."
 			}
 		},
 

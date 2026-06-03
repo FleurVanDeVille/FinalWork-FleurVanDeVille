@@ -43,7 +43,7 @@ export const lessen = [
     title: "Huidwonde",
     duration: "10 min",
     progress: 0,
-    locked: true,
+    locked: false,
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const lessen = [
     title: "Brandwonde",
     duration: "15 min",
     progress: 0,
-    locked: true,
+    locked: false,
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ export const lessen = [
     title: "Bloeding",
     duration: "10 min",
     progress: 0,
-    locked: true,
+    locked: false,
   },
   {
     id: 7,
@@ -70,7 +70,7 @@ export const lessen = [
     title: "Letsels",
     duration: "10 min",
     progress: 0,
-    locked: true,
+    locked: false,
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ export const lessen = [
     title: "Vergiftiging",
     duration: "15 min",
     progress: 0,
-    locked: true,
+    locked: false,
   },
   {
     id: 9,
@@ -88,6 +88,6 @@ export const lessen = [
     title: "Verdrinking",
     duration: "10 min",
     progress: 0,
-    locked: true,
+    locked: false,
   }
 ];

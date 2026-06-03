@@ -174,7 +174,9 @@ export default function DragExercise({ exercise, setInteractiveCorrect }) {
 						>
 							<Text style={styles.zoneTitle}>{zone.label}</Text>
 
-							<Image source={images[zone.image]} style={styles.zoneImage} />
+							{zone.image && images[zone.image] && (
+								<Image source={images[zone.image]} style={styles.zoneImage} />
+							)}
 
 							<View
 								ref={(ref) => {
@@ -207,6 +209,10 @@ export default function DragExercise({ exercise, setInteractiveCorrect }) {
 }
 
 const styles = StyleSheet.create({
+	container: {
+		width: "100%",
+	},
+
 	question: {
 		fontSize: 20,
 		fontWeight: "800",
@@ -243,7 +249,7 @@ const styles = StyleSheet.create({
 
 	zonesColumn: {
 		width: 125,
-		gap: 12,
+		gap: 20,
 	},
 
 	itemsColumn: {
@@ -271,7 +277,7 @@ const styles = StyleSheet.create({
 
 	zoneImage: {
 		width: "100%",
-		height: 80,
+		height: 90,
 		resizeMode: "cover",
 	},
 

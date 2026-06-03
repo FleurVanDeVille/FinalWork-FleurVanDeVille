@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function MultipleChoiceExercise({
 	exercise,
@@ -9,25 +9,38 @@ export default function MultipleChoiceExercise({
 		<View>
 			<Text style={styles.question}>{exercise.question}</Text>
 
-			{exercise.answers.map((answer, index) => (
-				<TouchableOpacity
-					key={answer}
-					onPress={() => setSelectedAnswer(answer)}
-					style={[
-						styles.answer,
-						selectedAnswer === answer && styles.selectedAnswer,
-					]}
-				>
-					<Text
+			{exercise.answers.map((answer, index) => {
+				const label = typeof answer === "string" ? answer : answer.label;
+				const image = typeof answer === "object" ? answer.image : null;
+
+				return (
+					<TouchableOpacity
+						key={`${exercise.id}-${index}`}
+						onPress={() => setSelectedAnswer(answer)}
 						style={[
-							styles.answerText,
-							selectedAnswer === answer && styles.selectedAnswerText,
+							styles.answer,
+							selectedAnswer === answer && styles.selectedAnswer,
 						]}
 					>
-						{String.fromCharCode(65 + index)}. {answer}
-					</Text>
-				</TouchableOpacity>
-			))}
+						<Text
+							style={[
+								styles.answerText,
+								selectedAnswer === answer && styles.selectedAnswerText,
+							]}
+						>
+							{String.fromCharCode(65 + index)}. {label}
+						</Text>
+
+						{image && (
+							<Image
+								source={image}
+								style={styles.answerImage}
+								resizeMode="contain"
+							/>
+						)}
+					</TouchableOpacity>
+				);
+			})}
 		</View>
 	);
 }
@@ -62,7 +75,7 @@ const styles = StyleSheet.create({
 		fontWeight: "700",
 	},
 
-  selectedAnswerText: {
-    color: "#FFFFFF",
-  }
+	selectedAnswerText: {
+		color: "#FFFFFF",
+	},
 });

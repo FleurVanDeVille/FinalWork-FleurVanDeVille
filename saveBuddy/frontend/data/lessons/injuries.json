@@ -7,30 +7,6 @@
 
     "exercises": [
         {
-            "id": 1,
-
-            "type": "meerkeuzevragen",
-
-            "question": "Wat is de allereerste prioriteit bij het vermoeden van een botbreuk of ontwrichting?",
-
-            "image": "broken_bone_immobile.png",
-
-            "answers": [
-                "Probeer het bot of gewricht zo snel mogelijk weer recht te trekken",
-                "Laat het slachtoffer het ledemaat voorzichtig bewegen om te testen of het gebroken is",
-                "Zorg voor absolute onbeweeglijkheid en verplaats het ledemaat niet",
-                "Smeer direct een warmtezalf op de pijnlijke plek"
-            ],
-
-            "correctAnswer": "Zorg voor absolute onbeweeglijkheid and verplaats het ledemaat niet",
-
-            "feedback": {
-                "correct": "Uitstekend! Rust en onbeweeglijkheid zijn cruciaal.",
-                "wrong": "Niet juist. Probeer iets anders."
-            }
-        },
-
-        {
             "id": 2,
 
             "type": "volgorde-oefening",
@@ -142,7 +118,7 @@
                 {
                     "id": "zone_breuk",
 
-                    "label": "De continuïteit van het bot is onderbroken (scheur of volledige breuk).",
+                    "label": "De continuïteit van het bot is onderbroken.",
 
                     "correctItem": "term_fractuur"
                 },
@@ -150,7 +126,7 @@
                 {
                     "id": "zone_verstuiking",
 
-                    "label": "De gewrichtsbanden zijn extreem uitgerekend of ingescheurd, maar de botuiteinden zitten nog op hun plek.",
+                    "label": "De gewrichtsbanden zijn extreem uitgerekend of ingescheurd.",
 
                     "correctItem": "term_verstuiking"
                 },
