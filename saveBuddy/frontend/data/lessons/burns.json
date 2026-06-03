@@ -13,13 +13,13 @@
 
 			"question": "Wat is de allerbelangrijkste eerste handeling bij het verzorgen van een brandwond?",
 
-			"image": "burn_cooling.png",
+			"image": "brandwonde-verzorgen.webp",
 
 			"answers": [
 				"Smeer er direct een speciale brandwondenzalf op",
 				"Koel de wond minstens 10 tot 20 minuten met lauw stromend water",
 				"Prik de blaren voorzichtig door met een propere naald",
-				"Dek de wond direct luchtdicht af met een dikke handdoek"
+				"Dek de wond direct luchtdicht af"
 			],
 
 			"correctAnswer": "Koel de wond minstens 10 tot 20 minuten met lauw stromend water",
@@ -107,16 +107,16 @@
 
 			"question": "Welke van de volgende stellingen over brandwonden is niet correct?",
 
-			"image": "burn_myths.png",
+			"image": "brandwonde.webp",
 
 			"answers": [
-				"Je mag een brandwond nooit met ijs koelen, omdat dit de huid nog meer kan beschadigen",
-				"Je mag een brandwond nooit met tandpasta of boter insmeren, omdat dit de wond kan verontreinigen",
-				"Je mag een brandwond nooit afdekken, omdat dit de genezing kan vertragen",
-				"Je mag een brandwond nooit doorprikken, omdat dit het risico op infectie verhoogt"
+				"Je mag een brandwond nooit met ijs koelen, dit beschadigt het weefsel verder",
+				"Je mag een brandwond nooit met tandpasta insmeren",
+				"Je mag een brandwond nooit afdekken, dit vertraagt de genezing",
+				"Je mag een brandwond nooit doorprikken"
 			],
 
-			"correctAnswer": "Je mag een brandwond nooit afdekken, omdat dit de genezing kan vertragen",
+			"correctAnswer": "Je mag een brandwond nooit afdekken, dit vertraagt de genezing",
 
 			"feedback": {
 				"correct": "Helemaal juist! Afdekken is juist belangrijk om infecties te voorkomen en het genezingsproces te ondersteunen.",
@@ -131,13 +131,13 @@
 
 			"question": "Wat is de beste manier om een brandwond te beschermen nadat je deze hebt gekoeld?",
 
-			"image": "burn_protection.png",
+			"image": "brandwonde-koelen.webp",
 
 			"answers": [
 				"Dek de wond af met een steriel gaasje en plak het losjes vast",
 				"Laat de wond open zodat deze kan ademen",
 				"Smeer er een dikke laag vaseline op en dek het af met huishoudfolie",
-				"Draag strakke kleding over de wond om deze op zijn plaats te houden"
+				"Draag strakke kleding over de wond"
 			],
 
 			"correctAnswer": "Dek de wond af met een steriel gaasje en plak het losjes vast",
@@ -155,7 +155,7 @@
 
 			"question": "Wanneer moet je altijd medische hulp zoeken bij een brandwond?",
 
-			"image": "burn_medical_help.png",
+			"image": "noodnummer.webp",
 
 			"answers": [
 				"Als de brandwond groter is dan de handpalm van het slachtoffer",
@@ -189,7 +189,7 @@
 				{
 					"id": 1,
 
-					"image": "burn_first_degree.png",
+					"image": "eerstegraadswonde.webp",
 
 					"situation": "De huid is na een dagje strand felrood, droog en pijnlijk. Er zijn geen blaren zichtbaar.",
 
@@ -204,7 +204,7 @@
 				{
 					"id": 2,
 
-					"image": "burn_second_degree.png",
+					"image": "tweedegraadswonde.webp",
 
 					"situation": "Er is hete koffie over de hand stroomt. De huid is rood, zeer pijnlijk en er ontstaan meteen vochtblaren.",
 
@@ -219,7 +219,7 @@
 				{
 					"id": 3,
 
-					"image": "burn_third_degree.png",
+					"image": "derdegraadswonde.webp",
 
 					"situation": "Na contact met een steekvlam is de huid wit en lederachtig geworden. Het slachtoffer voelt op die plek verrassend genoeg geen pijn.",
 

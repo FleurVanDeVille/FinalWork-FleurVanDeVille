@@ -13,16 +13,16 @@
 
             "question": "Wat is de eerste stap bij het verlenen van eerste hulp bij een hevige, spuitende bloeding?",
 
-            "image": "safety_first.png",
+            "image": "spuitende-bloeding.webp",
 
             "answers": [
-                "Spoel de wond direct schoon onder stromend kraanwater",
-                "Zorg voor je eigen veiligheid en trek (indien mogelijk) handschoenen aan",
-                "Breng meteen een strak knelverband (tourniquet) aan om de arm of het been",
-                "Laat het slachtoffer veel water drinken tegen het vochtverlies"
+                "Spoel de wond direct schoon",
+                "Zorg voor je eigen veiligheid en trek handschoenen aan",
+                "Breng meteen een strak knelverband aan",
+                "Laat het slachtoffer veel water drinken"
             ],
 
-            "correctAnswer": "Zorg voor je eigen veiligheid en trek (indien mogelijk) handschoenen aan",
+            "correctAnswer": "Zorg voor je eigen veiligheid en trek handschoenen aan",
 
             "feedback": {
                 "correct": "Goed gedaan! Je eigen veiligheid staat altijd voorop.",
@@ -132,6 +132,8 @@
                 {
                     "id": 1,
 
+                    "image": "bloeding-drukverband.webp",
+
                     "situation": "Je hebt een drukverband aangelegd bij een slachtoffer, maar na 2 minuten zie je dat het bloed er volledig doorheen begint te sijpelen.",
 
                     "correctAnswer": "Een tweede drukverband er strak bovenop aanleggen",
@@ -156,7 +158,7 @@
 
             "question": "Wat is de juiste manier om een lichte snijwond te verzorgen?",
 
-            "image": "minor_cut.png",
+            "image": "snijwonde.webp",
 
             "answers": [
                 "Laat de wond open zodat deze kan ademen",

@@ -104,7 +104,7 @@
 
 			"question": "Er zit een groot stuk glas diep in een snijwonde. Wat doe je?",
 
-			"image": "glass_in_wound.png",
+			"image": "glas-in-voet.webp",
 
 			"answers": [
 				"Trek het glas er meteen uit zodat de wond gespoeld kan worden",
@@ -126,18 +126,18 @@
 
 			"type": "meerkeuzevragen",
 
-			"question": "Wat is het belangrijkste nadeel van een wonde ontsmetten met een gekleurd product (zoals jodium of eosin)?",
+			"question": "Wat is het belangrijkste nadeel van een wonde ontsmetten met een gekleurd product?",
 
-			"image": "colored_disinfectant.png",
+			"image": "jodium-eosin.webp",
 
 			"answers": [
 				"Het product werkt minder goed tegen bacteriën",
 				"Het product maakt de huid te droog",
-				"De kleur maskeert de wond, waardoor je ontstekingen of wondheling minder goed kunt beoordelen",
+				"De kleur maskeert de wond",
 				"Het product zorgt ervoor dat de wond sneller gaat littekenen"
 			],
 
-			"correctAnswer": "De kleur maskeert de wond, waardoor je ontstekingen of wondheling minder goed kunt beoordelen",
+			"correctAnswer": "De kleur maskeert de wond",
 
 			"feedback": {
 				"correct": "Klopt helemaal! Gekleurde ontsmettingsmiddelen kleuren de wondranden, waardoor een arts een beginnende infectie (roodheid) minder snel kan opmerken. Gebruik bij voorkeur een kleurloze spray.",
@@ -151,18 +151,18 @@
 
 			"type": "meerkeuzevragen",
 
-			"question": "Wat doe je als het eerste drukverband dat je hebt aangelegd volledig doorbloedt bij een hevige snijwonde?",
+			"question": "Wat doe je als het eerste drukverband volledig doorbloedt?",
 
-			"image": "bleeding_wound.png",
+			"image": "drukverband.webp",
 
 			"answers": [
 				"Verwijder het eerste verband en leg een nieuw, strakker verband aan",
-				"Laat het eerste verband zitten en breng er een tweede drukverband stevig bovenop aan",
+				"Laat het eerste verband zitten en breng er een tweede drukverband aan",
 				"Stop met drukken en spoel de wond opnieuw onder de kraan",
 				"Breng een knelverband aan rond de nek"
 			],
 
-			"correctAnswer": "Laat het eerste verband zitten en breng er een tweede drukverband stevig bovenop aan",
+			"correctAnswer": "Laat het eerste verband zitten en breng er een tweede drukverband aan",
 
 			"feedback": {
 				"correct": "Uitstekend! Goed geantwoord.",

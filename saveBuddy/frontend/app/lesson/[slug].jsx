@@ -55,6 +55,18 @@ const images = {
 	"luid-hoesten.webp": require("../../assets/images/luid-hoesten.webp"),
 	"gierendgeluid-verslikking.webp": require("../../assets/images/gierendgeluid-verslikking.webp"),
 	"baby-verslikking.webp": require("../../assets/images/baby-verslikking.webp"),
+	"glas-in-voet.webp": require("../../assets/images/glas-in-voet.webp"),
+	"jodium-eosin.webp": require("../../assets/images/jodium-eosin.webp"),
+	"drukverband.webp": require("../../assets/images/drukverband.webp"),
+	"brandwonde-verzorgen.webp": require("../../assets/images/brandwonde-verzorgen.webp"),
+	"brandwonde.webp": require("../../assets/images/brandwonde.webp"),
+	"brandwonde-koelen.webp": require("../../assets/images/brandwonde-koelen.webp"),
+	"eerstegraadswonde.webp": require("../../assets/images/eerstegraadswonde.webp"),
+	"tweedegraadswonde.webp": require("../../assets/images/tweedegraadswonde.webp"),
+	"derdegraadswonde.webp": require("../../assets/images/derdegraadswonde.webp"),
+	"spuitende-bloeding.webp": require("../../assets/images/spuitende-bloeding.webp"),
+	"bloeding-drukverband.webp": require("../../assets/images/bloeding-drukverband.webp"),
+	"snijwonde.webp": require("../../assets/images/snijwonde.webp"),
 
 };
 
