@@ -58,7 +58,7 @@
         },
 
         {
-            "id": 4,
+            "id": 3,
 
             "type": "sleepoefeningen",
 
@@ -116,7 +116,7 @@
         },
 
         {
-            "id": 5,
+            "id": 4,
 
             "type": "dropdown-oefening",
 
@@ -150,7 +150,7 @@
         },
 
         {
-            "id": 6,
+            "id": 5,
 
             "type": "meerkeuzevragen",
 

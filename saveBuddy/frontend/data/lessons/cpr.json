@@ -13,7 +13,7 @@
 
 			"question": "Wat doe je als eerst bij een noodsituatie?",
 
-			"image": "cpr.png",
+			"image": "noodsituatie.webp",
 
 			"answers": [
 				"Begin meteen borstcompressies",
@@ -66,7 +66,7 @@
 
 			"question": "Waar plaats je je handen voor borstcompressies?",
 
-			"image": "cpr.png",
+			"image": "borstcompressie.png",
 
 			"answers": ["Hals", "Midden borstkas", "Buik", "Schouder"],
 
@@ -138,7 +138,7 @@
 				{
 					"id": 1,
 
-					"image": "cpr.png",
+					"image": "rustige-ademhaling.webp",
 
 					"situation": "Het slachtoffer ademt rustig en regelmatig.",
 
@@ -153,7 +153,7 @@
 				{
 					"id": 2,
 
-					"image": "cpr.png",
+					"image": "borstkast-ademhaling.webp",
 
 					"situation": "De borstkas beweegt niet.",
 
@@ -168,7 +168,7 @@
 				{
 					"id": 3,
 
-					"image": "cpr.png",
+					"image": "ademhappen.webp",
 
 					"situation": "Het slachtoffer hapt naar adem (gasping).",
 
@@ -183,7 +183,7 @@
 				{
 					"id": 4,
 
-					"image": "cpr.png",
+					"image": "praat-normaal.webp",
 
 					"situation": "Het slachtoffer praat normaal.",
 
@@ -204,7 +204,7 @@
 
 			"question": "Wat is de aanbevolen diepte van borstcompressies bij volwassenen?",
 
-			"image": "cpr.png",
+			"image": "borstcompressie-diepte.webp",
 
 			"answers": [
 				"Minstens 2 cm",
@@ -228,7 +228,7 @@
 
 			"question": "Hoe vaak moet je borstcompressies en beademingen afwisselen bij CPR?",
 
-			"image": "cpr.png",
+			"image": "reanimatiepop.webp",
 
 			"answers": [
 				"30 compressies en 2 beademingen",
@@ -252,7 +252,7 @@
 
 			"question": "Wat is de eerste stap bij het gebruik van een AED?",
 
-			"image": "aed.png",
+			"image": "AED.webp",
 
 			"answers": [
 				"Plaats de elektroden op de borst",
@@ -276,7 +276,7 @@
 
 			"question": "Wat moet je doen als de AED aangeeft dat een schok niet nodig is?",
 
-			"image": "aed.png",
+			"image": "aed-schok.webp",
 
 			"answers": [
 				"Blijf borstcompressies geven",
@@ -300,7 +300,7 @@
 
 			"question": "Wat is de aanbevolen frequentie van borstcompressies bij CPR?",
 
-			"image": "cpr.png",
+			"image": "borstcompressie-diepte.webp",
 
 			"answers": [
 				"50-70 compressies per minuut",

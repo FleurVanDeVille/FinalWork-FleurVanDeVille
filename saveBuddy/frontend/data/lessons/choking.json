@@ -11,6 +11,8 @@
 
 			"type": "meerkeuzevragen",
 
+			"image": "verslikking.webp",
+
 			"question": "Wat mag je niet doen bij een verstikking?",
 
 			"answers": [
@@ -32,6 +34,8 @@
 			"id": 2,
 
 			"type": "meerkeuzevragen",
+
+			"image": "ernstige-verslikking.webp",
 
 			"question": "Wat is een belangrijk teken van een ernstige verstikking?",
 
@@ -73,7 +77,7 @@
 				{
 					"id": 1,
 
-					"image": "choking_scenario.png",
+					"image": "luid-hoesten.webp",
 
 					"situation": "Het slachtoffer hoest heel luid en kan nog antwoorden op je vragen.",
 
@@ -88,7 +92,7 @@
 				{
 					"id": 2,
 
-					"image": "choking_scenario.png",
+					"image": "gierendgeluid-verslikking.webp",
 
 					"situation": "Het slachtoffer maakt een gierend geluid bij het inademen en kan niet meer praten.",
 
@@ -103,7 +107,7 @@
 				{
 					"id": 3,
 
-					"image": "choking_scenario.png",
+					"image": "luid-hoesten.webp",
 
 					"situation": "Het slachtoffer knikt 'ja' als je vraagt of hij stikt, maar maakt helemaal geen geluid meer.",
 
@@ -124,7 +128,7 @@
 
 			"question": "Hoe pas je eerste hulp bij verslikking aan voor een baby jonger dan 1 jaar?",
 
-			"image": "baby_choking.png",
+			"image": "baby-verslikking.webp",
 
 			"answers": [
 				"Je past exact dezelfde buikstoten toe als bij een volwassene",

@@ -7,7 +7,7 @@
 
     "exercises": [
         {
-            "id": 2,
+            "id": 1,
 
             "type": "volgorde-oefening",
 
@@ -34,7 +34,7 @@
         },
 
         {
-            "id": 3,
+            "id": 2,
 
             "type": "swipe-oefening",
 
@@ -89,7 +89,7 @@
         },
 
         {
-            "id": 4,
+            "id": 3,
 
             "type": "sleepoefeningen",
 
@@ -147,7 +147,7 @@
         },
 
         {
-            "id": 5,
+            "id": 4,
 
             "type": "meerkeuzevragen",
 
@@ -171,7 +171,7 @@
         },
 
         {
-            "id": 6,
+            "id": 5,
 
             "type": "verbind-oefening",
 

@@ -36,6 +36,26 @@ const lessonsMap = {
 
 const images = {
 	"cpr.png": require("../../assets/images/img-placeholder.png"),
+	"noodsituatie.webp": require("../../assets/images/noodsituatie.webp"),
+	"bewustzijn.webp": require("../../assets/images/bewustzijn.webp"),
+	"noodnummer.webp": require("../../assets/images/noodnummer.webp"),
+	"veiligesituatie.webp": require("../../assets/images/veiligesituatie.webp"),
+	"veiligheid.webp": require("../../assets/images/veiligheid.webp"),
+	"borstcompressie.png": require("../../assets/images/borstcompressie.png"),
+	"rustige-ademhaling.webp": require("../../assets/images/rustige-ademhaling.webp"),
+	"borstkast-ademhaling.webp": require("../../assets/images/borstkast-ademhaling.webp"),
+	"ademhappen.png": require("../../assets/images/ademhappen.webp"),
+	"praat-normaal.png": require("../../assets/images/praat-normaal.webp"),
+	"borstcompressie-diepte.webp": require("../../assets/images/borstcompressie-diepte.webp"),
+	"reanimatiepop.webp": require("../../assets/images/reanimatiepop.webp"),
+	"AED.webp": require("../../assets/images/AED.webp"),
+	"aed-schok.webp": require("../../assets/images/aed-schok.webp"),
+	"verslikking.webp": require("../../assets/images/verslikking.webp"),
+	"ernstige-verslikking.webp": require("../../assets/images/ernstige-verslikking.webp"),
+	"luid-hoesten.webp": require("../../assets/images/luid-hoesten.webp"),
+	"gierendgeluid-verslikking.webp": require("../../assets/images/gierendgeluid-verslikking.webp"),
+	"baby-verslikking.webp": require("../../assets/images/baby-verslikking.webp"),
+
 };
 
 export default function LessonPage() {
@@ -388,7 +408,7 @@ const styles = StyleSheet.create({
 
 	exerciseImage: {
 		width: "100%",
-		height: 200,
+		height: 230,
 		marginBottom: 24,
 	},
 

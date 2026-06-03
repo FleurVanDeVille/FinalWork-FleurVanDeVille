@@ -10,6 +10,13 @@ import {
 
 const images = {
 	"img-placeholder.png": require("../../assets/images/img-placeholder.png"),
+	"rustige-ademhaling.webp": require("../../assets/images/rustige-ademhaling.webp"),
+	"borstkast-ademhaling.webp": require("../../assets/images/borstkast-ademhaling.webp"),
+	"ademhappen.webp": require("../../assets/images/ademhappen.webp"),
+	"praat-normaal.webp": require("../../assets/images/praat-normaal.webp"),
+	"luid-hoesten.webp": require("../../assets/images/luid-hoesten.webp"),
+	"ernstige-verslikking.webp": require("../../assets/images/ernstige-verslikking.webp"),
+	"gierendgeluid-verslikking.webp": require("../../assets/images/gierendgeluid-verslikking.webp"),
 };
 
 export default function SwipeCard({ scenario, onSwipe = () => {} }) {

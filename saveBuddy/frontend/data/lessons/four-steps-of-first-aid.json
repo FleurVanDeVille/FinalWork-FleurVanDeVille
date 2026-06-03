@@ -158,7 +158,7 @@
 
 			"question": "Wat doe je als eerst in een noodsituatie?",
 
-			"image": "cpr.png",
+			"image": "noodsituatie.webp",
 
 			"answers": [
 				"Zorg voor veiligheid",
@@ -182,7 +182,7 @@
 
 			"question": "Hoe controleer je of iemand bewust is?",
 
-			"image": "cpr.png",
+			"image": "bewustzijn.webp",
 
 			"answers": [
 				"Water in het gezicht gooien",
@@ -204,7 +204,7 @@
 
 			"type": "tekst-input",
 
-			"image": "cpr.png",
+			"image": "noodnummer.webp",
 
 			"question": "Welk noodnummer bel je in een noodsituatie?",
 
@@ -223,7 +223,7 @@
 
 			"type": "meerkeuzevragen",
 
-			"image": "cpr.png",
+			"image": "veiligesituatie.webp",
 
 			"question": "Waarom is veiligheid belangrijk bij eerste hulp?",
 
@@ -247,7 +247,7 @@
 
 			"type": "meerkeuzevragen",
 
-			"image": "cpr.png",
+			"image": "veiligheid.webp",
 
 			"question": "Wanneer moet je de hulpdiensten bellen?",
 
