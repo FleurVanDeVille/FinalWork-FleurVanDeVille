@@ -67,6 +67,20 @@ const images = {
 	"spuitende-bloeding.webp": require("../../assets/images/spuitende-bloeding.webp"),
 	"bloeding-drukverband.webp": require("../../assets/images/bloeding-drukverband.webp"),
 	"snijwonde.webp": require("../../assets/images/snijwonde.webp"),
+	"bot-onderarm.webp": require("../../assets/images/bot-onderarm.webp"),
+	"blauwe-enkel.webp": require("../../assets/images/blauwe-enkel.webp"),
+	"open-botbreuk.webp": require("../../assets/images/open-botbreuk.webp"),
+	"bijtend-product.webp": require("../../assets/images/bijtend-product.webp"),
+	"co-vergiftiging.webp": require("../../assets/images/co-vergiftiging.webp"),
+	"giftige-medicijnen.webp": require("../../assets/images/giftige-medicijnen.webp"),
+	"bleekwater.webp": require("../../assets/images/bleekwater.webp"),
+	"alcohol.webp": require("../../assets/images/alcohol.webp"),
+	"knoopcelbatterij.webp": require("../../assets/images/knoopcelbatterij.webp"),
+	"oog.webp": require("../../assets/images/oog.webp"),
+	"nood-in-water.webp": require("../../assets/images/nood-in-water.webp"),
+	"aed-water.webp": require("../../assets/images/aed-water.webp"),
+	"verdrinkingsincident.webp": require("../../assets/images/verdrinkingsincident.webp"),
+	"beademing.webp": require("../../assets/images/beademing.webp"),
 
 };
 

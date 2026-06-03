@@ -11,18 +11,18 @@
 
 			"type": "meerkeuzevragen",
 
-			"question": "Je ziet iemand in diep water in nood verkeren. Wat is je eerste actie wat betreft veiligheid?",
+			"question": "Je ziet iemand in diep water in nood. Wat is je eerste actie?",
 
-			"image": "drowning_rescue.png",
+			"image": "nood-in-water.webp",
 
 			"answers": [
 				"Spring direct het water in om naar het slachtoffer te zwemmen",
-				"Probeer het slachtoffer vanaf de kant te helpen (bvb. met een tak, werplijn of reddingsboei) en bel 112",
+				"Probeer het slachtoffer vanaf de kant te helpen en bel 112",
 				"Wacht rustig af tot het slachtoffer uit zichzelf naar de kant zwemt",
 				"Zoek een boot, ook al duurt dat een half uur"
 			],
 
-			"correctAnswer": "Probeer het slachtoffer vanaf de kant te helpen (bvb. met een tak, werplijn of reddingsboei) en bel 112",
+			"correctAnswer": "Probeer het slachtoffer vanaf de kant te helpen en bel 112",
 
 			"feedback": {
 				"correct": "Goed gedaan! Zelf in het water springen is de allerlaatste optie. ",
@@ -64,13 +64,13 @@
 
 			"question": "Je moet een AED aansluiten bij een slachtoffer dat net uit het water is gehaald. Wat moet je doen voordat je de elektroden opplakt?",
 
-			"image": "aed_wet_chest.png",
+			"image": "aed-water.webp",
 
 			"answers": [
-				"Niets, je mag de stickers direct op de kletsnatte borstkas plakken",
+				"Niets, je mag de stickers direct op de natte borstkas plakken",
 				"Droog de borstkas van het slachtoffer eerst grondig af",
-				"Scheer al het borsthaar weg en giet er ontsmettingsalcohol over",
-				"Wacht 15 minuten tot de huid door de buitenlucht is opgedroogd"
+				"Scheer al het borsthaar weg",
+				"Wacht 15 minuten tot de huid is opgedroogd"
 			],
 
 			"correctAnswer": "Droog de borstkas van het slachtoffer eerst grondig af",
@@ -102,7 +102,7 @@
 				{
 					"id": 1,
 
-					"image": "drowning_cough.png",
+					"image": "verdrinkingsincident.webp",
 
 					"situation": "Het slachtoffer was kort onder water, hoest flink, maar zegt dat alles prima gaat en wil naar huis.",
 
@@ -117,7 +117,7 @@
 				{
 					"id": 2,
 
-					"image": "drowning_cpr_success.png",
+					"image": "beademing.webp",
 
 					"situation": "Het slachtoffer ademde niet, maar na jouw 5 beademingen begint hij spontaan weer te ademen en komt hij bij bewustzijn.",
 
@@ -136,16 +136,18 @@
 
 			"type": "meerkeuzevragen",
 
-			"question": "Wat is een belangrijke reden waarom je bij een slachtoffer van verdrinking altijd moet blijven controleren op ademhaling en bewustzijn, zelfs als ze weer ademen?",
+			"image": "beademing.webp",
+
+			"question": "Waarom is het belangrijk om een slachtoffer dat net uit het water is gehaald toch goed in de gaten te houden?",
 
 			"answers": [
-				"Er is geen reden, als ze ademen is alles in orde",
-				"Ze kunnen nog steeds een secundaire verdrinking ontwikkelen waarbij water in de longen blijft zitten",
-				"Ze kunnen plotseling weer stoppen met ademen zonder waarschuwing",
+				"Er is geen reden",
+				"Ze kunnen nog steeds een secundaire verdrinking ontwikkelen",
+				"Ze kunnen plotseling weer stoppen met ademen",
 				"Ze kunnen een allergische reactie krijgen op het water"
 			],
 
-			"correctAnswer": "Ze kunnen nog steeds een secundaire verdrinking ontwikkelen waarbij water in de longen blijft zitten",
+			"correctAnswer": "Ze kunnen nog steeds een secundaire verdrinking ontwikkelen",
 
 			"feedback": {
 				"correct": "Perfect! Een secundaire verdrinking kan uren na de oorspronkelijke incident plaatsvinden.",

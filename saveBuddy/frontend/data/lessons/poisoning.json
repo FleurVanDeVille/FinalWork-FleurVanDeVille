@@ -13,7 +13,7 @@
 
 			"question": "Een slachtoffer heeft per ongeluk een bijtend product ingeslikt. Wat mag je absoluut niet doen?",
 
-			"image": "corrosive_swallowed.png",
+			"image": "bijtend-product.webp",
 
 			"answers": [
 				"De mond van het slachtoffer spoelen met water",
@@ -35,9 +35,9 @@
 
 			"type": "meerkeuzevragen",
 
-			"question": "Wat is het allereerste symptoom waaraan je een beginnende koolstofmonoxidevergiftiging (CO) kunt herkennen bij jezelf of anderen?",
+			"question": "Wat is het allereerste symptoom waaraan je een beginnende koolstofmonoxidevergiftiging (CO) kunt herkennen?",
 
-			"image": "co_symptoms.png",
+			"image": "co-vergiftiging.webp",
 
 			"answers": [
 				"Hevige koorts en hoesten",
@@ -75,7 +75,7 @@
 				{
 					"id": 1,
 
-					"image": "unconscious_poison.png",
+					"image": "giftige-medicijnen.webp",
 
 					"situation": "Het slachtoffer heeft giftige medicijnen ingenomen en is heel suf en half buiten bewustzijn.",
 
@@ -90,7 +90,7 @@
 				{
 					"id": 2,
 
-					"image": "bleach_swallowed.png",
+					"image": "bleekwater.webp",
 
 					"situation": "Het slachtoffer is volledig bij bewustzijn en heeft net een klein slokje bijtend bleekwater ingeslikt.",
 
@@ -109,13 +109,13 @@
 
 			"type": "meerkeuzevragen",
 
-			"question": "Je treft een vriend aan die na een feestje extreem veel alcohol heeft gedronken. Hij reageert nergens meer op (bewusteloos), maar ademt wel nog normaal. Wat is de juiste EHBO-actie?",
+			"question": "Je vriend heeft veel alcohol gedronken. Hij is bewusteloos. Wat is de juiste EHBO-actie?",
 
-			"image": "alcohol_unconscious.png",
+			"image": "alcohol.webp",
 
 			"answers": [
 				"Leg hem in de stabiele zijligging en bel direct 112",
-				"Geef hem een sterke tas zwarte koffie om te ontnuchteren",
+				"Geef hem een sterke tas zwarte koffie",
 				"Laat hem buiten in de kou uitbramen en loop weg",
 				"Steek je vinger in zijn keel zodat hij gaat braken"
 			],
@@ -163,13 +163,13 @@
 
 			"type": "meerkeuzevragen",
 
-			"question": "Een kind heeft een kleine, ronde knoopcelbatterij (bijvoorbeeld uit een afstandsbediening) ingeslikt. Wat moet je doen?",
+			"question": "Een kind heeft een kleine, ronde knoopcelbatterij ingeslikt. Wat moet je doen?",
 
-			"image": "button_battery.png",
+			"image": "knoopcelbatterij.webp",
 
 			"answers": [
 				"Wacht rustig af tot de batterij via de natuurlijke weg de stoelgang verlaat",
-				"Geef het kind direct een glas melk om de maag te beschermen",
+				"Geef het kind direct een glas melk",
 				"Ga onmiddellijk naar de spoedafdeling van het ziekenhuis",
 				"Laat het kind veel springen zodat de batterij sneller zakt"
 			],
@@ -187,18 +187,18 @@
 
 			"type": "meerkeuzevragen",
 
-			"question": "Er is per ongeluk een chemisch reinigingsmiddel in het oog van het slachtoffer gespat. Hoe richt je de waterstraal tijdens het spoelen?",
+			"question": "Er is chemisch reinigingsmiddel in het oog van het slachtoffer gespat. Hoe richt je de waterstraal tijdens het spoelen?",
 
-			"image": "eye_rinse_direction.png",
+			"image": "oog.webp",
 
 			"answers": [
-				"Van de buitenkant van het gezicht (de slaag) richting de neus",
-				"Van de binnenkant (de neuszijde) naar de buitenkant van het gezicht",
+				"Van de buitenkant van het gezicht richting de neus",
+				"Van de binnenkant naar de buitenkant van het gezicht",
 				"Recht van voren, pal op de pupil",
-				"Je mag het oog absoluut niet spoelen met water"
+				"Je mag het oog absoluut niet spoelen"
 			],
 
-			"correctAnswer": "Van de binnenkant (de neuszijde) naar de buitenkant van het gezicht",
+			"correctAnswer": "Van de binnenkant naar de buitenkant van het gezicht",
 
 			"feedback": {
 				"correct": "Perfect! Door van binnen (bij de neus) naar buiten te spoelen, voorkom je dat het chemische product en het vuile spoelwater in het andere, gezonde oog lopen.",

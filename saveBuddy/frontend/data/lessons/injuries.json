@@ -54,7 +54,7 @@
                 {
                     "id": 1,
 
-                    "image": "open_fracture.png",
+                    "image": "bot-onderarm.webp",
 
                     "situation": "De onderarm staat in een abnormale stand en er steekt een stuk bot door de bloedende huid naar buiten.",
 
@@ -69,7 +69,7 @@
                 {
                     "id": 2,
 
-                    "image": "closed_injury.png",
+                    "image": "blauwe-enkel.webp",
 
                     "situation": "De enkel is na een val enorm dik geworden en vertoont een blauwe plek, maar de huid is nergens gescheurd.",
 
@@ -151,18 +151,18 @@
 
             "type": "meerkeuzevragen",
 
-            "question": "Wat is de belangrijkste reden om een open botbreuk NIET te manipuleren of te verplaatsen?",
+            "question": "Wat is de belangrijkste reden om een open botbreuk niet te manipuleren of te verplaatsen?",
 
-            "image": "do_not_move.png",
+            "image": "open-botbreuk.webp",
 
             "answers": [
-                "Het kan de pijn tijdelijk verlichten, maar het is niet nodig",
+                "Het kan de pijn tijdelijk verlichten",
                 "Het kan de bloedtoevoer naar het gebied verbeteren",
-                "Het kan ernstige bloedingen veroorzaken en verdere schade aan weefsels en zenuwen",
+                "Het kan ernstige bloedingen veroorzaken en verdere schade",
                 "Het helpt bij het sneller genezen van het bot"
             ],
 
-            "correctAnswer": "Het kan ernstige bloedingen veroorzaken en verdere schade aan weefsels en zenuwen",
+            "correctAnswer": "Het kan ernstige bloedingen veroorzaken en verdere schade",
 
             "feedback": {
                 "correct": "Uitstekend! Goed gedaan!",

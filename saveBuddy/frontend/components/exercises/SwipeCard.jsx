@@ -17,6 +17,12 @@ const images = {
 	"luid-hoesten.webp": require("../../assets/images/luid-hoesten.webp"),
 	"ernstige-verslikking.webp": require("../../assets/images/ernstige-verslikking.webp"),
 	"gierendgeluid-verslikking.webp": require("../../assets/images/gierendgeluid-verslikking.webp"),
+	"bot-onderarm.webp": require("../../assets/images/bot-onderarm.webp"),
+	"blauwe-enkel.webp": require("../../assets/images/blauwe-enkel.webp"),
+	"giftige-medicijnen.webp": require("../../assets/images/giftige-medicijnen.webp"),
+	"bleekwater.webp": require("../../assets/images/bleekwater.webp"),
+	"verdrinkingsincident.webp": require("../../assets/images/verdrinkingsincident.webp"),
+	"beademing.webp": require("../../assets/images/beademing.webp"),
 };
 
 export default function SwipeCard({ scenario, onSwipe = () => {} }) {
