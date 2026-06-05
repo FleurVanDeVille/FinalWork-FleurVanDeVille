@@ -1,19 +1,38 @@
-# Welcome to your Expo app 👋
+# SaveBuddy 
+SaveBuddy is an interactive first aid learning app for teenagers aged 12 to 18. Through short lessons, quizzes, and engaging exercises, users learn how to respond correctly in emergency situations in a fun and accessible way. 🚑📱
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
 
-1. Install dependencies
+1. Clone the repository:
 
-   ```bash
-   npm install
-   ```
+```bash
+git clone <repository-url>
+```
 
-2. Start the app
+2. Navigate to the project directory:
 
-   ```bash
-   npx expo start
+```bash
+cd saveBuddy
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+4. Start the Expo development server:
+
+```bash
+npx expo start
+```
+
+5. Open the app:
+   - Scan the QR code with the **Expo Go** app on your mobile device, or
+   - Press **i** to run the app in the iOS Simulator, or
+   - Press **a** to run the app on an Android Emulator.
    ```
 
 In the output, you'll find options to open the app in a
@@ -25,6 +44,7 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+
 ## Get a fresh project
 
 When you're ready, run:
@@ -33,18 +53,27 @@ When you're ready, run:
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+## Sources 🗃️
 
-To learn more about developing your project with Expo, look at the following resources:
+- [CoPilot](https://copilot.microsoft.com/chats/GdejiEP5a74ftRBhDeXYb)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Fellow students => Optimising code, helping with debugging...
 
-## Join the community
+- [ChatGPT] (https://chatgpt.com)
 
-Join our community of developers creating universal apps.
+- [ChatGPT](https://chatgpt.com/share/69f4cbe9-e9cc-83eb-bb29-9ab0f1a3ef83) => Helping to start up my project.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [ChatGPT](https://chatgpt.com/share/6a08cd19-1550-832c-9768-da789c241545) => This source was used to support the technical implementation of the lessons within the application.
+
+- [ChatGPT](https://chatgpt.com/share/6a106acb-074c-83eb-804c-4d99a98a0953) => This source was consulted to refresh knowledge of backend development and MongoDB integration.
+
+- [ChatGPT](https://chatgpt.com/share/6a14d508-d998-83eb-9025-cfbc52324168) => This source provided guidance on linking screens and organizing the application structure in Expo.
+
+- [ChatGPT](https://chatgpt.com/share/69f4cbe9-e9cc-83eb-bb29-9ab0f1a3ef83) => Helping to start 
+
+
+
+## Author 👨‍💻
+**Fleur Van De Ville**
+*Student Multimedia & Creative Technologies – Erasmushogeschool Brussel*

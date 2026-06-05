@@ -47,7 +47,6 @@ export default function Register() {
 					style={styles.input}
 					placeholder="Type hier je achternaam."
 					placeholderTextColor="#777"
-					secureTextEntry
 				/>
 
 				<Text style={styles.label}>E-mail</Text>
