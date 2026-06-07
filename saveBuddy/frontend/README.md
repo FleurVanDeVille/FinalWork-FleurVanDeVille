@@ -96,13 +96,13 @@ npm run reset-project
 
 - [ChatGPT](https://chatgpt.com/share/6a1b0fa9-2388-83eb-b443-a3f0b5a568f7) => Debugging the drop-down element issues.
 
-- [Github](https://github.com/Rakha112/react-native-animation/tree/main/season1/src/29-React-Native-Card-Swipe) => Learning how to use the swipe card. 
+- [Github](https://github.com/Rakha112/react-native-animation/tree/main/season1/src/29-React-Native-Card-Swipe) => Learning how to use the swipe card.
 
-- [YouTube](https://youtu.be/-JoQ5Y_unl8?si=bDOJVNvtXRb4Sh7L) => Learning how to use the swipe card. 
+- [YouTube](https://youtu.be/-JoQ5Y_unl8?si=bDOJVNvtXRb4Sh7L) => Learning how to use the swipe card.
 
 - [ChatGPT](https://chatgpt.com/share/6a1b59c4-7f44-83eb-942a-a322659d2c60) => Helping to debug the swipe card issues.
 
-- [ChatGPT](https://chatgpt.com/share/6a1c34ff-17d8-83eb-b4a1-079840aa7fb6) => This source provided guidance on positioning and aligning the right-hand column within the application's layout. 
+- [ChatGPT](https://chatgpt.com/share/6a1c34ff-17d8-83eb-b4a1-079840aa7fb6) => This source provided guidance on positioning and aligning the right-hand column within the application's layout.
 
 - [React Native](https://reactnative.dev/docs/switch) => Learning how to use the Switch button
 
@@ -110,29 +110,27 @@ npm run reset-project
 
 - [ChatGPT](https://chatgpt.com/share/6a1ee783-e428-8393-9585-e29b1724c6a6) => Helping with the drag and drop function and some errors.
 
-- [ChatGPT](https://chatgpt.com/share/6a1eff4b-1160-8396-b386-17a05b78cb3c) => Helping with the reanimation exercise. 
+- [ChatGPT](https://chatgpt.com/share/6a1eff4b-1160-8396-b386-17a05b78cb3c) => Helping with the reanimation exercise.
 
 - [ChatGPT](https://chatgpt.com/share/6a1f3289-ddfc-8386-ad10-822aae9f42d0) => Helping with the interactive exercise.
 
 - [ChatGPT](https://chatgpt.com/share/6a1eff4b-1160-8396-b386-17a05b78cb3c) => Helping with the interactive exercise.
 
-- [ChatGPT](https://chatgpt.com/share/6a1f3247-f864-838a-b6d1-037d3ed4a558) => Debugging errors from the interactive exercise.  
+- [ChatGPT](https://chatgpt.com/share/6a1f3247-f864-838a-b6d1-037d3ed4a558) => Debugging errors from the interactive exercise.
 
-- [ChatGPT](https://chatgpt.com/share/6a1f3d16-0fc8-838e-85e3-c2371ac7596d) => Having some problems with the interactive exercise and trying to fix it. 
+- [ChatGPT](https://chatgpt.com/share/6a1f3d16-0fc8-838e-85e3-c2371ac7596d) => Having some problems with the interactive exercise and trying to fix it.
 
-- [ChatGPT](https://chatgpt.com/share/6a1f46b3-280c-8392-83dd-47e69c2e38b8) => Fixing some errors in the drag exercise. 
+- [ChatGPT](https://chatgpt.com/share/6a1f46b3-280c-8392-83dd-47e69c2e38b8) => Fixing some errors in the drag exercise.
 
-- [ChatGPT](https://chatgpt.com/share/6a1f5e7a-20f8-8395-a9b9-4819efc5c567) => Having some problems with dropping the items, and trying to fix them. 
+- [ChatGPT](https://chatgpt.com/share/6a1f5e7a-20f8-8395-a9b9-4819efc5c567) => Having some problems with dropping the items, and trying to fix them.
 
-- [ChatGPT](https://chatgpt.com/share/6a1f602c-4dec-8385-95b3-abead74319c7) => Error fixing in dragExercise 
+- [ChatGPT](https://chatgpt.com/share/6a1f602c-4dec-8385-95b3-abead74319c7) => Error fixing in dragExercise
 
 - [NPM](https://www.npmjs.com/package/react-native-gifted-charts) => Helping for knowing how to work with charts.
 
 - [NPM](https://www.npmjs.com/package/react-native-draggable-flatlist) => knowing how to drag items in the orderExercises.
 
-- [ChatGPT](https://chatgpt.com/share/6a1ff47c-2610-8391-8bba-22c340c58274) => Fixing some errors. 
-
-
+- [ChatGPT](https://chatgpt.com/share/6a1ff47c-2610-8391-8bba-22c340c58274) => Fixing some errors.
 
 ## Author 👨‍💻
 
