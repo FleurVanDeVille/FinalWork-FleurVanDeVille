@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { router } from "expo-router";
 import {
 	Image,
@@ -9,7 +10,42 @@ import {
 	View,
 } from "react-native";
 
+import API_URL from "../api";
+
 export default function Register() {
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	const handleRegister = async () => {
+		try {
+			const response = await fetch(`${API_URL}/auth/register`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					firstName,
+					lastName,
+					email,
+					password,
+				}),
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				router.replace("/login");
+			} else {
+				alert(data.message);
+			}
+		} catch (error) {
+			console.log(error);
+			alert("Er is iets misgelopen bij het registreren.");
+		}
+	};
+
 	return (
 		<ImageBackground
 			source={require("../assets/images/background.png")}
@@ -39,7 +75,8 @@ export default function Register() {
 					style={styles.input}
 					placeholder="Type hier je voornaam."
 					placeholderTextColor="#777"
-					keyboardType="email-address"
+					value={firstName}
+					onChangeText={setFirstName}
 				/>
 
 				<Text style={styles.label}>Naam</Text>
@@ -47,6 +84,8 @@ export default function Register() {
 					style={styles.input}
 					placeholder="Type hier je achternaam."
 					placeholderTextColor="#777"
+					value={lastName}
+					onChangeText={setLastName}
 				/>
 
 				<Text style={styles.label}>E-mail</Text>
@@ -55,6 +94,9 @@ export default function Register() {
 					placeholder="Type hier je e-mail."
 					placeholderTextColor="#777"
 					keyboardType="email-address"
+					autoCapitalize="none"
+					value={email}
+					onChangeText={setEmail}
 				/>
 
 				<Text style={styles.label}>Wachtwoord</Text>
@@ -63,6 +105,8 @@ export default function Register() {
 					placeholder="Type hier je wachtwoord."
 					placeholderTextColor="#777"
 					secureTextEntry
+					value={password}
+					onChangeText={setPassword}
 				/>
 
 				<TouchableOpacity onPress={() => router.push("/login")}>
@@ -70,9 +114,7 @@ export default function Register() {
 				</TouchableOpacity>
 			</View>
 
-			<TouchableOpacity
-				style={styles.button}
-				onPress={() => router.replace("/(tabs)")}>
+			<TouchableOpacity style={styles.button} onPress={handleRegister}>
 				<Text style={styles.buttonText}>Registreer</Text>
 			</TouchableOpacity>
 		</ImageBackground>

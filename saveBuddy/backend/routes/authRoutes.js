@@ -38,7 +38,6 @@ router.post("/register", async (req, res) => {
         });
 
         res.status(201).json({
-            message: "Account aangemaakt.",
             userId: result.insertedId,
         });
     } catch (error) {

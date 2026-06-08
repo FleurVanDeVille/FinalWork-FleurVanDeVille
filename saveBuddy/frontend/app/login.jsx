@@ -1,4 +1,6 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router } from "expo-router";
+import { useState } from "react";
 import {
 	Image,
 	ImageBackground,
@@ -9,7 +11,41 @@ import {
 	View,
 } from "react-native";
 
+import API_URL from "../api";
+
 export default function Login() {
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	const handleLogin = async () => {
+		try {
+			const response = await fetch(`${API_URL}/auth/login`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					email,
+					password,
+				}),
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				await AsyncStorage.setItem("token", data.token);
+				await AsyncStorage.setItem("user", JSON.stringify(data.user));
+
+				router.replace("/(tabs)");
+			} else {
+				alert(data.message);
+			}
+		} catch (error) {
+			console.log(error);
+			alert("Er is iets misgelopen.");
+		}
+	};
+
 	return (
 		<ImageBackground
 			source={require("../assets/images/background.png")}
@@ -40,6 +76,8 @@ export default function Login() {
 					placeholder="Type hier je e-mail."
 					placeholderTextColor="#777"
 					keyboardType="email-address"
+					value={email}
+					onChangeText={setEmail}
 				/>
 
 				<Text style={styles.label}>Wachtwoord</Text>
@@ -48,6 +86,8 @@ export default function Login() {
 					placeholder="Type hier je wachtwoord."
 					placeholderTextColor="#777"
 					secureTextEntry
+					value={password}
+					onChangeText={setPassword}
 				/>
 
 				<TouchableOpacity>
@@ -59,10 +99,7 @@ export default function Login() {
 				</TouchableOpacity>
 			</View>
 
-			<TouchableOpacity
-				style={styles.button}
-				onPress={() => router.replace("/(tabs)")}
-			>
+			<TouchableOpacity style={styles.button} onPress={handleLogin}>
 				<Text style={styles.buttonText}>Login</Text>
 			</TouchableOpacity>
 		</ImageBackground>
