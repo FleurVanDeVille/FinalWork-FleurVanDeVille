@@ -36,6 +36,14 @@ export default function Login() {
 				await AsyncStorage.setItem("token", data.token);
 				await AsyncStorage.setItem("user", JSON.stringify(data.user));
 
+				const userId = data.user?._id || data.user?.id || data.userId;
+
+				if (userId) {
+					await AsyncStorage.setItem("userId", userId);
+				} else {
+					console.log("Geen userId gevonden in login response:", data);
+				}
+
 				router.replace("/(tabs)");
 			} else {
 				alert(data.message);

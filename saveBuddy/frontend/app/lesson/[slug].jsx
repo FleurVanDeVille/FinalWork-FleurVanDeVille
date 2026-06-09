@@ -293,17 +293,26 @@ export default function LessonPage() {
 			const data = await response.json();
 			console.log("Save response:", data);
 
-			const savedBadges = await AsyncStorage.getItem("unlockedBadges");
+			const userId = await AsyncStorage.getItem("userId");
+
+			if (!userId) {
+				console.log("Geen userId gevonden, badge niet opgeslagen");
+				router.replace("/(tabs)");
+				return;
+			}
+
+			const badgeKey = `unlockedBadges_${userId}`;
+
+			const savedBadges = await AsyncStorage.getItem(badgeKey);
 			const unlockedBadges = savedBadges ? JSON.parse(savedBadges) : [];
 
 			if (!unlockedBadges.includes(slug)) {
 				unlockedBadges.push(slug);
 			}
 
-			await AsyncStorage.setItem(
-				"unlockedBadges",
-				JSON.stringify(unlockedBadges),
-			);
+			await AsyncStorage.setItem(badgeKey, JSON.stringify(unlockedBadges));
+
+			console.log("Badge vrijgespeeld:", slug);
 
 			router.replace("/(tabs)");
 		} else {

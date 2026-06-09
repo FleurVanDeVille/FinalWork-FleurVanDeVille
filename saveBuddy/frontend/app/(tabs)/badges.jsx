@@ -1,6 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect } from "expo-router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import {
 	Image,
 	ImageBackground,
@@ -18,24 +18,24 @@ export default function Badges() {
 	useFocusEffect(
 		useCallback(() => {
 			const loadBadges = async () => {
-				const savedBadges = await AsyncStorage.getItem("unlockedBadges");
+				const userId = await AsyncStorage.getItem("userId");
+
+				if (!userId) {
+					console.log("Geen userId gevonden");
+					setUnlockedBadges([]);
+					return;
+				}
+
+				const badgeKey = `unlockedBadges_${userId}`;
+
+				const savedBadges = await AsyncStorage.getItem(badgeKey);
+
 				setUnlockedBadges(savedBadges ? JSON.parse(savedBadges) : []);
 			};
 
 			loadBadges();
 		}, []),
 	);
-
-	useEffect(() => {
-		const loadProgress = async () => {
-			const savedProgress = await AsyncStorage.getItem("lessonProgress");
-
-			if (savedProgress) {
-				setLessonProgress(JSON.parse(savedProgress));
-			}
-		};
-		loadProgress();
-	}, []);
 
 	return (
 		<ImageBackground

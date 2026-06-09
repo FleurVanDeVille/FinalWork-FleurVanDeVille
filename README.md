@@ -132,6 +132,14 @@ npm run reset-project
 
 - [ChatGPT](https://chatgpt.com/share/6a1ff47c-2610-8391-8bba-22c340c58274) => Fixing some errors.
 
+- [ChatGPT] (https://chatgpt.com)
+
+- [ChatGPT](https://chatgpt.com/share/6a287806-9a70-83eb-8b5d-6ab94bc5549a) => Helping with the processbar and navigating to the next class when it's finished (100%).
+
+- [ChatGPT](https://chatgpt.com/share/6a286c69-ca08-83eb-9042-83095bc249f1) => Helping to see my completed badges and some error fixing.
+
+- [ChatGPT](https://chatgpt.com/share/6a2877b2-467c-83ed-bb87-ada22296efab) => Fixing an error for my registration.
+
 ## Author 👨‍💻
 
 **Fleur Van De Ville**
