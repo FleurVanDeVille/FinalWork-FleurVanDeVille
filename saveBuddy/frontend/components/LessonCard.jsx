@@ -19,7 +19,12 @@ export default function LessonCard({ lesson }) {
 			style={styles.wrapper}
 			onPress={() => {
 				if (!lesson.locked) {
-					router.push(`/lesson/${lesson.slug}`);
+					router.push({
+						pathname: `/lesson/${lesson.slug}`,
+						params: {
+							startExerciseId: lesson.currentExerciseId,
+						},
+					});
 				}
 			}}
 		>
@@ -40,7 +45,7 @@ export default function LessonCard({ lesson }) {
 					</Text>
 
 					<Text style={[styles.progressText, textStyle]}>
-						{lesson.progress}%
+						{Math.round(lesson.progress)}%
 					</Text>
 
 					<View style={styles.progressBackground}>
@@ -49,7 +54,7 @@ export default function LessonCard({ lesson }) {
 								styles.progressFill,
 								lesson.id === 1 ? styles.darkProgress : styles.lightProgress,
 								{
-									width: `${lesson.progress}%`,
+									width: `${Math.round(lesson.progress)}%`,
 								},
 							]}
 						/>

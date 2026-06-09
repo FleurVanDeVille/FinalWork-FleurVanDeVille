@@ -1,5 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useEffect, useState } from "react";
+import { useFocusEffect } from "expo-router";
+import { useCallback, useState } from "react";
 import {
 	Image,
 	ImageBackground,
@@ -9,6 +10,7 @@ import {
 	TouchableOpacity,
 	View,
 } from "react-native";
+import API_URL from "../../api";
 import LessonCard from "../../components/LessonCard";
 import QuizCard from "../../components/QuizCard";
 import { lessen } from "../../data/lessons";
@@ -18,23 +20,37 @@ export default function Home() {
 	const [firstName, setFirstName] = useState("");
 	const [lessonProgress, setLessonProgress] = useState({});
 
-	useEffect(() => {
-		const loadUser = async () => {
-			try {
-				const userString = await AsyncStorage.getItem("user");
+	useFocusEffect(
+		useCallback(() => {
+			const loadUser = async () => {
+				try {
+					const token = await AsyncStorage.getItem("token");
 
-				if (userString) {
-					const user = JSON.parse(userString);
-					setFirstName(user.firstName);
-					setLessonProgress(user.lessonProgress || {});
+					if (!token) return;
+
+					const response = await fetch(`${API_URL}/user/me`, {
+						method: "GET",
+						headers: {
+							Authorization: `Bearer ${token}`,
+						},
+					});
+
+					const data = await response.json();
+
+					if (response.ok) {
+						setFirstName(data.user.firstName);
+						setLessonProgress(data.user.lessonProgress || {});
+
+						await AsyncStorage.setItem("user", JSON.stringify(data.user));
+					}
+				} catch (error) {
+					console.log(error);
 				}
-			} catch (error) {
-				console.log(error);
-			}
-		};
+			};
 
-		loadUser();
-	}, []);
+			loadUser();
+		}, []),
+	);
 
 	const [showAll, setShowAll] = useState(false);
 
@@ -43,7 +59,7 @@ export default function Home() {
 
 		return {
 			...lesson,
-			progress: progressData?.progress ?? 0,
+			progress: Math.round(progressData?.progress ?? 0),
 			locked: progressData?.locked ?? lesson.id !== 1,
 			completed: progressData?.completed ?? false,
 			currentExerciseId: progressData?.currentExerciseId ?? 1,
@@ -73,7 +89,7 @@ export default function Home() {
 					<View style={styles.header}>
 						<View>
 							<Text style={styles.welcome}>Welkom terug,</Text>
-							<Text style={styles.name}>{firstName}</Text>
+							<Text style={styles.name}>{firstName}!</Text>
 						</View>
 
 						<Image

@@ -1,5 +1,6 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router, useLocalSearchParams } from "expo-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
 	Image,
 	ImageBackground,
@@ -9,7 +10,7 @@ import {
 	TouchableOpacity,
 	View,
 } from "react-native";
-
+import API_URL from "../../api";
 import ExerciseRenderer from "../../components/exercises/ExerciseRenderer";
 
 import bloeding from "../../data/lessons/bleeding.json";
@@ -81,17 +82,23 @@ const images = {
 	"aed-water.webp": require("../../assets/images/aed-water.webp"),
 	"verdrinkingsincident.webp": require("../../assets/images/verdrinkingsincident.webp"),
 	"beademing.webp": require("../../assets/images/beademing.webp"),
-
 };
 
 export default function LessonPage() {
-	const { slug } = useLocalSearchParams();
+	const { slug, startExerciseId } = useLocalSearchParams();
 
 	const [retryKey, setRetryKey] = useState(0);
 
 	const lesson = lessonsMap[slug];
 
 	const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
+
+	useEffect(() => {
+		if (startExerciseId) {
+			setCurrentExerciseIndex(Math.max(0, Number(startExerciseId) - 1));
+		}
+	}, [startExerciseId]);
+
 	const [selectedAnswer, setSelectedAnswer] = useState(null);
 
 	const [orderAnswer, setOrderAnswer] = useState([]);
@@ -123,6 +130,30 @@ export default function LessonPage() {
 
 	const progress = ((currentExerciseIndex + 1) / lesson.exercises.length) * 100;
 
+	const handleCloseLesson = async () => {
+		try {
+			const token = await AsyncStorage.getItem("token");
+
+			await fetch(`${API_URL}/user/progress/${slug}`, {
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					progress,
+					currentExerciseId: currentExerciseIndex + 1,
+
+					completed: false,
+				}),
+			});
+
+			router.back();
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	function handleNextExercise() {
 		const isLastExercise = currentExerciseIndex === lesson.exercises.length - 1;
 
@@ -145,7 +176,7 @@ export default function LessonPage() {
 		setIsCorrect(false);
 	}
 
-	function handleCheck() {
+	async function handleCheck() {
 		if (!checked) {
 			let correct = false;
 
@@ -242,6 +273,26 @@ export default function LessonPage() {
 		const isLastExercise = currentExerciseIndex === lesson.exercises.length - 1;
 
 		if (isLastExercise) {
+			console.log("Les is klaar:", slug);
+
+			const token = await AsyncStorage.getItem("token");
+
+			const response = await fetch(`${API_URL}/user/progress/${slug}`, {
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					progress: 100,
+					currentExerciseId: lesson.exercises.length,
+					completed: true,
+				}),
+			});
+
+			const data = await response.json();
+			console.log("Save response:", data);
+
 			router.replace("/(tabs)");
 		} else {
 			setCurrentExerciseIndex(currentExerciseIndex + 1);
@@ -275,7 +326,7 @@ export default function LessonPage() {
 			<View style={styles.content}>
 				<View>
 					<View style={styles.topBar}>
-						<TouchableOpacity onPress={() => router.back()}>
+						<TouchableOpacity onPress={handleCloseLesson}>
 							<Text style={styles.close}>×</Text>
 						</TouchableOpacity>
 
