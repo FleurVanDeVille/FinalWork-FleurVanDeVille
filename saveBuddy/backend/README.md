@@ -37,3 +37,13 @@ http://localhost:5500
 
 
 # sources
+
+- [CoPilot](https://copilot.microsoft.com/chats/GdejiEP5a74ftRBhDeXYb)
+
+- Fellow students => Optimising code, helping with debugging...
+
+- Fellow colleagues => Optimising code, helping with debugging...
+
+- [ChatGPT] (https://chatgpt.com)
+
+- [ChatGPT](https://chatgpt.com/share/6a286c69-ca08-83eb-9042-83095bc249f1) => Helping to see my completed badges and some error fixing.

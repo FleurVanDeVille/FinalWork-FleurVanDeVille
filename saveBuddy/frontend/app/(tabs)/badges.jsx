@@ -1,3 +1,6 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useFocusEffect } from "expo-router";
+import { useCallback, useEffect, useState } from "react";
 import {
 	Image,
 	ImageBackground,
@@ -9,6 +12,31 @@ import {
 import { badges } from "../../data/badges.js";
 
 export default function Badges() {
+	const [lessonProgress, setLessonProgress] = useState({});
+	const [unlockedBadges, setUnlockedBadges] = useState([]);
+
+	useFocusEffect(
+		useCallback(() => {
+			const loadBadges = async () => {
+				const savedBadges = await AsyncStorage.getItem("unlockedBadges");
+				setUnlockedBadges(savedBadges ? JSON.parse(savedBadges) : []);
+			};
+
+			loadBadges();
+		}, []),
+	);
+
+	useEffect(() => {
+		const loadProgress = async () => {
+			const savedProgress = await AsyncStorage.getItem("lessonProgress");
+
+			if (savedProgress) {
+				setLessonProgress(JSON.parse(savedProgress));
+			}
+		};
+		loadProgress();
+	}, []);
+
 	return (
 		<ImageBackground
 			source={require("../../assets/images/background.png")}
@@ -37,30 +65,34 @@ export default function Badges() {
 				<Text style={styles.sectionTitle}>Mijn badges</Text>
 
 				<View style={styles.grid}>
-					{badges.map((badge) => (
-						<View
-							key={badge.id}
-							style={[styles.badgeCard, badge.locked && styles.lockedBadgeCard]}
-						>
-							<View style={styles.statusCircle}>
-								{!badge.locked ? (
-									<Text style={styles.statusText}>✓</Text>
-								) : (
-									<Image
-										source={require("../../assets/images/lock.png")}
-										style={styles.statusIcon}
-									/>
-								)}
-							</View>
+					{badges.map((badge) => {
+						const locked = !unlockedBadges.includes(badge.slug);
 
-							<View style={styles.badgeIconCircle}>
-								<Image source={badge.Image} style={styles.badgeIcon} />
-							</View>
+						return (
+							<View
+								key={badge.id}
+								style={[styles.badgeCard, locked && styles.lockedBadgeCard]}
+							>
+								<View style={styles.statusCircle}>
+									{!locked ? (
+										<Text style={styles.statusText}>✓</Text>
+									) : (
+										<Image
+											source={require("../../assets/images/lock.png")}
+											style={styles.statusIcon}
+										/>
+									)}
+								</View>
 
-							<Text style={styles.badgeTitle}>{badge.title}</Text>
-							<Text style={styles.badgeText}>{badge.description}</Text>
-						</View>
-					))}
+								<View style={styles.badgeIconCircle}>
+									<Image source={badge.Image} style={styles.badgeIcon} />
+								</View>
+
+								<Text style={styles.badgeTitle}>{badge.title}</Text>
+								<Text style={styles.badgeText}>{badge.description}</Text>
+							</View>
+						);
+					})}
 				</View>
 			</ScrollView>
 		</ImageBackground>
