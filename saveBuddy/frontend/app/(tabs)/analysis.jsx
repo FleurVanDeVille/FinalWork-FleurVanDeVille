@@ -1,4 +1,6 @@
-import { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useFocusEffect } from "expo-router";
+import { useCallback, useState } from "react";
 import {
 	Image,
 	ImageBackground,
@@ -9,6 +11,7 @@ import {
 	View,
 } from "react-native";
 import { BarChart } from "react-native-gifted-charts";
+import API_URL from "../../api";
 import LessonCard from "../../components/LessonCard";
 import { lessen } from "../../data/lessons";
 
@@ -23,16 +26,43 @@ export default function Analyse() {
 		{ day: "Zo", value: 13 },
 	];
 
-	const categories = [
-		{ title: "Vier stappen in eerste hulp", progress: 100 },
-		{ title: "Reanimeren", progress: 65 },
-		{ title: "Verslikking", progress: 80 },
-		{ title: "Huidwonde", progress: 40 },
-	];
-
 	const [showAll, setShowAll] = useState(false);
 
 	const visibleLessons = showAll ? lessen : lessen.slice(0, 1);
+
+	const [lessonProgress, setLessonProgress] = useState({});
+
+	useFocusEffect(
+		useCallback(() => {
+			const loadUser = async () => {
+				const token = await AsyncStorage.getItem("token");
+
+				const response = await fetch(`${API_URL}/user/me`, {
+					method: "GET",
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				});
+
+				const data = await response.json();
+
+				if (response.ok) {
+					setLessonProgress(data.user.lessonProgress || {});
+				}
+			};
+
+			loadUser();
+		}, []),
+	);
+
+	const categories = lessen.map((lesson) => {
+		const progressData = lessonProgress[lesson.slug];
+
+		return {
+			title: lesson.title,
+			progress: Math.round(progressData?.progress ?? 0),
+		};
+	});
 
 	return (
 		<ImageBackground
@@ -68,7 +98,7 @@ export default function Analyse() {
 
 				<View style={styles.topCards}>
 					<View style={styles.completedCard}>
-						<Text style={styles.completedNumber}>6</Text>
+						<Text style={styles.completedNumber}>2</Text>
 						<Text style={styles.completedText}>Lessen voltooid</Text>
 					</View>
 
@@ -116,7 +146,6 @@ export default function Analyse() {
 
 				<View style={styles.card}>
 					<Text style={styles.cardTitle}>Categorieën</Text>
-
 					{categories.map((category) => (
 						<View key={category.title} style={styles.categoryItem}>
 							<View style={styles.categoryHeader}>

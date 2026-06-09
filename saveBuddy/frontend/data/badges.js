@@ -13,21 +13,21 @@ import LessenVoltooidBadge from "../assets/images/badges/lessenvoltooid.png";
 import StreakBadge from "../assets/images/badges/streak.png";
 
 export const badges = [
-    {
-        id: 1,
-        Image: BasisEhboBadge,
-        slug: "vierStappen",
-        title: "Vier stappen in eerste hulp",
-        description: "Voltooi de vier stappen in eerste hulp les",
-        locked: false,
-    },
+    	{
+		id: 1,
+		Image: BasisEhboBadge,
+		slug: "vierStappen",
+		title: "Vier stappen in eerste hulp",
+		description: "Voltooi de vier stappen in eerste hulp les",
+		type: "lesson",
+	},
     {
         id: 2,
         Image: ReanimerenBadge,
         slug: "reanimeren",
         title: "Reanimeren",
         description: "Voltooi de reanimatie les",
-        locked: false,
+        type: "lesson",
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ export const badges = [
         slug: "verslikking",
         title: "Verslikking",
         description: "Voltooi de verslikking les",
-        locked: true,
+        type: "lesson",
     },
     {
         id: 4,
@@ -43,7 +43,7 @@ export const badges = [
         slug: "huidwonde",
         title: "Huidwonde",
         description: "Voltooi de huidwonde les",
-        locked: true,
+        type: "lesson",
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ export const badges = [
         slug: "brandwonde",
         title: "Brandwonde",
         description: "Voltooi de brandwonde les",
-        locked: true,
+        type: "lesson",
     },
     {
         id: 6,
@@ -59,7 +59,7 @@ export const badges = [
         slug: "bloeding",
         title: "Bloeding",
         description: "Voltooi de bloeding les",
-        locked: true,
+        type: "lesson",
     },
     {
         id: 7,
@@ -67,7 +67,7 @@ export const badges = [
         slug: "letsels",
         title: "Letsels",
         description: "Voltooi de letsels les",
-        locked: true,
+        type: "lesson",
     },
     {
         id: 8,
@@ -75,7 +75,7 @@ export const badges = [
         slug: "vergiftiging",
         title: "Vergiftiging",
         description: "Voltooi de vergiftiging les",
-        locked: true,
+        type: "lesson",
     },
     {
         id: 9,
@@ -83,7 +83,7 @@ export const badges = [
         slug: "verdrinking",
         title: "Verdrinking",
         description: "Voltooi de verdrinking les",
-        locked: true,
+        type: "lesson",
     },
     {
         id: 10,
@@ -91,7 +91,7 @@ export const badges = [
         slug: "snelleLeerder",
         title: "Snelle leerder",
         description: "Voltooi een les binnen 10 minuten",
-        locked: true,
+        type: "achievement",
     },
     {
         id: 11,
@@ -99,7 +99,7 @@ export const badges = [
         slug: "lessenVoltooid",
         title: "Lessen voltooid",
         description: "Voltooi 5 lessen",
-        locked: true,
+        type: "achievement",
     },
     {
         id: 12,
@@ -107,7 +107,7 @@ export const badges = [
         slug: "streak",
         title: "Streak",
         description: "Kom 3 dagen achter elkaar terug",
-        locked: true,
+        type: "achievement",
     },
     {
         id: 13,
@@ -115,6 +115,5 @@ export const badges = [
         slug: "allesVoltooid",
         title: "Alles voltooid",
         description: "Voltooi alle lessen",
-        locked: true,
     }
 ];

@@ -1,4 +1,7 @@
-import { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { router } from "expo-router";
+import { useEffect, useState } from "react";
+import API_URL from "../../api";
 import {
 	Image,
 	ImageBackground,
@@ -10,11 +13,66 @@ import {
 	TouchableOpacity,
 	View,
 } from "react-native";
-import { router } from "expo-router";
 
 export default function Profile() {
 	const [pushEnabled, setPushEnabled] = useState(true);
 	const [emailEnabled, setEmailEnabled] = useState(false);
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
+	const [email, setEmail] = useState("");
+
+	const handleLogout = async () => {
+		await AsyncStorage.removeItem("token");
+		await AsyncStorage.removeItem("user");
+
+		router.replace("/login");
+	};
+
+	useEffect(() => {
+		const loadUser = async () => {
+			const userString = await AsyncStorage.getItem("user");
+
+			if (userString) {
+				const user = JSON.parse(userString);
+
+				setFirstName(user.firstName);
+				setLastName(user.lastName);
+				setEmail(user.email);
+			}
+		};
+
+		loadUser();
+	}, []);
+
+	const handleSaveProfile = async () => {
+		try {
+			const token = await AsyncStorage.getItem("token");
+
+			const response = await fetch(`${API_URL}/user/profile`, {
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					firstName,
+					lastName,
+					email,
+				}),
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				await AsyncStorage.setItem("user", JSON.stringify(data.user));
+			} else {
+				alert(data.message);
+			}
+		} catch (error) {
+			console.log(error);
+			alert("Er is iets misgelopen.");
+		}
+	};
 
 	return (
 		<ImageBackground
@@ -35,9 +93,14 @@ export default function Profile() {
 					<View style={styles.header}>
 						<View>
 							<Text style={styles.title}>Profiel</Text>
-							<Text style={styles.name}>Fleur Van De Ville</Text>
+							<Text style={styles.name}>
+								{firstName} {lastName}
+							</Text>
 
-							<TouchableOpacity style={styles.saveButton}>
+							<TouchableOpacity
+								style={styles.saveButton}
+								onPress={handleSaveProfile}
+							>
 								<Text style={styles.saveButtonText}>Wijzigingen opslaan</Text>
 							</TouchableOpacity>
 						</View>
@@ -53,20 +116,26 @@ export default function Profile() {
 					<Text style={styles.informationTitle}>Account</Text>
 
 					<Text style={styles.label}>Voornaam</Text>
-					<TextInput style={styles.input} value="Fleur" editable={false} />
+					<TextInput
+						style={styles.input}
+						value={firstName}
+						onChangeText={setFirstName}
+					/>
 
 					<Text style={styles.label}>Achternaam</Text>
 					<TextInput
 						style={styles.input}
-						value="Van De Ville"
-						editable={false}
+						value={lastName}
+						onChangeText={setLastName}
 					/>
 
 					<Text style={styles.label}>E-mail</Text>
 					<TextInput
 						style={styles.input}
-						value="fleur@email.com"
-						editable={false}
+						value={email}
+						onChangeText={setEmail}
+						keyboardType="email-address"
+						autoCapitalize="none"
 					/>
 
 					<Text style={styles.label}>Wachtwoord</Text>
@@ -102,8 +171,7 @@ export default function Profile() {
 					</View>
 				</View>
 
-				<TouchableOpacity style={styles.logoutButton}
-								onPress={() => router.push("/login")}>
+				<TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
 					<Text style={styles.logoutText}>Uitloggen</Text>
 				</TouchableOpacity>
 			</ScrollView>

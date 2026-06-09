@@ -293,6 +293,18 @@ export default function LessonPage() {
 			const data = await response.json();
 			console.log("Save response:", data);
 
+			const savedBadges = await AsyncStorage.getItem("unlockedBadges");
+			const unlockedBadges = savedBadges ? JSON.parse(savedBadges) : [];
+
+			if (!unlockedBadges.includes(slug)) {
+				unlockedBadges.push(slug);
+			}
+
+			await AsyncStorage.setItem(
+				"unlockedBadges",
+				JSON.stringify(unlockedBadges),
+			);
+
 			router.replace("/(tabs)");
 		} else {
 			setCurrentExerciseIndex(currentExerciseIndex + 1);

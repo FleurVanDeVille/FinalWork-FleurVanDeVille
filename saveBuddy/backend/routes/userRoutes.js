@@ -98,4 +98,53 @@ router.put("/progress/:slug", authMiddleware, async (req, res) => {
     }
 });
 
+router.put("/profile", authMiddleware, async (req, res) => {
+	try {
+		const { firstName, lastName, email } = req.body;
+
+		if (!firstName || !lastName || !email) {
+			return res.status(400).json({
+				message: "Uw voornaam, achternaam en email zijn verplicht.",
+			});
+		}
+
+		const db = await connectDB();
+		const users = db.collection("users");
+
+		await users.updateOne(
+			{ _id: new ObjectId(req.user.userId) },
+			{
+				$set: {
+					firstName,
+					lastName,
+					email,
+				},
+			}
+		);
+
+		const updatedUser = await users.findOne({
+			_id: new ObjectId(req.user.userId),
+		});
+
+		res.json({
+			message: "Profiel aangepast.",
+			user: {
+				id: updatedUser._id,
+				firstName: updatedUser.firstName,
+				lastName: updatedUser.lastName,
+				email: updatedUser.email,
+				completedLessons: updatedUser.completedLessons || [],
+				badges: updatedUser.badges || [],
+				lessonProgress: updatedUser.lessonProgress || {},
+				activityMinutes: updatedUser.activityMinutes || {},
+			},
+		});
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({
+			message: "Server error.",
+		});
+	}
+});
+
 module.exports = router;
