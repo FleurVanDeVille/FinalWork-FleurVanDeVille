@@ -32,8 +32,77 @@ router.post("/register", async (req, res) => {
             lastName,
             email,
             password: hashedPassword,
+
             completedLessons: [],
             badges: [],
+
+            lessonProgress: {
+                vierStappen: {
+                    progress: 0,
+                    locked: false,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+
+                reanimeren: {
+                    progress: 0,
+                    locked: true,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+
+                verslikking: {
+                    progress: 0,
+                    locked: true,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+
+                huidwonde: {
+                    progress: 0,
+                    locked: true,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+
+                brandwonde: {
+                    progress: 0,
+                    locked: true,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+
+                bloeding: {
+                    progress: 0,
+                    locked: true,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+
+                letsels: {
+                    progress: 0,
+                    locked: true,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+
+                vergiftiging: {
+                    progress: 0,
+                    locked: true,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+
+                verdrinking: {
+                    progress: 0,
+                    locked: true,
+                    completed: false,
+                    currentExerciseId: 1,
+                },
+            },
+
+            activityMinutes: {},
+
             createdAt: new Date(),
         });
 
@@ -85,7 +154,9 @@ router.post("/login", async (req, res) => {
                 email: user.email,
                 completedLessons: user.completedLessons || [],
                 badges: user.badges || [],
-            },
+                lessonProgress: user.lessonProgress || {},
+                activityMinutes: user.activityMinutes || {},
+            }
         });
     } catch (error) {
         console.error(error);

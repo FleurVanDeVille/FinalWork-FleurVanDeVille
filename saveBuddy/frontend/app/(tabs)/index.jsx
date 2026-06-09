@@ -1,4 +1,5 @@
-import { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useEffect, useState } from "react";
 import {
 	Image,
 	ImageBackground,
@@ -14,9 +15,44 @@ import { lessen } from "../../data/lessons";
 import { quizzes } from "../../data/quizzes";
 
 export default function Home() {
+	const [firstName, setFirstName] = useState("");
+	const [lessonProgress, setLessonProgress] = useState({});
+
+	useEffect(() => {
+		const loadUser = async () => {
+			try {
+				const userString = await AsyncStorage.getItem("user");
+
+				if (userString) {
+					const user = JSON.parse(userString);
+					setFirstName(user.firstName);
+					setLessonProgress(user.lessonProgress || {});
+				}
+			} catch (error) {
+				console.log(error);
+			}
+		};
+
+		loadUser();
+	}, []);
+
 	const [showAll, setShowAll] = useState(false);
 
-	const visibleLessons = showAll ? lessen : lessen.slice(0, 6);
+	const lessonsWithProgress = lessen.map((lesson) => {
+		const progressData = lessonProgress[lesson.slug];
+
+		return {
+			...lesson,
+			progress: progressData?.progress ?? 0,
+			locked: progressData?.locked ?? lesson.id !== 1,
+			completed: progressData?.completed ?? false,
+			currentExerciseId: progressData?.currentExerciseId ?? 1,
+		};
+	});
+
+	const visibleLessons = showAll
+		? lessonsWithProgress
+		: lessonsWithProgress.slice(0, 6);
 
 	return (
 		<ImageBackground
@@ -37,7 +73,7 @@ export default function Home() {
 					<View style={styles.header}>
 						<View>
 							<Text style={styles.welcome}>Welkom terug,</Text>
-							<Text style={styles.name}>Anne-Marie!</Text>
+							<Text style={styles.name}>{firstName}</Text>
 						</View>
 
 						<Image

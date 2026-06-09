@@ -10,6 +10,7 @@ import {
 	TouchableOpacity,
 	View,
 } from "react-native";
+import { router } from "expo-router";
 
 export default function Profile() {
 	const [pushEnabled, setPushEnabled] = useState(true);
@@ -101,7 +102,8 @@ export default function Profile() {
 					</View>
 				</View>
 
-				<TouchableOpacity style={styles.logoutButton}>
+				<TouchableOpacity style={styles.logoutButton}
+								onPress={() => router.push("/login")}>
 					<Text style={styles.logoutText}>Uitloggen</Text>
 				</TouchableOpacity>
 			</ScrollView>
